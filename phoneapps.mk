@@ -9,7 +9,6 @@ private-phone-apps := \
 	com.qualcomm.location \
 	com.qualcomm.services.location \
 	KeyChain \
-	LatinIME \
 	LiveWallpapers \
 	PacProcessor \
 	PicoTts \
@@ -18,8 +17,7 @@ private-phone-apps := \
 	Stk \
 	telresources \
 	TimeService \
-	WAPPushManager \
-	webview 
+	WAPPushManager 
 
 private-phone-priv-apps := \
 	AudioFX \
@@ -32,7 +30,6 @@ private-phone-priv-apps := \
 	FMRadio \
 	FusedLocation \
 	InputDevices \
-	OneTimeInitializer \
 	ProxyHandler \
 	Screencast \
 	SharedStorageBackup \
