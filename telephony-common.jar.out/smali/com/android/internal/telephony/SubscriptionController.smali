@@ -986,7 +986,7 @@
     #invoke-interface {v0, v1}, Landroid/database/Cursor;->getInt(I)I
 
     #move-result v15
-    
+
     const/16 v15, -0x1
 
     .line 305
