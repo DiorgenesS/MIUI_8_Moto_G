@@ -2,8 +2,6 @@ system/media/audio/notifications/MessageComplete.ogg|../ui/MessageComplete.ogg
 system/media/audio/notifications/MessageIncoming.ogg|../ui/MessageIncoming.ogg
 system/app/Bluetooth/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/BluetoothExt/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
-system/app/LatinImeGoogle/lib/arm/libjni_keyboarddecoder.so|/system/lib/libjni_keyboarddecoder.so
-system/app/LatinImeGoogle/lib/arm/libjni_latinimegoogle.so|/system/lib/libjni_latinimegoogle.so
 system/app/PacProcessor/lib/arm/libjni_pacprocessor.so|/system/lib/libjni_pacprocessor.so
 system/app/PicoTts/lib/arm/libttscompat.so|/system/lib/libttscompat.so
 system/app/PicoTts/lib/arm/libttspico.so|/system/lib/libttspico.so
