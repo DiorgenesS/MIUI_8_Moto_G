@@ -78,4 +78,8 @@ local-pre-zip-misc:
 	@echo remove unnecessary files!
 	rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
+	rm -rf $(ZIP_DIR)/system/media/audio/*
 	rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
+	@echo use default sounds miui!
+	cp -rf $(PORT_ROOT)/miui/system/media/$(local-density)/audio/* $(ZIP_DIR)/system/media/audio
+	rm -rf $(ZIP_DIR)/system/media/audio/create_symlink_for_audio-timestamp
