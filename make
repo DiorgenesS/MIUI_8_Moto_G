@@ -3,6 +3,8 @@
 #sh for miui patchrom
 
 pwd=$PWD
+device="FalconGlobal"       # Modify the Device Name as required
+version="6.0"               # Modify the Android Version as required
 
 function BUILD_DATE() {
     date=`date +%y%m%d`
@@ -39,7 +41,7 @@ function MakeFullota() {
 }
 
 function CopyFullota() {
-    if [ ! -d ROM ];then 
+    if [ ! -d ROM ];then
         mkdir ROM
     fi
     if [ -f out/fullota.zip ]; then
@@ -64,6 +66,17 @@ function CopyFullota() {
         mv out ROM/$BUILD_NUMBER-out
     else
         echo -e "\e[1;31mWarning:Not Found out!!!\e[0m"
+    fi
+}
+
+function RenameFullota() {
+    if [ -f ROM/$BUILD_NUMBER-fullota.zip ]; then
+        echo -e "\e[1;32mRenaming Fullota\e[0m"
+        md5=`md5sum "ROM/$BUILD_NUMBER-fullota.zip" | cut -c 1-10`
+        echo $md5
+        mv ROM/$BUILD_NUMBER-fullota.zip ROM/miui_${device}_${BUILD_NUMBER}_${md5}_${version}.zip
+    else
+        echo -e "\e[1;31mWarning:Not Found Fullota!!!\e[0m"
     fi
 }
 
@@ -98,6 +111,7 @@ else
 fi
 MakeFullota
 CopyFullota
+RenameFullota
 MakeOTA
 END_TIME=`date +%s`
 UseTime
