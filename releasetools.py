@@ -32,9 +32,16 @@ def WritePolicyConfig(info):
   except KeyError:
     print "warning: file_context missing from target;"
 
+def CdmaConfig(info):
+  info.script.AppendExtra(("""if getprop("ro.boot.radio") == "0x3" then
+delete("/system/etc/apns-conf.xml");
+symlink("/system/etc/apns-conf-cdma.xml", "/system/etc/apns-conf.xml");
+endif;"""))
+
 def FullOTA_InstallEnd(info):
     WritePolicyConfig(info)
     RemoveDeviceAssert(info)
+    CdmaConfig(info)
 
 def IncrementalOTA_InstallEnd(info):
     RemoveDeviceAssert(info)
