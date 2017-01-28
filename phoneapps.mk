@@ -5,6 +5,7 @@ private-phone-apps := \
 	BasicDreams \
 	Bluetooth \
 	BluetoothExt \
+	BluetoothMidiService \
 	CertInstaller \
 	com.qualcomm.location \
 	com.qualcomm.services.location \
