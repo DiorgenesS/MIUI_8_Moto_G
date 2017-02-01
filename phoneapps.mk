@@ -18,6 +18,7 @@ private-phone-apps := \
 	Stk \
 	telresources \
 	TimeService \
+	UserDictionaryProvider \
 	WAPPushManager 
 
 private-phone-priv-apps := \
