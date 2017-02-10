@@ -30,7 +30,7 @@
     .param p2, "val$im"    # Landroid/view/View;
 
     .prologue
-    .line 178
+    .line 173
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$5;->val$im:Landroid/view/View;
@@ -51,7 +51,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 181
+    .line 176
     const/4 v0, 0x4
 
     if-eq p2, v0, :cond_3
@@ -62,21 +62,21 @@
 
     if-nez v0, :cond_3
 
-    .line 182
+    .line 177
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
 
     if-nez v0, :cond_0
 
-    .line 183
+    .line 178
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$5;->val$im:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/PlatLogoActivity;->showMarshmallow(Landroid/view/View;)V
 
-    .line 185
+    .line 180
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
@@ -86,7 +86,7 @@
 
     iput v1, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
 
-    .line 186
+    .line 181
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mKeyCount:I
@@ -95,7 +95,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 187
+    .line 182
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
@@ -104,19 +104,19 @@
 
     if-le v0, v1, :cond_2
 
-    .line 188
+    .line 183
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->val$im:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->performLongClick()Z
 
-    .line 193
+    .line 188
     :cond_1
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 190
+    .line 185
     :cond_2
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$5;->val$im:Landroid/view/View;
 
@@ -124,7 +124,7 @@
 
     goto :goto_0
 
-    .line 195
+    .line 190
     :cond_3
     return v1
 .end method

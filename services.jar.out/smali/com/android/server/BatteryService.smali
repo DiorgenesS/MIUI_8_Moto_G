@@ -1904,9 +1904,9 @@
     .param p1, "level"    # I
 
     .prologue
-    const v3, 0x1080662
+    const v3, 0x1080661
 
-    const v2, 0x1080654
+    const v2, 0x1080653
 
     .line 828
     iget-object v0, p0, Lcom/android/server/BatteryService;->mBatteryProps:Landroid/os/BatteryProperties;
@@ -1980,7 +1980,7 @@
 
     .line 840
     :cond_4
-    const v0, 0x1080670
+    const v0, 0x108066f
 
     return v0
 .end method
@@ -1990,9 +1990,9 @@
     .param p1, "level"    # I
 
     .prologue
-    const v3, 0x1080662
+    const v3, 0x1080661
 
-    const v2, 0x1080654
+    const v2, 0x1080653
 
     .line 810
     iget-object v0, p0, Lcom/android/server/BatteryService;->mBatteryProps:Landroid/os/BatteryProperties;
@@ -2066,7 +2066,7 @@
 
     .line 823
     :cond_4
-    const v0, 0x1080670
+    const v0, 0x108066f
 
     return v0
 .end method
@@ -4685,7 +4685,7 @@
     invoke-direct {v0, v3}, Landroid/app/Notification$Builder;-><init>(Landroid/content/Context;)V
 
     .line 991
-    const v3, 0x1080662
+    const v3, 0x1080661
 
     .line 990
     invoke-virtual {v0, v3}, Landroid/app/Notification$Builder;->setSmallIcon(I)Landroid/app/Notification$Builder;

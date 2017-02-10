@@ -595,7 +595,7 @@
     .line 160
     const v19, 0x10404c0
 
-    const v20, 0x108074f
+    const v20, 0x108074e
 
     move-object/from16 v0, p0
 
@@ -713,7 +713,7 @@
     .line 166
     const v19, 0x10404be
 
-    const v20, 0x108074f
+    const v20, 0x108074e
 
     move-object/from16 v0, p0
 
@@ -792,7 +792,7 @@
     .line 176
     const v19, 0x10404c0
 
-    const v20, 0x108074f
+    const v20, 0x108074e
 
     move-object/from16 v0, p0
 
@@ -816,7 +816,7 @@
     .line 180
     const v19, 0x10404c0
 
-    const v20, 0x108074f
+    const v20, 0x108074e
 
     move-object/from16 v0, p0
 
@@ -880,7 +880,7 @@
     .line 195
     const v19, 0x10404bf
 
-    const v20, 0x108074e
+    const v20, 0x108074d
 
     move-object/from16 v0, p0
 

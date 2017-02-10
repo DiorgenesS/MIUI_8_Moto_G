@@ -176,6 +176,7 @@ system/bin/bugreport 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0
 system/bin/bzcat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/cal 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/cat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/bin/charge_only_mode 0 2000 755 selabel=u:object_r:charge_only_mode_exec:s0 capabilities=0x0
 system/bin/chattr 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/chcon 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/chgrp 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -426,7 +427,6 @@ system/bin/start-ssh 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0
 system/bin/stat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/stop 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/strings 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/bin/su 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/surfaceflinger 0 2000 755 selabel=u:object_r:surfaceflinger_exec:s0 capabilities=0x0
 system/bin/svc 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/bin/swapoff 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
@@ -1748,8 +1748,6 @@ system/priv-app/CMAudioService/CMAudioService.apk 0 0 644 selabel=u:object_r:sys
 system/priv-app/CMAudioService/lib 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMAudioService/lib/arm 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMAudioService/lib/arm/libcmaudio_jni.so 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/CMBugReport 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
-system/priv-app/CMBugReport/CMBugReport.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMSettingsProvider 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMSettingsProvider/CMSettingsProvider.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/CMUpdater 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0

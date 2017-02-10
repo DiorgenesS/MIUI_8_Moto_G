@@ -27,16 +27,16 @@
     .param p2, "byteOrder"    # Ljava/nio/ByteOrder;
 
     .prologue
-    .line 2485
+    .line 2484
     invoke-direct {p0, p1}, Ljava/io/FilterOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 2486
+    .line 2485
     iput-object p1, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
-    .line 2487
+    .line 2486
     iput-object p2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
-    .line 2484
+    .line 2483
     return-void
 .end method
 
@@ -47,10 +47,10 @@
     .param p1, "byteOrder"    # Ljava/nio/ByteOrder;
 
     .prologue
-    .line 2491
+    .line 2490
     iput-object p1, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
-    .line 2490
+    .line 2489
     return-void
 .end method
 
@@ -64,12 +64,12 @@
     .end annotation
 
     .prologue
-    .line 2495
+    .line 2494
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write([B)V
 
-    .line 2494
+    .line 2493
     return-void
 .end method
 
@@ -85,12 +85,12 @@
     .end annotation
 
     .prologue
-    .line 2499
+    .line 2498
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 2498
+    .line 2497
     return-void
 .end method
 
@@ -104,12 +104,12 @@
     .end annotation
 
     .prologue
-    .line 2503
+    .line 2502
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2502
+    .line 2501
     return-void
 .end method
 
@@ -123,14 +123,14 @@
     .end annotation
 
     .prologue
-    .line 2517
+    .line 2516
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     if-ne v0, v1, :cond_1
 
-    .line 2518
+    .line 2517
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x0
@@ -139,10 +139,19 @@
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2519
+    .line 2518
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x8
+
+    and-int/lit16 v1, v1, 0xff
+
+    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
+
+    .line 2519
+    iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
+
+    ushr-int/lit8 v1, p1, 0x10
 
     and-int/lit16 v1, v1, 0xff
 
@@ -151,27 +160,18 @@
     .line 2520
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
-    ushr-int/lit8 v1, p1, 0x10
-
-    and-int/lit16 v1, v1, 0xff
-
-    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
-
-    .line 2521
-    iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
-
     ushr-int/lit8 v1, p1, 0x18
 
     and-int/lit16 v1, v1, 0xff
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2516
+    .line 2515
     :cond_0
     :goto_0
     return-void
 
-    .line 2522
+    .line 2521
     :cond_1
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -179,10 +179,19 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2523
+    .line 2522
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x18
+
+    and-int/lit16 v1, v1, 0xff
+
+    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
+
+    .line 2523
+    iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
+
+    ushr-int/lit8 v1, p1, 0x10
 
     and-int/lit16 v1, v1, 0xff
 
@@ -191,22 +200,13 @@
     .line 2524
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
-    ushr-int/lit8 v1, p1, 0x10
-
-    and-int/lit16 v1, v1, 0xff
-
-    invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
-
-    .line 2525
-    iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
-
     ushr-int/lit8 v1, p1, 0x8
 
     and-int/lit16 v1, v1, 0xff
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2526
+    .line 2525
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x0
@@ -228,14 +228,14 @@
     .end annotation
 
     .prologue
-    .line 2507
+    .line 2506
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     if-ne v0, v1, :cond_1
 
-    .line 2508
+    .line 2507
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x0
@@ -244,7 +244,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2509
+    .line 2508
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x8
@@ -253,12 +253,12 @@
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2506
+    .line 2505
     :cond_0
     :goto_0
     return-void
 
-    .line 2510
+    .line 2509
     :cond_1
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -266,7 +266,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2511
+    .line 2510
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x8
@@ -275,7 +275,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/OutputStream;->write(I)V
 
-    .line 2512
+    .line 2511
     iget-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->mOutputStream:Ljava/io/OutputStream;
 
     ushr-int/lit8 v1, p1, 0x0
@@ -297,12 +297,12 @@
     .end annotation
 
     .prologue
-    .line 2535
+    .line 2534
     long-to-int v0, p1
 
     invoke-virtual {p0, v0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->writeInt(I)V
 
-    .line 2534
+    .line 2533
     return-void
 .end method
 
@@ -316,11 +316,11 @@
     .end annotation
 
     .prologue
-    .line 2531
+    .line 2530
     int-to-short v0, p1
 
     invoke-virtual {p0, v0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataOutputStream;->writeShort(S)V
 
-    .line 2530
+    .line 2529
     return-void
 .end method

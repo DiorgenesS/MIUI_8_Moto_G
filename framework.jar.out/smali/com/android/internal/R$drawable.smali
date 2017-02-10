@@ -489,9 +489,9 @@
 
 .field public static final notification_icon_legacy_bg:I = 0x10804f2
 
-.field public static final notification_template_icon_bg:I = 0x1080756
+.field public static final notification_template_icon_bg:I = 0x1080755
 
-.field public static final notification_template_icon_low_bg:I = 0x1080757
+.field public static final notification_template_icon_low_bg:I = 0x1080756
 
 .field public static final picture_emergency:I = 0x1080545
 
@@ -499,27 +499,25 @@
 
 .field public static final platlogo:I = 0x1080546
 
-.field public static final platlogo_cm:I = 0x1080547
+.field public static final platlogo_m:I = 0x1080547
 
-.field public static final platlogo_m:I = 0x1080548
+.field public static final popup_bottom_bright:I = 0x1080552
 
-.field public static final popup_bottom_bright:I = 0x1080553
+.field public static final popup_bottom_dark:I = 0x1080553
 
-.field public static final popup_bottom_dark:I = 0x1080554
+.field public static final popup_bottom_medium:I = 0x1080554
 
-.field public static final popup_bottom_medium:I = 0x1080555
+.field public static final popup_center_bright:I = 0x1080555
 
-.field public static final popup_center_bright:I = 0x1080556
+.field public static final popup_center_dark:I = 0x1080556
 
-.field public static final popup_center_dark:I = 0x1080557
+.field public static final popup_full_bright:I = 0x1080558
 
-.field public static final popup_full_bright:I = 0x1080559
+.field public static final popup_full_dark:I = 0x1080559
 
-.field public static final popup_full_dark:I = 0x108055a
+.field public static final popup_top_bright:I = 0x1080566
 
-.field public static final popup_top_bright:I = 0x1080567
-
-.field public static final popup_top_dark:I = 0x1080568
+.field public static final popup_top_dark:I = 0x1080567
 
 .field public static final presence_audio_away:I = 0x10800af
 
@@ -547,13 +545,13 @@
 
 .field public static final progress_indeterminate_horizontal:I = 0x108006d
 
-.field public static final quickcontact_badge_overlay_dark:I = 0x1080595
+.field public static final quickcontact_badge_overlay_dark:I = 0x1080594
 
 .field public static final radiobutton_off_background:I = 0x108006e
 
 .field public static final radiobutton_on_background:I = 0x108006f
 
-.field public static final reticle:I = 0x10805d4
+.field public static final reticle:I = 0x10805d3
 
 .field public static final screen_background_dark:I = 0x1080098
 
@@ -563,31 +561,31 @@
 
 .field public static final screen_background_light_transparent:I = 0x10800aa
 
-.field public static final scroll_indicator_material:I = 0x10805d7
+.field public static final scroll_indicator_material:I = 0x10805d6
 
-.field public static final scrubber_control_disabled_holo:I = 0x10805de
+.field public static final scrubber_control_disabled_holo:I = 0x10805dd
 
-.field public static final scrubber_control_selector_holo:I = 0x10805e4
+.field public static final scrubber_control_selector_holo:I = 0x10805e3
 
-.field public static final scrubber_progress_horizontal_holo_dark:I = 0x10805e7
+.field public static final scrubber_progress_horizontal_holo_dark:I = 0x10805e6
 
-.field public static final search_spinner:I = 0x10805f2
+.field public static final search_spinner:I = 0x10805f1
 
-.field public static final sim_dark_blue:I = 0x1080600
+.field public static final sim_dark_blue:I = 0x10805ff
 
-.field public static final sim_dark_green:I = 0x1080601
+.field public static final sim_dark_green:I = 0x1080600
 
-.field public static final sim_dark_orange:I = 0x1080602
+.field public static final sim_dark_orange:I = 0x1080601
 
-.field public static final sim_dark_purple:I = 0x1080603
+.field public static final sim_dark_purple:I = 0x1080602
 
-.field public static final sim_light_blue:I = 0x1080604
+.field public static final sim_light_blue:I = 0x1080603
 
-.field public static final sim_light_green:I = 0x1080605
+.field public static final sim_light_green:I = 0x1080604
 
-.field public static final sim_light_orange:I = 0x1080606
+.field public static final sim_light_orange:I = 0x1080605
 
-.field public static final sim_light_purple:I = 0x1080607
+.field public static final sim_light_purple:I = 0x1080606
 
 .field public static final spinner_background:I = 0x1080070
 
@@ -603,13 +601,13 @@
 
 .field public static final stat_notify_call_mute:I = 0x1080076
 
-.field public static final stat_notify_car_mode:I = 0x1080647
+.field public static final stat_notify_car_mode:I = 0x1080646
 
 .field public static final stat_notify_chat:I = 0x1080077
 
-.field public static final stat_notify_disabled_data:I = 0x1080648
+.field public static final stat_notify_disabled_data:I = 0x1080647
 
-.field public static final stat_notify_disk_full:I = 0x1080649
+.field public static final stat_notify_disk_full:I = 0x1080648
 
 .field public static final stat_notify_error:I = 0x1080078
 
@@ -617,11 +615,11 @@
 
 .field public static final stat_notify_more:I = 0x1080079
 
-.field public static final stat_notify_privacy_guard:I = 0x108064c
+.field public static final stat_notify_privacy_guard:I = 0x108064b
 
-.field public static final stat_notify_protected:I = 0x108064d
+.field public static final stat_notify_protected:I = 0x108064c
 
-.field public static final stat_notify_rssi_in_range:I = 0x108064e
+.field public static final stat_notify_rssi_in_range:I = 0x108064d
 
 .field public static final stat_notify_sdcard:I = 0x108007a
 
@@ -629,37 +627,37 @@
 
 .field public static final stat_notify_sdcard_usb:I = 0x108007b
 
-.field public static final stat_notify_sim_toolkit:I = 0x108064f
+.field public static final stat_notify_sim_toolkit:I = 0x108064e
 
 .field public static final stat_notify_sync:I = 0x108007c
 
-.field public static final stat_notify_sync_error:I = 0x1080651
+.field public static final stat_notify_sync_error:I = 0x1080650
 
 .field public static final stat_notify_sync_noanim:I = 0x108007d
 
 .field public static final stat_notify_voicemail:I = 0x108007e
 
-.field public static final stat_notify_wifi_in_range:I = 0x1080652
+.field public static final stat_notify_wifi_in_range:I = 0x1080651
 
-.field public static final stat_sys_adb:I = 0x1080653
+.field public static final stat_sys_adb:I = 0x1080652
 
-.field public static final stat_sys_battery:I = 0x1080654
+.field public static final stat_sys_battery:I = 0x1080653
 
-.field public static final stat_sys_battery_charge:I = 0x1080662
+.field public static final stat_sys_battery_charge:I = 0x1080661
 
-.field public static final stat_sys_battery_unknown:I = 0x1080670
+.field public static final stat_sys_battery_unknown:I = 0x108066f
 
-.field public static final stat_sys_certificate_info:I = 0x1080671
+.field public static final stat_sys_certificate_info:I = 0x1080670
 
 .field public static final stat_sys_data_bluetooth:I = 0x1080080
 
-.field public static final stat_sys_data_usb:I = 0x1080672
+.field public static final stat_sys_data_usb:I = 0x1080671
 
 .field public static final stat_sys_download:I = 0x1080081
 
 .field public static final stat_sys_download_done:I = 0x1080082
 
-.field public static final stat_sys_gps_on:I = 0x108067c
+.field public static final stat_sys_gps_on:I = 0x108067b
 
 .field public static final stat_sys_headset:I = 0x1080083
 
@@ -680,15 +678,15 @@
 
 .field public static final stat_sys_speakerphone:I = 0x1080087
 
-.field public static final stat_sys_tether_bluetooth:I = 0x1080691
+.field public static final stat_sys_tether_bluetooth:I = 0x1080690
 
-.field public static final stat_sys_tether_general:I = 0x1080692
+.field public static final stat_sys_tether_general:I = 0x1080691
 
-.field public static final stat_sys_tether_usb:I = 0x1080693
+.field public static final stat_sys_tether_usb:I = 0x1080692
 
-.field public static final stat_sys_tether_wifi:I = 0x1080694
+.field public static final stat_sys_tether_wifi:I = 0x1080693
 
-.field public static final stat_sys_throttled:I = 0x1080695
+.field public static final stat_sys_throttled:I = 0x1080694
 
 .field public static final stat_sys_upload:I = 0x1080088
 
@@ -706,7 +704,7 @@
 
 .field public static final stat_sys_warning:I = 0x108008a
 
-.field public static final status_bar_background:I = 0x108069c
+.field public static final status_bar_background:I = 0x108069b
 
 .field public static final status_bar_item_app_background:I = 0x108008b
 
@@ -718,7 +716,7 @@
 
 .field public static final sym_action_email:I = 0x108008f
 
-.field public static final sym_app_on_sd_unavailable_icon:I = 0x10806bb
+.field public static final sym_app_on_sd_unavailable_icon:I = 0x10806ba
 
 .field public static final sym_call_incoming:I = 0x1080090
 
@@ -730,57 +728,57 @@
 
 .field public static final sym_def_app_icon:I = 0x1080093
 
-.field public static final sym_keyboard_return_holo:I = 0x10806d3
+.field public static final sym_keyboard_return_holo:I = 0x10806d2
 
-.field public static final sym_keyboard_shift:I = 0x10806d4
+.field public static final sym_keyboard_shift:I = 0x10806d3
 
-.field public static final sym_keyboard_shift_locked:I = 0x10806d5
+.field public static final sym_keyboard_shift_locked:I = 0x10806d4
 
-.field public static final tab_bottom_left:I = 0x10806d8
+.field public static final tab_bottom_left:I = 0x10806d7
 
-.field public static final tab_bottom_left_v4:I = 0x10806d9
+.field public static final tab_bottom_left_v4:I = 0x10806d8
 
-.field public static final tab_bottom_right:I = 0x10806da
+.field public static final tab_bottom_right:I = 0x10806d9
 
-.field public static final tab_bottom_right_v4:I = 0x10806db
+.field public static final tab_bottom_right_v4:I = 0x10806da
 
-.field public static final tab_indicator_v4:I = 0x10806e4
+.field public static final tab_indicator_v4:I = 0x10806e3
 
-.field public static final text_edit_paste_window:I = 0x10806fa
+.field public static final text_edit_paste_window:I = 0x10806f9
 
-.field public static final text_edit_side_paste_window:I = 0x10806fb
+.field public static final text_edit_side_paste_window:I = 0x10806fa
 
-.field public static final text_select_handle_left:I = 0x10806fd
+.field public static final text_select_handle_left:I = 0x10806fc
 
-.field public static final text_select_handle_middle:I = 0x1080700
+.field public static final text_select_handle_middle:I = 0x10806ff
 
-.field public static final text_select_handle_right:I = 0x1080703
+.field public static final text_select_handle_right:I = 0x1080702
 
 .field public static final title_bar:I = 0x1080095
 
-.field public static final title_bar_medium:I = 0x108073e
+.field public static final title_bar_medium:I = 0x108073d
 
 .field public static final title_bar_tall:I = 0x10800a6
 
 .field public static final toast_frame:I = 0x1080096
 
-.field public static final unknown_image:I = 0x1080742
+.field public static final unknown_image:I = 0x1080741
 
-.field public static final unlock_default:I = 0x1080743
+.field public static final unlock_default:I = 0x1080742
 
-.field public static final unlock_halo:I = 0x1080744
+.field public static final unlock_halo:I = 0x1080743
 
-.field public static final unlock_ring:I = 0x1080745
+.field public static final unlock_ring:I = 0x1080744
 
-.field public static final unlock_wave:I = 0x1080746
+.field public static final unlock_wave:I = 0x1080745
 
-.field public static final usb_android:I = 0x1080747
+.field public static final usb_android:I = 0x1080746
 
-.field public static final usb_android_connected:I = 0x1080748
+.field public static final usb_android_connected:I = 0x1080747
 
-.field public static final vpn_connected:I = 0x108074e
+.field public static final vpn_connected:I = 0x108074d
 
-.field public static final vpn_disconnected:I = 0x108074f
+.field public static final vpn_disconnected:I = 0x108074e
 
 .field public static final zoom_plate:I = 0x1080097
 
@@ -790,7 +788,7 @@
     .locals 0
 
     .prologue
-    .line 15992
+    .line 21910
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

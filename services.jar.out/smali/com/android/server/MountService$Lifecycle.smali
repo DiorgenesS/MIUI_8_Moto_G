@@ -58,12 +58,12 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 178
+    .line 183
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-static {v0, p1}, Lcom/android/server/MountService;->-wrap7(Lcom/android/server/MountService;I)V
 
-    .line 177
+    .line 182
     return-void
 .end method
 
@@ -98,10 +98,24 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 173
+    .line 178
     iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
 
     invoke-static {v0, p1}, Lcom/android/server/MountService;->-wrap8(Lcom/android/server/MountService;I)V
+
+    .line 177
+    return-void
+.end method
+
+.method public onSwitchUser(I)V
+    .locals 1
+    .param p1, "userHandle"    # I
+
+    .prologue
+    .line 173
+    iget-object v0, p0, Lcom/android/server/MountService$Lifecycle;->mMountService:Lcom/android/server/MountService;
+
+    invoke-static {v0, p1}, Lcom/android/server/MountService;->-set1(Lcom/android/server/MountService;I)I
 
     .line 172
     return-void

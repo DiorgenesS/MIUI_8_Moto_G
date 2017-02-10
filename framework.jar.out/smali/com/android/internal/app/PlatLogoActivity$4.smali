@@ -30,7 +30,7 @@
     .param p2, "val$im"    # Landroid/view/View;
 
     .prologue
-    .line 129
+    .line 125
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$4;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$4;->val$im:Landroid/view/View;
@@ -47,21 +47,21 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 132
+    .line 128
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$4;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v0, v0, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 129
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$4;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/PlatLogoActivity$4;->val$im:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/PlatLogoActivity;->showMarshmallow(Landroid/view/View;)V
 
-    .line 135
+    .line 131
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$4;->val$im:Landroid/view/View;
 
@@ -73,7 +73,7 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 171
+    .line 166
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$4;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iget v1, v0, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
@@ -82,6 +82,6 @@
 
     iput v1, v0, Lcom/android/internal/app/PlatLogoActivity;->mTapCount:I
 
-    .line 131
+    .line 127
     return-void
 .end method

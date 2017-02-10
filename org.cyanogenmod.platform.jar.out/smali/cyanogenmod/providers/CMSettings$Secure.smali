@@ -130,6 +130,9 @@
 .field public static final STATS_COLLECTION:Ljava/lang/String; = "stats_collection"
 
 .field public static final STATS_COLLECTION_REPORTED:Ljava/lang/String; = "stats_collection_reported"
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
 
 .field public static final SYS_PROP_CM_SETTING_VERSION:Ljava/lang/String; = "sys.cm_settings_secure_version"
 
@@ -233,88 +236,88 @@
     .line 2575
     sput-object v0, Lcyanogenmod/providers/CMSettings$Secure;->NAVIGATION_RING_TARGETS:[Ljava/lang/String;
 
-    .line 2859
+    .line 2861
     const/16 v0, 0x22
 
     new-array v0, v0, [Ljava/lang/String;
 
-    .line 2860
+    .line 2862
     const-string/jumbo v1, "advanced_mode"
 
     aput-object v1, v0, v6
 
-    .line 2861
+    .line 2863
     const-string/jumbo v1, "button_backlight_timeout"
 
     aput-object v1, v0, v5
 
-    .line 2862
+    .line 2864
     const-string/jumbo v1, "button_brightness"
 
     aput-object v1, v0, v7
 
-    .line 2863
+    .line 2865
     const-string/jumbo v1, "default_theme_components"
 
     aput-object v1, v0, v8
 
-    .line 2864
+    .line 2866
     const-string/jumbo v1, "default_theme_package"
 
     const/4 v2, 0x4
 
     aput-object v1, v0, v2
 
-    .line 2865
+    .line 2867
     const-string/jumbo v1, "dev_force_show_navbar"
 
     const/4 v2, 0x5
 
     aput-object v1, v0, v2
 
-    .line 2866
+    .line 2868
     const-string/jumbo v1, "keyboard_brightness"
 
     const/4 v2, 0x6
 
     aput-object v1, v0, v2
 
-    .line 2867
+    .line 2869
     const-string/jumbo v1, "power_menu_actions"
 
     const/4 v2, 0x7
 
     aput-object v1, v0, v2
 
-    .line 2868
+    .line 2870
     const-string/jumbo v1, "stats_collection"
 
     const/16 v2, 0x8
 
     aput-object v1, v0, v2
 
-    .line 2869
+    .line 2871
     const-string/jumbo v1, "qs_show_brightness_slider"
 
     const/16 v2, 0x9
 
     aput-object v1, v0, v2
 
-    .line 2870
+    .line 2872
     const-string/jumbo v1, "sysui_qs_tiles"
 
     const/16 v2, 0xa
 
     aput-object v1, v0, v2
 
-    .line 2871
+    .line 2873
     const-string/jumbo v1, "sysui_qs_main_tiles"
 
     const/16 v2, 0xb
 
     aput-object v1, v0, v2
 
-    .line 2872
+    .line 2874
     sget-object v1, Lcyanogenmod/providers/CMSettings$Secure;->NAVIGATION_RING_TARGETS:[Ljava/lang/String;
 
     aget-object v1, v1, v6
@@ -323,7 +326,7 @@
 
     aput-object v1, v0, v2
 
-    .line 2873
+    .line 2875
     sget-object v1, Lcyanogenmod/providers/CMSettings$Secure;->NAVIGATION_RING_TARGETS:[Ljava/lang/String;
 
     aget-object v1, v1, v5
@@ -332,7 +335,7 @@
 
     aput-object v1, v0, v2
 
-    .line 2874
+    .line 2876
     sget-object v1, Lcyanogenmod/providers/CMSettings$Secure;->NAVIGATION_RING_TARGETS:[Ljava/lang/String;
 
     aget-object v1, v1, v7
@@ -341,165 +344,165 @@
 
     aput-object v1, v0, v2
 
-    .line 2875
+    .line 2877
     const-string/jumbo v1, "recents_long_press_activity"
 
     const/16 v2, 0xf
 
     aput-object v1, v0, v2
 
-    .line 2876
+    .line 2878
     const-string/jumbo v1, "adb_notify"
 
     const/16 v2, 0x10
 
     aput-object v1, v0, v2
 
-    .line 2877
+    .line 2879
     const-string/jumbo v1, "adb_port"
 
     const/16 v2, 0x11
 
     aput-object v1, v0, v2
 
-    .line 2878
+    .line 2880
     const-string/jumbo v1, "device_hostname"
 
     const/16 v2, 0x12
 
     aput-object v1, v0, v2
 
-    .line 2879
+    .line 2881
     const-string/jumbo v1, "kill_app_longpress_back"
 
     const/16 v2, 0x13
 
     aput-object v1, v0, v2
 
-    .line 2880
+    .line 2882
     const-string/jumbo v1, "protected_components"
 
     const/16 v2, 0x14
 
     aput-object v1, v0, v2
 
-    .line 2881
+    .line 2883
     const-string/jumbo v1, "live_display_color_matrix"
 
     const/16 v2, 0x15
 
     aput-object v1, v0, v2
 
-    .line 2882
+    .line 2884
     const-string/jumbo v1, "advanced_reboot"
 
     const/16 v2, 0x16
 
     aput-object v1, v0, v2
 
-    .line 2883
+    .line 2885
     const-string/jumbo v1, "theme_prev_boot_api_level"
 
     const/16 v2, 0x17
 
     aput-object v1, v0, v2
 
-    .line 2884
+    .line 2886
     const-string/jumbo v1, "lockscreen_target_actions"
 
     const/16 v2, 0x18
 
     aput-object v1, v0, v2
 
-    .line 2885
+    .line 2887
     const-string/jumbo v1, "ring_home_button_behavior"
 
     const/16 v2, 0x19
 
     aput-object v1, v0, v2
 
-    .line 2886
+    .line 2888
     const-string/jumbo v1, "privacy_guard_default"
 
     const/16 v2, 0x1a
 
     aput-object v1, v0, v2
 
-    .line 2887
+    .line 2889
     const-string/jumbo v1, "privacy_guard_notification"
 
     const/16 v2, 0x1b
 
     aput-object v1, v0, v2
 
-    .line 2888
+    .line 2890
     const-string/jumbo v1, "development_shortcut"
 
     const/16 v2, 0x1c
 
     aput-object v1, v0, v2
 
-    .line 2889
+    .line 2891
     const-string/jumbo v1, "performance_profile"
 
     const/16 v2, 0x1d
 
     aput-object v1, v0, v2
 
-    .line 2890
+    .line 2892
     const-string/jumbo v1, "app_perf_profiles_enabled"
 
     const/16 v2, 0x1e
 
     aput-object v1, v0, v2
 
-    .line 2891
+    .line 2893
     const-string/jumbo v1, "qs_location_advanced"
 
     const/16 v2, 0x1f
 
     aput-object v1, v0, v2
 
-    .line 2892
+    .line 2894
     const-string/jumbo v1, "lockscreen_visualizer"
 
     const/16 v2, 0x20
 
     aput-object v1, v0, v2
 
-    .line 2893
+    .line 2895
     const-string/jumbo v1, "lock_screen_pass_to_security_view"
 
     const/16 v2, 0x21
 
     aput-object v1, v0, v2
 
-    .line 2859
+    .line 2861
     sput-object v0, Lcyanogenmod/providers/CMSettings$Secure;->LEGACY_SECURE_SETTINGS:[Ljava/lang/String;
 
-    .line 2906
+    .line 2908
     new-instance v0, Lcyanogenmod/providers/CMSettings$Secure$1;
 
     invoke-direct {v0}, Lcyanogenmod/providers/CMSettings$Secure$1;-><init>()V
 
     sput-object v0, Lcyanogenmod/providers/CMSettings$Secure;->PROTECTED_COMPONENTS_VALIDATOR:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 2926
+    .line 2928
     new-instance v0, Lcyanogenmod/providers/CMSettings$Secure$2;
 
     invoke-direct {v0}, Lcyanogenmod/providers/CMSettings$Secure$2;-><init>()V
 
     sput-object v0, Lcyanogenmod/providers/CMSettings$Secure;->PROTECTED_COMPONENTS_MANAGER_VALIDATOR:Lcyanogenmod/providers/CMSettings$Validator;
 
-    .line 2953
+    .line 2955
     new-instance v0, Landroid/util/ArrayMap;
 
     invoke-direct {v0}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 2952
+    .line 2954
     sput-object v0, Lcyanogenmod/providers/CMSettings$Secure;->VALIDATORS:Ljava/util/Map;
 
-    .line 2955
+    .line 2957
     sget-object v0, Lcyanogenmod/providers/CMSettings$Secure;->VALIDATORS:Ljava/util/Map;
 
     const-string/jumbo v1, "protected_components"
@@ -508,7 +511,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2956
+    .line 2958
     sget-object v0, Lcyanogenmod/providers/CMSettings$Secure;->VALIDATORS:Ljava/util/Map;
 
     const-string/jumbo v1, "protected_component_managers"
@@ -1112,7 +1115,7 @@
     .param p0, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 2900
+    .line 2902
     sget-object v0, Lcyanogenmod/providers/CMSettings$Secure;->LEGACY_SECURE_SETTINGS:[Ljava/lang/String;
 
     invoke-static {v0, p0}, Lcom/android/internal/util/ArrayUtils;->contains([Ljava/lang/Object;Ljava/lang/Object;)Z
@@ -1366,7 +1369,7 @@
     .param p0, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 2963
+    .line 2965
     const-string/jumbo v0, "dev_force_show_navbar"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1375,12 +1378,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2968
+    .line 2970
     const/4 v0, 0x1
 
     return v0
 
-    .line 2970
+    .line 2972
     :cond_0
     const/4 v0, 0x0
 

@@ -274,7 +274,7 @@
 
     .line 1906
     .local v7, "contentText":Ljava/lang/String;
-    const v17, 0x1080671
+    const v17, 0x1080670
 
     .line 1915
     .local v17, "smallIconId":I
@@ -475,7 +475,7 @@
 
     .line 1909
     .restart local v7    # "contentText":Ljava/lang/String;
-    const v17, 0x1080671
+    const v17, 0x1080670
 
     .restart local v17    # "smallIconId":I
     goto/16 :goto_1

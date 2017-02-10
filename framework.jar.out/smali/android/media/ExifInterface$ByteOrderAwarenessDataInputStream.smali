@@ -41,17 +41,17 @@
     .locals 1
 
     .prologue
-    .line 2323
+    .line 2322
     sget-object v0, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     sput-object v0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    .line 2324
+    .line 2323
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     sput-object v0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
-    .line 2322
+    .line 2321
     return-void
 .end method
 
@@ -60,27 +60,27 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 2331
+    .line 2330
     invoke-direct {p0, p1}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 2326
+    .line 2325
     sget-object v0, Ljava/nio/ByteOrder;->BIG_ENDIAN:Ljava/nio/ByteOrder;
 
     iput-object v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
-    .line 2332
+    .line 2331
     array-length v0, p1
 
     int-to-long v0, v0
 
     iput-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
 
-    .line 2333
+    .line 2332
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2330
+    .line 2329
     return-void
 .end method
 
@@ -90,7 +90,7 @@
     .locals 2
 
     .prologue
-    .line 2349
+    .line 2348
     iget-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     return-wide v0
@@ -105,7 +105,7 @@
     .end annotation
 
     .prologue
-    .line 2363
+    .line 2362
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     const-wide/16 v4, 0x1
@@ -114,7 +114,7 @@
 
     iput-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2364
+    .line 2363
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -123,31 +123,31 @@
 
     if-lez v1, :cond_0
 
-    .line 2365
+    .line 2364
     new-instance v1, Ljava/io/EOFException;
 
     invoke-direct {v1}, Ljava/io/EOFException;-><init>()V
 
     throw v1
 
-    .line 2367
+    .line 2366
     :cond_0
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v0
 
-    .line 2368
+    .line 2367
     .local v0, "ch":I
     if-gez v0, :cond_1
 
-    .line 2369
+    .line 2368
     new-instance v1, Ljava/io/EOFException;
 
     invoke-direct {v1}, Ljava/io/EOFException;-><init>()V
 
     throw v1
 
-    .line 2371
+    .line 2370
     :cond_1
     int-to-byte v1, v0
 
@@ -163,7 +163,7 @@
     .end annotation
 
     .prologue
-    .line 2474
+    .line 2473
     invoke-virtual {p0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->readLong()J
 
     move-result-wide v0
@@ -184,7 +184,7 @@
     .end annotation
 
     .prologue
-    .line 2470
+    .line 2469
     invoke-virtual {p0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->readInt()I
 
     move-result v0
@@ -206,7 +206,7 @@
     .end annotation
 
     .prologue
-    .line 2353
+    .line 2352
     iget-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     array-length v2, p1
@@ -217,7 +217,7 @@
 
     iput-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2354
+    .line 2353
     iget-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -226,14 +226,14 @@
 
     if-lez v0, :cond_0
 
-    .line 2355
+    .line 2354
     new-instance v0, Ljava/io/EOFException;
 
     invoke-direct {v0}, Ljava/io/EOFException;-><init>()V
 
     throw v0
 
-    .line 2357
+    .line 2356
     :cond_0
     array-length v0, p1
 
@@ -247,7 +247,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 2358
+    .line 2357
     new-instance v0, Ljava/io/IOException;
 
     const-string/jumbo v1, "Couldn\'t read up to the length of buffer"
@@ -256,7 +256,7 @@
 
     throw v0
 
-    .line 2352
+    .line 2351
     :cond_1
     return-void
 .end method
@@ -270,7 +270,7 @@
     .end annotation
 
     .prologue
-    .line 2393
+    .line 2392
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     const-wide/16 v6, 0x4
@@ -279,7 +279,7 @@
 
     iput-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2394
+    .line 2393
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v6, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -288,38 +288,38 @@
 
     if-lez v4, :cond_0
 
-    .line 2395
+    .line 2394
     new-instance v4, Ljava/io/EOFException;
 
     invoke-direct {v4}, Ljava/io/EOFException;-><init>()V
 
     throw v4
 
-    .line 2397
+    .line 2396
     :cond_0
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v0
 
-    .line 2398
+    .line 2397
     .local v0, "ch1":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v1
 
-    .line 2399
+    .line 2398
     .local v1, "ch2":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v2
 
-    .line 2400
+    .line 2399
     .local v2, "ch3":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v3
 
-    .line 2401
+    .line 2400
     .local v3, "ch4":I
     or-int v4, v0, v1
 
@@ -329,14 +329,14 @@
 
     if-gez v4, :cond_1
 
-    .line 2402
+    .line 2401
     new-instance v4, Ljava/io/EOFException;
 
     invoke-direct {v4}, Ljava/io/EOFException;-><init>()V
 
     throw v4
 
-    .line 2404
+    .line 2403
     :cond_1
     iget-object v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -344,7 +344,7 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 2405
+    .line 2404
     shl-int/lit8 v4, v3, 0x18
 
     shl-int/lit8 v5, v2, 0x10
@@ -359,7 +359,7 @@
 
     return v4
 
-    .line 2406
+    .line 2405
     :cond_2
     iget-object v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -367,7 +367,7 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 2407
+    .line 2406
     shl-int/lit8 v4, v0, 0x18
 
     shl-int/lit8 v5, v1, 0x10
@@ -382,7 +382,7 @@
 
     return v4
 
-    .line 2409
+    .line 2408
     :cond_3
     new-instance v4, Ljava/io/IOException;
 
@@ -420,7 +420,7 @@
     .end annotation
 
     .prologue
-    .line 2442
+    .line 2441
     iget-wide v8, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     const-wide/16 v10, 0x8
@@ -429,7 +429,7 @@
 
     iput-wide v8, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2443
+    .line 2442
     iget-wide v8, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v10, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -438,62 +438,62 @@
 
     if-lez v8, :cond_0
 
-    .line 2444
+    .line 2443
     new-instance v8, Ljava/io/EOFException;
 
     invoke-direct {v8}, Ljava/io/EOFException;-><init>()V
 
     throw v8
 
-    .line 2446
+    .line 2445
     :cond_0
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v0
 
-    .line 2447
+    .line 2446
     .local v0, "ch1":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v1
 
-    .line 2448
+    .line 2447
     .local v1, "ch2":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v2
 
-    .line 2449
+    .line 2448
     .local v2, "ch3":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v3
 
-    .line 2450
+    .line 2449
     .local v3, "ch4":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v4
 
-    .line 2451
+    .line 2450
     .local v4, "ch5":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v5
 
-    .line 2452
+    .line 2451
     .local v5, "ch6":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v6
 
-    .line 2453
+    .line 2452
     .local v6, "ch7":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v7
 
-    .line 2454
+    .line 2453
     .local v7, "ch8":I
     or-int v8, v0, v1
 
@@ -511,14 +511,14 @@
 
     if-gez v8, :cond_1
 
-    .line 2455
+    .line 2454
     new-instance v8, Ljava/io/EOFException;
 
     invoke-direct {v8}, Ljava/io/EOFException;-><init>()V
 
     throw v8
 
-    .line 2457
+    .line 2456
     :cond_1
     iget-object v8, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -526,7 +526,7 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 2458
+    .line 2457
     int-to-long v8, v7
 
     const/16 v10, 0x38
@@ -549,55 +549,55 @@
 
     add-long/2addr v8, v10
 
-    .line 2459
+    .line 2458
     int-to-long v10, v4
 
     const/16 v12, 0x20
 
     shl-long/2addr v10, v12
 
-    .line 2458
+    .line 2457
     add-long/2addr v8, v10
 
-    .line 2459
+    .line 2458
     int-to-long v10, v3
 
     const/16 v12, 0x18
 
     shl-long/2addr v10, v12
 
-    .line 2458
+    .line 2457
     add-long/2addr v8, v10
 
-    .line 2459
+    .line 2458
     int-to-long v10, v2
 
     const/16 v12, 0x10
 
     shl-long/2addr v10, v12
 
-    .line 2458
+    .line 2457
     add-long/2addr v8, v10
 
-    .line 2460
+    .line 2459
     int-to-long v10, v1
 
     const/16 v12, 0x8
 
     shl-long/2addr v10, v12
 
-    .line 2458
+    .line 2457
     add-long/2addr v8, v10
 
-    .line 2460
+    .line 2459
     int-to-long v10, v0
 
-    .line 2458
+    .line 2457
     add-long/2addr v8, v10
 
     return-wide v8
 
-    .line 2461
+    .line 2460
     :cond_2
     iget-object v8, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -605,7 +605,7 @@
 
     if-ne v8, v9, :cond_3
 
-    .line 2462
+    .line 2461
     int-to-long v8, v0
 
     const/16 v10, 0x38
@@ -628,55 +628,55 @@
 
     add-long/2addr v8, v10
 
-    .line 2463
+    .line 2462
     int-to-long v10, v3
 
     const/16 v12, 0x20
 
     shl-long/2addr v10, v12
 
-    .line 2462
+    .line 2461
     add-long/2addr v8, v10
 
-    .line 2463
+    .line 2462
     int-to-long v10, v4
 
     const/16 v12, 0x18
 
     shl-long/2addr v10, v12
 
-    .line 2462
+    .line 2461
     add-long/2addr v8, v10
 
-    .line 2463
+    .line 2462
     int-to-long v10, v5
 
     const/16 v12, 0x10
 
     shl-long/2addr v10, v12
 
-    .line 2462
+    .line 2461
     add-long/2addr v8, v10
 
-    .line 2464
+    .line 2463
     int-to-long v10, v6
 
     const/16 v12, 0x8
 
     shl-long/2addr v10, v12
 
-    .line 2462
+    .line 2461
     add-long/2addr v8, v10
 
-    .line 2464
+    .line 2463
     int-to-long v10, v7
 
-    .line 2462
+    .line 2461
     add-long/2addr v8, v10
 
     return-wide v8
 
-    .line 2466
+    .line 2465
     :cond_3
     new-instance v8, Ljava/io/IOException;
 
@@ -714,7 +714,7 @@
     .end annotation
 
     .prologue
-    .line 2375
+    .line 2374
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     const-wide/16 v4, 0x2
@@ -723,7 +723,7 @@
 
     iput-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2376
+    .line 2375
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -732,39 +732,39 @@
 
     if-lez v2, :cond_0
 
-    .line 2377
+    .line 2376
     new-instance v2, Ljava/io/EOFException;
 
     invoke-direct {v2}, Ljava/io/EOFException;-><init>()V
 
     throw v2
 
-    .line 2379
+    .line 2378
     :cond_0
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v0
 
-    .line 2380
+    .line 2379
     .local v0, "ch1":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v1
 
-    .line 2381
+    .line 2380
     .local v1, "ch2":I
     or-int v2, v0, v1
 
     if-gez v2, :cond_1
 
-    .line 2382
+    .line 2381
     new-instance v2, Ljava/io/EOFException;
 
     invoke-direct {v2}, Ljava/io/EOFException;-><init>()V
 
     throw v2
 
-    .line 2384
+    .line 2383
     :cond_1
     iget-object v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -772,7 +772,7 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2385
+    .line 2384
     shl-int/lit8 v2, v1, 0x8
 
     add-int/2addr v2, v0
@@ -781,7 +781,7 @@
 
     return v2
 
-    .line 2386
+    .line 2385
     :cond_2
     iget-object v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -789,7 +789,7 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 2387
+    .line 2386
     shl-int/lit8 v2, v0, 0x8
 
     add-int/2addr v2, v1
@@ -798,7 +798,7 @@
 
     return v2
 
-    .line 2389
+    .line 2388
     :cond_3
     new-instance v2, Ljava/io/IOException;
 
@@ -836,7 +836,7 @@
     .end annotation
 
     .prologue
-    .line 2438
+    .line 2437
     invoke-virtual {p0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->readInt()I
 
     move-result v0
@@ -859,7 +859,7 @@
     .end annotation
 
     .prologue
-    .line 2420
+    .line 2419
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     const-wide/16 v4, 0x2
@@ -868,7 +868,7 @@
 
     iput-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2421
+    .line 2420
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
@@ -877,39 +877,39 @@
 
     if-lez v2, :cond_0
 
-    .line 2422
+    .line 2421
     new-instance v2, Ljava/io/EOFException;
 
     invoke-direct {v2}, Ljava/io/EOFException;-><init>()V
 
     throw v2
 
-    .line 2424
+    .line 2423
     :cond_0
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v0
 
-    .line 2425
+    .line 2424
     .local v0, "ch1":I
     invoke-super {p0}, Ljava/io/ByteArrayInputStream;->read()I
 
     move-result v1
 
-    .line 2426
+    .line 2425
     .local v1, "ch2":I
     or-int v2, v0, v1
 
     if-gez v2, :cond_1
 
-    .line 2427
+    .line 2426
     new-instance v2, Ljava/io/EOFException;
 
     invoke-direct {v2}, Ljava/io/EOFException;-><init>()V
 
     throw v2
 
-    .line 2429
+    .line 2428
     :cond_1
     iget-object v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -917,14 +917,14 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2430
+    .line 2429
     shl-int/lit8 v2, v1, 0x8
 
     add-int/2addr v2, v0
 
     return v2
 
-    .line 2431
+    .line 2430
     :cond_2
     iget-object v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
@@ -932,14 +932,14 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 2432
+    .line 2431
     shl-int/lit8 v2, v0, 0x8
 
     add-int/2addr v2, v1
 
     return v2
 
-    .line 2434
+    .line 2433
     :cond_3
     new-instance v2, Ljava/io/IOException;
 
@@ -978,15 +978,15 @@
     .end annotation
 
     .prologue
-    .line 2341
+    .line 2340
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2342
+    .line 2341
     invoke-virtual {p0}, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->reset()V
 
-    .line 2343
+    .line 2342
     invoke-virtual {p0, p1, p2}, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->skip(J)J
 
     move-result-wide v0
@@ -995,7 +995,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2344
+    .line 2343
     new-instance v0, Ljava/io/IOException;
 
     const-string/jumbo v1, "Couldn\'t seek up to the byteCount"
@@ -1004,7 +1004,7 @@
 
     throw v0
 
-    .line 2340
+    .line 2339
     :cond_0
     return-void
 .end method
@@ -1014,10 +1014,10 @@
     .param p1, "byteOrder"    # Ljava/nio/ByteOrder;
 
     .prologue
-    .line 2337
+    .line 2336
     iput-object p1, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mByteOrder:Ljava/nio/ByteOrder;
 
-    .line 2336
+    .line 2335
     return-void
 .end method
 
@@ -1026,7 +1026,7 @@
     .param p1, "byteCount"    # J
 
     .prologue
-    .line 2414
+    .line 2413
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mLength:J
 
     iget-wide v4, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
@@ -1041,7 +1041,7 @@
 
     move-result-wide v0
 
-    .line 2415
+    .line 2414
     .local v0, "skipped":J
     iget-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
@@ -1049,6 +1049,6 @@
 
     iput-wide v2, p0, Landroid/media/ExifInterface$ByteOrderAwarenessDataInputStream;->mPosition:J
 
-    .line 2416
+    .line 2415
     return-wide v0
 .end method

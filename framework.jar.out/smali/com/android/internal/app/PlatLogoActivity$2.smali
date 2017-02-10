@@ -33,7 +33,7 @@
     .param p4, "val$M"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 97
+    .line 93
     iput-object p1, p0, Lcom/android/internal/app/PlatLogoActivity$2;->this$0:Lcom/android/internal/app/PlatLogoActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$bgPaint:Landroid/graphics/Paint;
@@ -60,7 +60,7 @@
 
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 111
+    .line 107
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v0
@@ -69,13 +69,13 @@
 
     div-float v9, v0, v2
 
-    .line 112
+    .line 108
     .local v9, "r":F
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$bgPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v9, v9, v9, v0}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 113
+    .line 109
     mul-float v3, v2, v9
 
     mul-float v4, v2, v9
@@ -92,7 +92,7 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/graphics/Canvas;->drawArc(FFFFFFZLandroid/graphics/Paint;)V
 
-    .line 114
+    .line 110
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$M:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
@@ -105,12 +105,12 @@
 
     invoke-virtual {v0, v7, v7, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 115
+    .line 111
     iget-object v0, p0, Lcom/android/internal/app/PlatLogoActivity$2;->val$M:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 110
+    .line 106
     return-void
 .end method
 
@@ -118,7 +118,7 @@
     .locals 1
 
     .prologue
-    .line 106
+    .line 102
     const/4 v0, -0x3
 
     return v0
@@ -129,7 +129,7 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 99
+    .line 95
     return-void
 .end method
 
@@ -138,6 +138,6 @@
     .param p1, "colorFilter"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 102
+    .line 98
     return-void
 .end method
