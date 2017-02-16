@@ -9090,6 +9090,7 @@
 .method final finishActivityLocked(Lcom/android/server/am/ActivityRecord;ILandroid/content/Intent;Ljava/lang/String;Z)Z
     .locals 9
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
+    .param p2, "resultCode"    # I
     .param p3, "resultData"    # Landroid/content/Intent;
     .param p4, "reason"    # Ljava/lang/String;
     .param p5, "oomAdj"    # Z
