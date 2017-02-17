@@ -76,6 +76,9 @@ local-pre-zip-misc:
 	@echo remove unnecessary files!
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/build-manifest.xml
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-thea.conf
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-titan.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	@echo copying files!
