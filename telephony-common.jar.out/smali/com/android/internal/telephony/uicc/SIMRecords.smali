@@ -1141,6 +1141,14 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
+    new-instance v0, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    iget-object v1, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mFh:Lcom/android/internal/telephony/uicc/IccFileHandler;
+
+    invoke-direct {v0, v1}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;-><init>(Lcom/android/internal/telephony/uicc/IccFileHandler;)V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
     .line 192
     new-instance v0, Lcom/android/internal/telephony/uicc/VoiceMailConstants;
 
@@ -2507,7 +2515,7 @@
     .line 1819
     const/4 v5, 0x3
 
-    invoke-static {v2, v0, v5}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v2, v0, v5}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4046,6 +4054,10 @@
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
 
     .line 1304
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/SIMRecords;->fetchSimRecords()V
@@ -5748,7 +5760,7 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v10, v4, v2}, Lcom/android/internal/telephony/uicc/IccUtils;->bcdToString([BII)Ljava/lang/String;
+    invoke-static {v10, v4, v2}, Lmiui/telephony/IccUtils;->parseIccIdToString([BII)Ljava/lang/String;
 
     move-result-object v2
 
@@ -10111,6 +10123,10 @@
     iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mAdnCache:Lcom/android/internal/telephony/uicc/AdnRecordCache;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/AdnRecordCache;->reset()V
+
+    iget-object v0, p0, Lcom/android/internal/telephony/uicc/SIMRecords;->mMiuiAdnCache:Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/uicc/MiuiAdnRecordCache;->reset()V
 
     .line 242
     const-string/jumbo v0, "SIMRecords: onRadioOffOrNotAvailable set \'gsm.sim.operator.numeric\' to operator=null"

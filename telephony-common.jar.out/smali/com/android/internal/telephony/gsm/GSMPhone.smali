@@ -474,6 +474,12 @@
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
 
+    new-instance v0, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    invoke-direct {v0, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
     .line 165
     new-instance v0, Lcom/android/internal/telephony/PhoneSubInfo;
 
@@ -645,6 +651,12 @@
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/gsm/GSMPhone;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+
+    new-instance v0, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    invoke-direct {v0, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
+
+    iput-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
 
     .line 201
     new-instance v0, Lcom/android/internal/telephony/PhoneSubInfo;
@@ -3611,6 +3623,10 @@
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->dispose()V
+
+    iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    invoke-virtual {v0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->dispose()V
 
     .line 245
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;
@@ -7524,6 +7540,10 @@
 
     invoke-virtual {v3, v6}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
 
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    invoke-virtual {v3, v6}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
+
     .line 1807
     :cond_2
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
@@ -7573,6 +7593,18 @@
     check-cast v3, Lcom/android/internal/telephony/uicc/IccRecords;
 
     invoke-virtual {v4, v3}, Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
+
+    iget-object v4, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    iget-object v3, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mIccRecords:Ljava/util/concurrent/atomic/AtomicReference;
+
+    invoke-virtual {v3}, Ljava/util/concurrent/atomic/AtomicReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lcom/android/internal/telephony/uicc/IccRecords;
+
+    invoke-virtual {v4, v3}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;->updateIccRecords(Lcom/android/internal/telephony/uicc/IccRecords;)V
 
     .line 1782
     :cond_4
@@ -7699,6 +7731,8 @@
 
     .line 253
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSimPhoneBookIntManager:Lcom/android/internal/telephony/gsm/SimPhoneBookInterfaceManager;
+
+    iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
 
     .line 254
     iput-object v2, p0, Lcom/android/internal/telephony/gsm/GSMPhone;->mSubInfo:Lcom/android/internal/telephony/PhoneSubInfo;

@@ -1149,6 +1149,12 @@
 
     iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mRuimPhoneBookInterfaceManager:Lcom/android/internal/telephony/cdma/RuimPhoneBookInterfaceManager;
 
+    new-instance v2, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
+    invoke-direct {v2, p0}, Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;-><init>(Lcom/android/internal/telephony/PhoneBase;)V
+
+    iput-object v2, p0, Lcom/android/internal/telephony/cdma/CDMALTEPhone;->mMiuiIccPhoneBookInterfaceManager:Lcom/android/internal/telephony/MiuiIccPhoneBookInterfaceManager;
+
     .line 319
     new-instance v2, Lcom/android/internal/telephony/PhoneSubInfo;
 
