@@ -56,3 +56,7 @@ if [ $1 = "SecurityCenter" ];then
     applyPatch $1 $2
 	sed -i '/- 16/a\sdkInfo:\n  minSdkVersion: '\''23'\''\n  targetSdkVersion: '\''23'\''' $2/apktool.yml
 fi
+
+if [ $1 = "Settings" ];then
+    applyPatch $1 $2
+fi
