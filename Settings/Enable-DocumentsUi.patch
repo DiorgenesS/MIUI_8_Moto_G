@@ -1,0 +1,31 @@
+From 0671a8485a4e047dcd68705b83b0d167bd9d4f17 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 13 Mar 2017 10:31:50 -0300
+Subject: [PATCH] Enable DocumentsUi
+
+---
+ Settings/smali/com/android/settings/MiuiSettingsReceiver.smali | 3 ---
+ 1 file changed, 3 deletions(-)
+
+--- a/Settings/smali/com/android/settings/MiuiSettingsReceiver.smali
++++ b/Settings/smali/com/android/settings/MiuiSettingsReceiver.smali
+@@ -29,8 +29,6 @@
+ 
+     sget-boolean v0, Lmiui/os/Build;->IS_CTS_BUILD:Z
+ 
+-    if-eqz v0, :cond_0
+-
+     const/4 v0, 0x1
+ 
+     :goto_0
+@@ -45,7 +43,6 @@
+     :goto_1
+     return-void
+
+-    :cond_0
+     const/4 v0, 0x3
+ 
+     goto :goto_0
+-- 
+2.7.4
+
