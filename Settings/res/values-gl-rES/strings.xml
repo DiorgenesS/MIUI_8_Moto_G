@@ -1591,8 +1591,8 @@ Para borrar música, imaxes e outros datos de usuario, é necesario borrar a "<b
     <string name="accessibility_screen_magnification_summary">"Cando esta función estea activada, poderás achegar e afastar o zoom tocando tres veces a pantalla.
 
 Co zoom achegado podes:
-"<li><ul>"Facer unha panorámica: arrastra dous ou máis dedos pola pantalla.
-"<li>Axustar o nivel do zoom: xunta dous ou máis dedos ou afástaos entre si.</li></ul></li>"
+"<ul><li>"Facer unha panorámica: arrastra dous ou máis dedos pola pantalla.
+"<li>Axustar o nivel do zoom: xunta dous ou máis dedos ou afástaos entre si.</li></li></ul>"
 
 Tamén podes ampliar o contido seleccionado de forma temporal tocando tres veces e mantendo premida a pantalla. Co contido ampliado, podes arrastrar o dedo para explorar diferentes partes da pantalla. Levanta o dedo para volver ao teu estado anterior.
 

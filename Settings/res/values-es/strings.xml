@@ -1655,8 +1655,8 @@ Es posible que algunas aplicaciones no funcionen hasta que los desarrolladores l
     <string name="accessibility_screen_magnification_summary">"Cuando esta función está activada, puedes acercar y alejar la imagen tocando tres veces la pantalla.
 
 Con la imagen acercada, puedes:
-"<li><ul>"Desplazar la imagen: arrastra dos o más dedos por la pantalla.
-"<li>Modificar el nivel de zoom: pellizca dos o más dedos o sepáralos mientras los arrastras.</li></ul></li>"
+"<ul><li>"Desplazar la imagen: arrastra dos o más dedos por la pantalla.
+"<li>Modificar el nivel de zoom: pellizca dos o más dedos o sepáralos mientras los arrastras.</li></li></ul>"
 
 También puedes ampliar el contenido seleccionado de forma temporal con solo tocar la pantalla tres veces y mantenerla pulsada. Con el contenido ampliado, puedes arrastrar el dedo para explorar diferentes partes de la pantalla. Levanta el dedo para volver al estado anterior.
 

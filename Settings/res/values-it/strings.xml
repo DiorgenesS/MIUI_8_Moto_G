@@ -744,11 +744,9 @@ Consetirlo a tutte le app che vogliono eseguire la ricerca?"</string>
     <string name="wifi_skipped_message">AVVISO. Se non attivi il Wi‑Fi, il telefono utilizzerà solo la rete dati per gli aggiornamenti e i download iniziali. Per evitare possibili costi per i dati, connettiti al Wi‑Fi.</string>
     <string name="wifi_and_mobile_skipped_message">"In caso di non attivazione del WLAN:
 
-I"<li>"l telefono non avrà una connessione Internet.
-"</li>"
-N"<li>"on riceverai aggiornamenti software finché non viene stabilita una connessione.
-"</li>"
-A"<li>l momento, non puoi attivare le funzioni di protezione del dispositivo.</string>
+"<li>Il telefono non avrà una connessione Internet.</li>"
+"<li>Non riceverai aggiornamenti software finché non viene stabilita una connessione.</li>"
+"<li>Al momento, non puoi attivare le funzioni di protezione del dispositivo.</li></string>
     <string name="wifi_connect_failed_message">Impossibile connetersi alla rete WLAN</string>
     <string name="wifi_saved_access_points_titlebar">Reti salvate</string>
     <string name="wifi_advanced_titlebar">Impostazioni avanzate WLAN</string>
@@ -1655,8 +1653,8 @@ Alcune applicazioni potrebbero non funzionare fino all'aggiornamento da parte de
     <string name="accessibility_screen_magnification_summary">"Quando questa funzione è attiva puoi aumentare e diminuire lo zoom toccando tre volte lo schermo.
 
 Dopo avere aumentato lo zoom puoi:
-"<li><ul>"Eseguire una panoramica: trascina due o più dita sullo schermo.
-"<li>Regolare il livello di zoom: unisci due o più dita come per fare un pizzicotto o allontanale.</li></ul></li>"
+"<ul><li>"Eseguire una panoramica: trascina due o più dita sullo schermo.
+"<li>Regolare il livello di zoom: unisci due o più dita come per fare un pizzicotto o allontanale.</li></li></ul>"
 
 Puoi anche ingrandire temporaneamente l'area su cui hai il dito toccando tre volte e tenendo premuto. Nello stato ingrandito puoi trascinare il dito per esaminare parti diverse dello schermo. Solleva il dito per tornare allo stato precedente.
 

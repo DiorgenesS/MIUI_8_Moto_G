@@ -994,12 +994,12 @@ Du kan geninstallere dine apps senere, men de data, de indeholder, og som er gem
     <string name="storage_detail_cached">Cachelagrede data</string>
     <string name="storage_detail_other">Andet</string>
     <string name="storage_detail_explore">Åbn ^1</string>
-    <string name="storage_detail_dialog_other">"Andre filer omfatter delte filer, der er gemt af apps, filer, der er downloadet fra internettet eller via Bluetooth, Android-filer osv. 
+    <string name="storage_detail_dialog_other">"Andere beinhaltete von Apps gespeicherte Dateien, Downloads, Androiddateien, etc. 
 
-Tryk på Åbn for at se alt indhold på dette ^1."</string>
-    <string name="storage_detail_dialog_user">"^1 kan have gemt billeder, musik, film, apps og andre data, som bruger ^2 af lagerpladsen. 
+Um den gesamten Inhalt von ^1 anzuzeigen, tippen Sie auf Erkunden."</string>
+    <string name="storage_detail_dialog_user">"^1 hat möglicherweise, Musik, Videos, Apps oder andere Dateien gespeichert, die ^2 im Speicher belegen. 
 
-Få flere oplysninger ved at skifte til ^1."</string>
+Um Details anzuschauen, wechseln Sie zu ^1."</string>
     <string name="storage_wizard_init_title">Konfigurer dit ^1</string>
     <string name="storage_wizard_init_external_title">Brug som ekstern lagerplads</string>
     <string name="storage_wizard_init_external_summary">Til flytning af billeder og andre medier mellem enheder.</string>
@@ -1097,9 +1097,9 @@ Du kan også skifte til et hurtigere ^1 for at få en bedre ydeevne."</string>
     <string name="reset_network_title">Nulstil netværksindstillinger</string>
     <string name="reset_network_desc">"Denne handling nulstiller alle netværksindstillinger, herunder: 
 
-"<li>"WLAN
-"</li>M<li>"obildata
-"</li>B<li>luetooth</string>
+&lt;li>WLAN&lt;/li>
+&lt;li>Mobildata&lt;/li>
+&lt;li>Bluetooth&lt;/li>"</string>
     <string name="reset_network_button_text">Nulstil indstillinger</string>
     <string name="reset_network_final_desc">Vil du nulstille alle netværksindstillingerne? Du kan ikke fortryde denne handling.</string>
     <string name="reset_network_final_button_text">Nulstil indstillinger</string>
@@ -1591,8 +1591,8 @@ Nogle apps fungerer muligvis ikke, før de opdateres af deres udviklere."</strin
     <string name="accessibility_screen_magnification_summary">"Når denne funktion er slået til, kan du zoome ind og ud ved at trykke tre gange på skærmen.
 
 Mens der er zoomet ind, kan du:
-"<li><ul>"panorere: Træk to eller flere fingre hen over skærmen.
-"<li>justere zoomniveauet: Knib to eller flere fingre sammen, eller spred dem fra hinanden.</li></ul></li>"
+"<ul><li>"panorere: Træk to eller flere fingre hen over skærmen.
+"<li>justere zoomniveauet: Knib to eller flere fingre sammen, eller spred dem fra hinanden.</li></li></ul>"
 
 Du kan også midlertidigt forstørre det, du trykker på, ved at trykke tre gange og holde fingeren nede. I denne forstørrede tilstand kan du trække fingeren for at udforske forskellige dele af skærmen. Løft fingeren for at vende tilbage til din forrige tilstand.
 

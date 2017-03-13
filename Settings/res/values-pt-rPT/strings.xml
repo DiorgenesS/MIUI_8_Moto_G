@@ -725,11 +725,9 @@ Permitir esta opção para todas as aplicações que pretenderem verificar?"</st
     <string name="wifi_skipped_message">AVISO: Se ignorar o WLAN, o telemóvel utilizará apenas dados de rede móvel para as transferências e as atualizações iniciais. Para evitar possíveis taxas de dados, estabeleça ligação a uma rede WLAN.</string>
     <string name="wifi_and_mobile_skipped_message">"Se ignorar o WLAN:
 
-O"<li>" seu telemóvel não terá uma ligação à Internet.
-"</li>"
-N"<li>"ão receberá atualizações de software até se ligar à Internet.
-"</li>"
-N"<li>este momento, não pode ativar as funcionalidades de proteção do dispositivo.</string>
+"<li>O seu telemóvel não terá uma ligação à Internet.</li>"
+"<li>Não receberá atualizações de software até se ligar à Internet.</li>"
+"<li>Neste momento, não pode ativar as funcionalidades de proteção do dispositivo.</li></string>
     <string name="wifi_connect_failed_message">Não foi possível ligar à rede WLAN</string>
     <string name="wifi_saved_access_points_titlebar">Redes guardadas</string>
     <string name="wifi_advanced_titlebar">Definições avançadas WLAN</string>
@@ -1636,8 +1634,8 @@ Algumas aplicações podem não funcionar até serem atualizadas pelos respetivo
     <string name="accessibility_screen_magnification_summary">"Quando esta funcionalidade está ativada, pode aumentar ou diminuir o zoom ao tocar três vezes no ecrã.
 
 Enquanto estiver a aumentar o zoom, pode:
-"<li><ul>"Deslocar: arraste dois ou mais dedos no ecrã.
-"<li>Ajustar o nível de zoom: junte dois ou mais dedos ou afaste-os.</li></ul></li>"
+"<ul><li>"Deslocar: arraste dois ou mais dedos no ecrã.
+"<li>Ajustar o nível de zoom: junte dois ou mais dedos ou afaste-os.</li></li></ul>"
 
 Também pode aumentar temporariamente o que estiver por baixo do seu dedo ao tocar três vezes sem soltar. Neste estado aumentado, pode arrastar o dedo para explorar diferentes partes do ecrã. Levante o dedo para voltar ao estado anterior.
 

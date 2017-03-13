@@ -1586,8 +1586,8 @@ Disa aplikacione mund të mos funksionojnë derisa të përditësohen nga progra
     <string name="accessibility_screen_magnification_summary">"Kur ky funksion aktivizohet, mund të zmadhosh dhe të zvogëlosh pamje ekrani duke trokitur tri herë mbi të.
 
 Kur ta kesh zmadhuar mund të kryesh këto veprime :
-"<li><ul>"Panoramimin: Zvarrit dy ose më shumë gishta nëpër ekran.
-"<li>Rregullimin e nivelit të zmadhimit: Afro bashkë dy ose më shumë gishta ose largoji nga njëri-tjetri.</li></ul></li>"
+"<ul><li>"Panoramimin: Zvarrit dy ose më shumë gishta nëpër ekran.
+"<li>Rregullimin e nivelit të zmadhimit: Afro bashkë dy ose më shumë gishta ose largoji nga njëri-tjetri.</li></li></ul>"
 
 Mund të zmadhosh po ashtu pamjen që ndodhet nën gishtin tënd, duke trokitur tri herë dhe duke e mbajtur gishtin. Në këtë gjendje zmadhimi, mund ta zvarritësh gishtin për të eksploruar pjesë të ndryshme të ekranit. Për ta kthyer pamjen te gjendja e mëparshme, mjafton të ngresh gishtin.
 

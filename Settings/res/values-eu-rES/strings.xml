@@ -1591,8 +1591,8 @@ Aplikazio batzuek ez dute funtzionatuko garatzaileek eguneratu arte."</string>
     <string name="accessibility_screen_magnification_summary">"Eginbidea gaituta dagoenean, pantaila hiru aldiz saka dezakezu handitzeko edo txikitzeko.
 
 Handituta dagoen bitartean, ekintza hauek egin ditzakezu:
-"<li><ul>"Mugimendu panoramikoa: arrastatu hatz bat edo gehiago pantailan zehar.
-"<li>Doitu zoom-maila: atximurkatu bi hatzarekin edo gehiagorekin edo banandu hatzak elkarrengandik.</li></ul></li>"
+"<ul><li>"Mugimendu panoramikoa: arrastatu hatz bat edo gehiago pantailan zehar.
+"<li>Doitu zoom-maila: atximurkatu bi hatzarekin edo gehiagorekin edo banandu hatzak elkarrengandik.</li></li></ul>"
 
 Hatzaren azpian duzuna aldi baterako handi dezakezu hiru aldiz sakatuta eta sakatuta edukita. Handituta dagoela, pantailaren zati desberdinak arakatzeko, arrastatu hatza. Aurreko egoerara itzultzeko, jaso hatza.
 

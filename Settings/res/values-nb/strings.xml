@@ -680,11 +680,11 @@ Vil du tillate dette for alle apper som prøver å skanne?"</string>
     <string name="wifi_skipped_message">ADVARSEL: Hvis du hopper over WLAN, bruker telefonen din bare mobildata for automatiske nedlastinger og oppdateringer. For å unngå mulige datakostnader bør du koble til WLAN.</string>
     <string name="wifi_and_mobile_skipped_message">"Hvis du hopper over WLAN:
 
-T"<li>"elefonen din får ingen Internett-tilkobling.
-"</li>"
-D"<li>"u får ikke oppdateringer før du kobler til Internett.
-"</li>"
-D"<li>u kan ikke aktivere funksjoner for enhetsbeskyttelse nå.</string>
+Telefonen din får ingen Internett-tilkobling.
+
+Du får ikke oppdateringer før du kobler til Internett.
+
+Du kan ikke aktivere funksjoner for enhetsbeskyttelse nå."</string>
     <string name="wifi_connect_failed_message">Telefonen kunne ikke koble til WLAN-nettverket.</string>
     <string name="wifi_saved_access_points_titlebar">Lagrede nettverk</string>
     <string name="wifi_advanced_titlebar">Avanserte WLAN-innst.</string>
@@ -1591,8 +1591,8 @@ Enkelte apper fungerer ikke før utviklerne har oppdatert dem."</string>
     <string name="accessibility_screen_magnification_summary">"Når denne funksjonen er på, kan du zoome inn og ut ved å trykke tre ganger på skjermen.
 
 Når du har zoomet inn kan du
-"<li><ul>"panorere: Dra to eller flere fingre over skjermen.
-"<li>tilpasse zoomenivået: Knip to eller flere fingre sammen eller fra hverandre.</li></ul></li>"
+"<ul><li>"panorere: Dra to eller flere fingre over skjermen.
+"<li>tilpasse zoomenivået: Knip to eller flere fingre sammen eller fra hverandre.</li></li></ul>"
 
 Du kan også forstørre det som er under fingeren din midlertidig ved å trykke tre ganger og holde fingeren nede. Mens du forstørrer på denne måten, kan du dra fingeren rundt for å se på forskjellige deler av skjermen. Løft fingeren for å gå tilbake til den forrige visningen.
 

@@ -1170,9 +1170,9 @@ Yuqori unumdorlikka erishish uchun tezkor qurilmadan (^1) foydalaning."</string>
     <string name="reset_network_title">Tarmoq sozlamalarini tiklash</string>
     <string name="reset_network_desc">"\"Qurilmadagi barcha tarmoq sozlamalari qayta tiklanadi, jumladan: 
 
-\""<li>"WLAN
-"</li>M<li>"obil internet
-"</li>B<li>luetooth</string>
+"<li>WLAN</li>"
+"<li>Mobil internet</li>"
+"<li>Bluetooth</li></string>
     <string name="reset_network_button_text">Sozlamalarni tiklash</string>
     <string name="reset_network_final_desc">"Barcha tarmoq sozlamalari qayta tiklansinmi? Bu amalni ortga qaytarib bo'lmaydi!"</string>
     <string name="reset_network_final_button_text">Sozlamalarni tiklash</string>
@@ -1667,8 +1667,8 @@ Ba'zi ilovalar yaratgan dasturchilari tomonidan yangilanmaganicha ishlamasligi m
     <string name="accessibility_screen_magnification_summary">"Bu xususiyat yoqilganda, ekranni uch marta bosib uni kattalashtirish yoki kichiklashtirish mumkin.
 
 Kattalashtirilganda quyidagilarni bajarish mumkin:
-\""<li><ul>"Siljitish: ekrand bo'ylab ikki yoki ko'proq barmoqlaringizni siljiting.
-"<li>"Zumerlash darajasini moslash: ekranda ikki yoki ko'proq barmoqlaringizni jipslashtiring yoki ajrating."</li></ul></li>"
+\""<ul><li>"Siljitish: ekrand bo'ylab ikki yoki ko'proq barmoqlaringizni siljiting.
+"<li>"Zumerlash darajasini moslash: ekranda ikki yoki ko'proq barmoqlaringizni jipslashtiring yoki ajrating."</li></li></ul>"
 
 \"Shuningdek, barmog‘ingiz ostitagi elementni uch marta bosib va tutib uni vaqtinchalik kattalashtirishingiz mumkin. Bu kattalashtirilgan holatda, barmog‘ingizni ekran bo'ylab siljitib uning turli burchaklarini kattalashtirib ko'rishingiz mumkin. Avvalgi holatga qaytarish uchun ekrandan barmog‘ingizni ajrating.
 

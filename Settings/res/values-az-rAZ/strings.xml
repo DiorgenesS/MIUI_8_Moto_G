@@ -675,11 +675,9 @@ Sadəcə cihazlar bir-birinə yaxın tutun (adətən arxa-arxaya) və ekrana tox
     <string name="wifi_skipped_message">"XƏBƏRDARLIQ: Əgər Wi‑Fi'ı atlasanız, telefonunuz endirmək və güncəlləşmək üçün yalnız mobil şəbəkənin internet xidmətindən faydalanacaq ki, bu da əlavə ödənişlərə səbəb olacaq. Bunun qarşısını almaq üçün Wi‑Fi şəbəkəsinə qoşulun."</string>
     <string name="wifi_and_mobile_skipped_message">"WLAN şəbəkəsini atlasanız: 
 
-T"<li>elefonunuzda internet bağlantısı olmayacaq.i</li>"nternetə qoşulana kimi
-
-,"<li>" proqram təminatı güncəlləşmələri almayacaqsınız.
-"</li>"
-B"<li>u zaman cihaz qoruması funksiyalarını aktiv edə bilməzsiniz.</string>
+"<li>Telefonunuzda internet bağlantısı olmayacaq.internetə qoşulana kimi,</li>"
+"<li> proqram təminatı güncəlləşmələri almayacaqsınız.</li>"
+"<li>Bu zaman cihaz qoruması funksiyalarını aktiv edə bilməzsiniz.</li></string>
     <string name="wifi_connect_failed_message">Telefon bu WLAN şəbəkəsinə qoşula bilmirdi.</string>
     <string name="wifi_saved_access_points_titlebar">Saxlanmış şəbəkələr</string>
     <string name="wifi_advanced_titlebar">Qabaqcıl WLAN</string>
@@ -1586,8 +1584,8 @@ Bəzi tətbiqlər gəlişdiricilər tərəfindən güncəlləşdirilməmiş işl
     <string name="accessibility_screen_magnification_summary">"Bu özəllik aktivləşdirildikdə, Siz ekrana üçqat tıklamaqla ekranı böyüdə və kiçildə bilərsiniz.
 
 Böyüdüləndən sonra bunları edə bilərsiniz:
-"<li><ul>"Panorama: İki və daha artıq barmağı ekran üstündə sürüşdürün.
-"<li>Zoom dərəcəsini təyin edin: İki və daha çox barmağı ekran üstündə sürüşdürərək bir-birinə yaxınlaşdırın və ya bir-birindən uzaqlaşdırın.</li></ul></li>"
+"<ul><li>"Panorama: İki və daha artıq barmağı ekran üstündə sürüşdürün.
+"<li>Zoom dərəcəsini təyin edin: İki və daha çox barmağı ekran üstündə sürüşdürərək bir-birinə yaxınlaşdırın və ya bir-birindən uzaqlaşdırın.</li></li></ul>"
 
 Siz həmçinin barmağınızın altında olanı üçqat tıklayaraq saxlamaqla müvəqqəti böyüdə bilərsiniz. Bu böyüdülmüş halda, barmağınızı ekranda sürüşdürərək müxtəlif hissələr axtara bilərsiniz. Barmağınızı ekrandan çəkən kimi ekran öncəki halına qayıdacaq.
 

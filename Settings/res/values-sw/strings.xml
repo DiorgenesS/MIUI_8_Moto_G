@@ -1095,9 +1095,9 @@ Zingatia kutumia ^1 yenye kasi zaidi kwa ajili ya utendaji bora."</string>
     <string name="reset_network_title">Mipangilio ya mtandao imewekwa upya</string>
     <string name="reset_network_desc">"Hatua hii itaweka upya mipangilio yote ya mtandao, ikiwemo: 
 
-"<li>"WLAN
-"</li>D<li>"ata ya simu za mkononi
-"</li>B<li>luetooth</string>
+"<li>WLAN</li>"
+"<li>Data ya simu za mkononi</li>"
+"<li>Bluetooth</li></string>
     <string name="reset_network_button_text">Weka upya mipangilio</string>
     <string name="reset_network_final_desc">Ungependa kuweka upya mipangilio yote ya mtandao? Huwezi kutendua kitendo hiki.</string>
     <string name="reset_network_final_button_text">Weka upya mipangilio</string>
@@ -1588,8 +1588,8 @@ Baadhi ya programu zinawezakosa kufanya kazi hadi zisasishwe na wasanidi wake."<
     <string name="accessibility_screen_magnification_summary">"Kipengele hiki kinapowashwa, unaweza kukuza na kufifiza kwa kugonga skrini mara tatu.
 
 Unapokuwa umekuza, unaweza:
-"<li><ul>"Kupindua: Vuta vidole viwili au zaidi kwenye skrini.
-"<li>Rekebisha kiwango cha ukuzaji: Bana vidole viwili au zaidi pamoja au uzitawanye.</li></ul></li>"
+"<ul><li>"Kupindua: Vuta vidole viwili au zaidi kwenye skrini.
+"<li>Rekebisha kiwango cha ukuzaji: Bana vidole viwili au zaidi pamoja au uzitawanye.</li></li></ul>"
 
 Pia unaweza kukuza hali, unaweza kuvuta kidole chako ili kuchunguza sehemu mbalimbali za skrini. Inua kidole chako ili kurejea kwenye hali yako ya awali.
 
