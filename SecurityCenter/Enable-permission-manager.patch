@@ -1,0 +1,70 @@
+From 3ccc83965e223437bad4c10d64790c55a56250bd Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 14 Mar 2017 18:38:38 -0300
+Subject: [PATCH] Enable permission manager
+
+---
+.../smali/com/miui/permcenter/SettingsAcitivty.smali         | 12 ++----------
+1 file changed, 2 insertions(+), 10 deletions(-)
+
+--- a/SecurityCenter/smali/com/miui/permcenter/SettingsAcitivty.smali
++++ b/SecurityCenter/smali/com/miui/permcenter/SettingsAcitivty.smali
+@@ -107,8 +107,6 @@
+ 
+     move-result-object v0
+ 
+-    if-eqz v0, :cond_0
+-
+     const-string v1, "extra_settings_title"
+ 
+     invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+@@ -119,11 +117,8 @@
+ 
+     move-result v1
+ 
+-    if-nez v1, :cond_0
+-
+     invoke-virtual {p0, v0}, Lcom/miui/permcenter/SettingsAcitivty;->setTitle(Ljava/lang/CharSequence;)V
+ 
+-    :cond_0
+     const v0, 0x7f090341
+ 
+     invoke-virtual {p0, v0}, Lcom/miui/permcenter/SettingsAcitivty;->getString(I)Ljava/lang/String;
+@@ -142,8 +137,6 @@
+ 
+     move-result v0
+ 
+-    if-eqz v0, :cond_1
+-
+     iget-object v0, p0, Lcom/miui/permcenter/SettingsAcitivty;->py:Landroid/preference/CheckBoxPreference;
+ 
+     invoke-virtual {v0, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+@@ -169,7 +162,7 @@
+ 
+     move-result v2
+ 
+-    if-eqz v2, :cond_2
++    if-eqz v2, :cond_0
+ 
+     invoke-virtual {v1}, Lcom/miui/permcenter/install/c;->isEnabled()Z
+ 
+@@ -182,7 +175,6 @@
+     :goto_1
+     return-void
+ 
+-    :cond_1
+     invoke-virtual {p0}, Lcom/miui/permcenter/SettingsAcitivty;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+ 
+     move-result-object v0
+@@ -193,7 +185,7 @@
+ 
+     goto :goto_0
+ 
+-    :cond_2
++    :cond_0
+     invoke-virtual {p0}, Lcom/miui/permcenter/SettingsAcitivty;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+ 
+     move-result-object v1
+-- 
+2.7.4
+
