@@ -1,0 +1,417 @@
+From 003b1d2b2852bf3ffe7759b4c596fcedde429f30 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 13 Mar 2017 21:50:48 -0300
+Subject: [PATCH] Replace classNam and packageName "MiuiCamera" for "Vendor Camera"
+
+---
+ MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x5.xml   | 2 +-
+ MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x6.xml   | 2 +-
+ .../res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x5.xml   | 2 +-
+ .../res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x6.xml   | 2 +-
+ MiuiHome/res/xml/cm_default_workspace3x4.xml                            | 2 +-
+ MiuiHome/res/xml/cm_default_workspace3x4_private_model.xml              | 2 +-
+ MiuiHome/res/xml/cm_default_workspace4x5.xml                            | 2 +-
+ MiuiHome/res/xml/cm_default_workspace4x5_private_model.xml              | 2 +-
+ MiuiHome/res/xml/cm_default_workspace4x6.xml                            | 2 +-
+ MiuiHome/res/xml/cm_default_workspace4x6_private_model.xml              | 2 +-
+ MiuiHome/res/xml/default_workspace3x4.xml                               | 2 +-
+ MiuiHome/res/xml/default_workspace3x4_private_model.xml                 | 2 +-
+ MiuiHome/res/xml/default_workspace4x5.xml                               | 2 +-
+ MiuiHome/res/xml/default_workspace4x5_private_model.xml                 | 2 +-
+ MiuiHome/res/xml/default_workspace4x6.xml                               | 2 +-
+ MiuiHome/res/xml/default_workspace4x6_private_model.xml                 | 2 +-
+ MiuiHome/res/xml/default_workspace_rotatable.xml                        | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace3x4.xml                          | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace3x4_private_model.xml            | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace4x5.xml                          | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace4x5_private_model.xml            | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace4x6.xml                          | 2 +-
+ MiuiHome/res/xml/i18n_default_workspace4x6_private_model.xml            | 2 +-
+ MiuiHome/res/xml/in_i18n_default_workspace4x5.xml                       | 2 +-
+ MiuiHome/res/xml/in_i18n_default_workspace4x5_private_model.xml         | 2 +-
+ MiuiHome/res/xml/in_i18n_default_workspace4x6.xml                       | 2 +-
+ MiuiHome/res/xml/in_i18n_default_workspace4x6_private_model.xml         | 2 +-
+ MiuiHome/res/xml/islam_i18n_default_workspace4x5.xml                    | 2 +-
+ MiuiHome/res/xml/islam_i18n_default_workspace4x6.xml                    | 2 +-
+ MiuiHome/res/xml/tw_i18n_default_workspace4x5.xml                       | 2 +-
+ MiuiHome/res/xml/tw_i18n_default_workspace4x5_private_model.xml         | 2 +-
+ MiuiHome/res/xml/tw_i18n_default_workspace4x6.xml                       | 2 +-
+ MiuiHome/res/xml/tw_i18n_default_workspace4x6_private_model.xml         | 2 +-
+ 33 files changed, 33 insertions(+), 33 deletions(-)
+
+--- a/MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x5.xml
++++ b/MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x5.xml
+@@ -10,7 +10,7 @@
+     <gadget launcher:screen="0" launcher:x="2" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/music.mtz" />
+     <gadget launcher:screen="0" launcher:x="4" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/notes.mtz" />
+     <gadget launcher:screen="0" launcher:x="0" launcher:y="5" launcher:uri="file:///system/media/theme/default/gadgets/searchbox.mtz" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="0" />
+     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="3" launcher:y="0" />
+
+--- a/MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x6.xml
++++ b/MiuiHome/res/xml-sw720dp-xhdpi-v13/default_workspace_rotatable4x6.xml
+@@ -9,7 +9,7 @@
+     <gadget launcher:screen="0" launcher:x="2" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/music.mtz" />
+     <gadget launcher:screen="0" launcher:x="4" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/notes.mtz" />
+     <gadget launcher:screen="0" launcher:x="0" launcher:y="5" launcher:uri="file:///system/media/theme/default/gadgets/searchbox.mtz" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="0" />
+     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="3" launcher:y="0" />
+
+--- a/MiuiHome/res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x5.xml
++++ b/MiuiHome/res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x5.xml
+@@ -9,7 +9,7 @@
+     <gadget launcher:screen="0" launcher:x="2" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/music.mtz" />
+     <gadget launcher:screen="0" launcher:x="4" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/notes.mtz" />
+     <gadget launcher:screen="0" launcher:x="0" launcher:y="5" launcher:uri="file:///system/media/theme/default/gadgets/searchbox.mtz" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="0" />
+     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="3" launcher:y="0" />
+
+--- a/MiuiHome/res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x6.xml
++++ b/MiuiHome/res/xml-sw720dp-xhdpi-v13/i18n_default_workspace_rotatable4x6.xml
+@@ -9,7 +9,7 @@
+     <gadget launcher:screen="0" launcher:x="2" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/music.mtz" />
+     <gadget launcher:screen="0" launcher:x="4" launcher:y="3" launcher:uri="file:///system/media/theme/default/gadgets/notes.mtz" />
+     <gadget launcher:screen="0" launcher:x="0" launcher:y="5" launcher:uri="file:///system/media/theme/default/gadgets/searchbox.mtz" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="0" />
+     <favorite launcher:className="com.miui.weather2.ActivityWeatherMain" launcher:packageName="com.miui.weather2" launcher:screen="1" launcher:x="3" launcher:y="0" />
+
+--- a/MiuiHome/res/xml/cm_default_workspace3x4.xml
++++ b/MiuiHome/res/xml/cm_default_workspace3x4.xml
+@@ -5,7 +5,7 @@
+     <folder launcher:screen="1" launcher:x="1" launcher:y="0" launcher:title="com.miui.home:string/default_folder_title_tools" />
+     <folder launcher:screen="1" launcher:x="0" launcher:y="2" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:presets_container="true" />
+     <clock2x4 launcher:screen="0" launcher:x="0" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="0" launcher:x="0" launcher:y="2" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="0" launcher:x="0" launcher:y="2" />
+     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="2" />
+     <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="0" launcher:x="2" launcher:y="2" />
+     <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="0" launcher:x="0" launcher:y="3" />
+
+--- a/MiuiHome/res/xml/cm_default_workspace3x4_private_model.xml
++++ b/MiuiHome/res/xml/cm_default_workspace3x4_private_model.xml
+@@ -7,7 +7,7 @@
+     <shortcut launcher:className="com.miui.securityspace.ui.activity.SwitchDataActivity" launcher:packageName="com.miui.securitycore" launcher:screen="0" launcher:x="0" launcher:y="2" launcher:title="com.miui.securitycore:string/switch_data_settings" launcher:iconResource="com.miui.securitycore:drawable/switch_data" launcher:retained="true" />
+     <shortcut launcher:className="com.miui.securityspace.ui.activity.PrivateSpaceMainActivity" launcher:packageName="com.miui.securitycore" launcher:screen="0" launcher:x="1" launcher:y="2" launcher:title="com.miui.securitycore:string/private_space_setting" launcher:iconResource="com.miui.securitycore:drawable/private_space_setting" launcher:retained="true" />
+     <shortcut launcher:className="com.miui.securityspace.ui.activity.SwitchUserActivity" launcher:packageName="com.miui.securitycore" launcher:screen="0" launcher:x="2" launcher:y="2" launcher:title="com.miui.securitycore:string/exit_private_space" launcher:iconResource="com.miui.securitycore:drawable/exit_private_space" launcher:retained="true" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="0" launcher:x="0" launcher:y="3" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="0" launcher:x="0" launcher:y="3" />
+     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="3" />
+     <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="2" launcher:y="3" />
+     <favorite launcher:className="com.android.settings.MainSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="2" launcher:y="3" />
+
+--- a/MiuiHome/res/xml/cm_default_workspace4x5.xml
++++ b/MiuiHome/res/xml/cm_default_workspace4x5.xml
+@@ -97,5 +97,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/cm_default_workspace4x5_private_model.xml
++++ b/MiuiHome/res/xml/cm_default_workspace4x5_private_model.xml
+@@ -42,5 +42,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/cm_default_workspace4x6.xml
++++ b/MiuiHome/res/xml/cm_default_workspace4x6.xml
+@@ -98,5 +98,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/cm_default_workspace4x6_private_model.xml
++++ b/MiuiHome/res/xml/cm_default_workspace4x6_private_model.xml
+@@ -41,5 +41,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/default_workspace3x4.xml
++++ b/MiuiHome/res/xml/default_workspace3x4.xml
+@@ -5,7 +5,7 @@
+     <folder launcher:screen="1" launcher:x="1" launcher:y="0" launcher:title="com.miui.home:string/default_folder_title_tools" />
+     <folder launcher:screen="1" launcher:x="2" launcher:y="3" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:presets_container="true" />
+     <clock2x4 launcher:screen="0" launcher:x="0" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="0" launcher:x="0" launcher:y="2" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="0" launcher:x="0" launcher:y="2" />
+     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="0" launcher:x="1" launcher:y="2" />
+     <favorite launcher:className="com.miui.player.ui.MusicBrowserActivity" launcher:packageName="com.miui.player" launcher:screen="0" launcher:x="2" launcher:y="2" />
+     <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="0" launcher:x="0" launcher:y="3" />
+
+--- a/MiuiHome/res/xml/default_workspace3x4_private_model.xml
++++ b/MiuiHome/res/xml/default_workspace3x4_private_model.xml
+@@ -10,7 +10,7 @@
+     <favorite launcher:className="com.android.settings.MiuiSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="3" />
+     <favorite launcher:className="com.android.settings.MainSettings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="3" />
+     <favorite launcher:className="com.miui.securityscan.MainActivity" launcher:packageName="com.miui.securitycenter" launcher:screen="0" launcher:x="1" launcher:y="3" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="0" launcher:x="2" launcher:y="3" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="0" launcher:x="2" launcher:y="3" />
+     <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.xiaomi.account.ui.AccountSettingsActivity" launcher:packageName="com.xiaomi.account" launcher:container="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.email.activity.Welcome" launcher:packageName="com.android.email" launcher:container="1" launcher:x="1" launcher:y="0" />
+
+--- a/MiuiHome/res/xml/default_workspace4x5.xml
++++ b/MiuiHome/res/xml/default_workspace4x5.xml
+@@ -90,5 +90,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/default_workspace4x5_private_model.xml
++++ b/MiuiHome/res/xml/default_workspace4x5_private_model.xml
+@@ -46,5 +46,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/default_workspace4x6.xml
++++ b/MiuiHome/res/xml/default_workspace4x6.xml
+@@ -90,5 +90,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/default_workspace4x6_private_model.xml
++++ b/MiuiHome/res/xml/default_workspace4x6_private_model.xml
+@@ -46,5 +46,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/default_workspace_rotatable.xml
++++ b/MiuiHome/res/xml/default_workspace_rotatable.xml
+@@ -5,7 +5,7 @@
+     <folder launcher:screen="1" launcher:x="1" launcher:y="2" launcher:title="com.miui.home:string/default_folder_title_tools" />
+     <folder launcher:screen="1" launcher:x="2" launcher:y="2" launcher:title="com.miui.home:string/default_folder_title_recommend" launcher:presets_container="true" />
+     <clock2x4 launcher:screen="0" launcher:x="0" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:screen="1" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.calendar.AllInOneActivity" launcher:packageName="com.android.calendar" launcher:screen="1" launcher:x="2" launcher:y="0" />
+     <favorite launcher:className="com.xiaomi.market.ui.MarketTabActivity" launcher:packageName="com.xiaomi.market" launcher:screen="1" launcher:x="3" launcher:y="0" />
+
+--- a/MiuiHome/res/xml/i18n_default_workspace3x4.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace3x4.xml
+@@ -7,7 +7,7 @@
+     <folder launcher:screen="2" launcher:x="1" launcher:y="2" launcher:title="com.miui.home:string/default_folder_title_recommend" />
+     <google_original_search launcher:screen="0" launcher:x="0" launcher:y="0" />
+     <clock2x4 launcher:screen="1" launcher:x="0" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="2" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="2" />
+     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="1" launcher:x="1" launcher:y="2" />
+     <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="1" launcher:x="2" launcher:y="2" />
+     <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="1" launcher:x="0" launcher:y="3" />
+
+--- a/MiuiHome/res/xml/i18n_default_workspace3x4_private_model.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace3x4_private_model.xml
+@@ -9,7 +9,7 @@
+     <shortcut launcher:className="com.miui.securityspace.ui.activity.PrivateSpaceMainActivity" launcher:packageName="com.miui.securitycore" launcher:screen="0" launcher:x="1" launcher:y="2" launcher:title="com.miui.securitycore:string/private_space_setting" launcher:iconResource="com.miui.securitycore:drawable/private_space_setting" launcher:retained="true" />
+     <shortcut launcher:className="com.miui.securityspace.ui.activity.SwitchUserActivity" launcher:packageName="com.miui.securitycore" launcher:screen="0" launcher:x="2" launcher:y="2" launcher:title="com.miui.securitycore:string/exit_private_space" launcher:iconResource="com.miui.securitycore:drawable/exit_private_space" launcher:retained="true" />
+     <clock2x4 launcher:screen="1" launcher:x="0" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:screen="1" launcher:x="0" launcher:y="2" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:screen="1" launcher:x="0" launcher:y="2" />
+     <favorite launcher:className="com.miui.gallery.activity.HomePageActivity" launcher:packageName="com.miui.gallery" launcher:screen="1" launcher:x="1" launcher:y="2" />
+     <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="1" launcher:x="2" launcher:y="2" />
+     <favorite launcher:className="com.android.thememanager.ThemeResourceTabActivity" launcher:packageName="com.android.thememanager" launcher:screen="1" launcher:x="0" launcher:y="3" />
+
+--- a/MiuiHome/res/xml/i18n_default_workspace4x5.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace4x5.xml
+@@ -64,5 +64,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/i18n_default_workspace4x5_private_model.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace4x5_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/i18n_default_workspace4x6.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace4x6.xml
+@@ -64,5 +64,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/i18n_default_workspace4x6_private_model.xml
++++ b/MiuiHome/res/xml/i18n_default_workspace4x6_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/in_i18n_default_workspace4x5.xml
++++ b/MiuiHome/res/xml/in_i18n_default_workspace4x5.xml
+@@ -67,5 +67,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/in_i18n_default_workspace4x5_private_model.xml
++++ b/MiuiHome/res/xml/in_i18n_default_workspace4x5_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/in_i18n_default_workspace4x6.xml
++++ b/MiuiHome/res/xml/in_i18n_default_workspace4x6.xml
+@@ -67,5 +67,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/in_i18n_default_workspace4x6_private_model.xml
++++ b/MiuiHome/res/xml/in_i18n_default_workspace4x6_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/islam_i18n_default_workspace4x5.xml
++++ b/MiuiHome/res/xml/islam_i18n_default_workspace4x5.xml
+@@ -63,5 +63,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/islam_i18n_default_workspace4x6.xml
++++ b/MiuiHome/res/xml/islam_i18n_default_workspace4x6.xml
+@@ -63,5 +63,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/tw_i18n_default_workspace4x5.xml
++++ b/MiuiHome/res/xml/tw_i18n_default_workspace4x5.xml
+@@ -65,5 +65,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/tw_i18n_default_workspace4x5_private_model.xml
++++ b/MiuiHome/res/xml/tw_i18n_default_workspace4x5_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/tw_i18n_default_workspace4x6.xml
++++ b/MiuiHome/res/xml/tw_i18n_default_workspace4x6.xml
+@@ -65,5 +65,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+
+--- a/MiuiHome/res/xml/tw_i18n_default_workspace4x6_private_model.xml
++++ b/MiuiHome/res/xml/tw_i18n_default_workspace4x6_private_model.xml
+@@ -53,5 +53,5 @@
+     <favorite launcher:className="com.android.contacts.activities.TwelveKeyDialer" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:x="0" launcher:y="0" />
+     <favorite launcher:className="com.android.mms.ui.MmsTabActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:x="1" launcher:y="0" />
+     <favorite launcher:className="com.android.browser.BrowserActivity" launcher:packageName="com.android.browser" launcher:container="-101" launcher:x="2" launcher:y="0" />
+-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.camera" launcher:container="-101" launcher:x="3" launcher:y="0" />
++    <favorite launcher:className="com.motorola.camera.Camera" launcher:packageName="com.motorola.cameraone" launcher:container="-101" launcher:x="3" launcher:y="0" />
+ </favorites>
+\ No newline at end of file
+-- 
+2.7.4
+
