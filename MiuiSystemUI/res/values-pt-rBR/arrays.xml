@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="aqi_title_prefix">
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+        <item>IQA %1$s</item>
+    </string-array>
+    <string-array name="aqi_title_append">
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+    </string-array>
+    <string-array name="aqi_title">
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+        <item>%1$s</item>
+    </string-array>
+    <string-array name="weather_type">
+        <item>Ensolarado</item>
+        <item>Nublado</item>
+        <item>Nublado</item>
+        <item>Nebuloso</item>
+        <item>Tempestade pesada</item>
+        <item>Chuva torrencial</item>
+        <item>Tempestade chuvosa</item>
+        <item>Tempestade</item>
+        <item>Chuva</item>
+        <item>Chuva forte</item>
+        <item>Chuva moderada</item>
+        <item>Chuva leve</item>
+        <item>Chuva com neve</item>
+        <item>Nevasca</item>
+        <item>Neve</item>
+        <item>Neve pesada</item>
+        <item>Neve moderada</item>
+        <item>Neve leve</item>
+        <item>Tempestade de areia forte</item>
+        <item>Tempestade de areia</item>
+        <item>Areia</item>
+        <item>Ventania</item>
+        <item>Granizo</item>
+        <item>Poeira</item>
+        <item>Neblina</item>
+        <item>Chuva congelada</item>
+        <item></item>
+    </string-array>
+</resources>
