@@ -150,7 +150,7 @@ on boot
     mkdir /persist/properties 0770 system system
 
 # sysinit (/system/etc/init.d)
-service sysinit /system/bin/sysinit
+service sysinit /system/bin/logwrapper /system/xbin/busybox run-parts /system/etc/init.d
     user root
     oneshot
     disabled

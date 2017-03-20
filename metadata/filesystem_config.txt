@@ -2210,6 +2210,7 @@ system/xbin/ps 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/puncture_fs 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/rawbu 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/rsync 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/xbin/run-parts 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/sane_schedstat 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/showmap 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/xbin/showslab 0 2000 755 selabel=u:object_r:system_file:s0 capabilities=0x0
