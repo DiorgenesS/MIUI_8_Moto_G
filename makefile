@@ -70,6 +70,8 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttscompat.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
@@ -81,6 +83,7 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-thea.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-titan.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
+	$(hide) rm -rf $(ZIP_DIR)/system/tts
 	$(hide) rm -rf $(ZIP_DIR)/system/recovery-from-boot.bak
 	@echo copying files!
 	$(hide) cp -rf other/system $(ZIP_DIR)/

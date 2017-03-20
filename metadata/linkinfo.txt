@@ -3,8 +3,6 @@ system/media/audio/notifications/MessageIncoming.ogg|../ui/MessageIncoming.ogg
 system/app/Bluetooth/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/BluetoothExt/lib/arm/libbluetooth_jni.so|/system/lib/libbluetooth_jni.so
 system/app/PacProcessor/lib/arm/libjni_pacprocessor.so|/system/lib/libjni_pacprocessor.so
-system/app/PicoTts/lib/arm/libttscompat.so|/system/lib/libttscompat.so
-system/app/PicoTts/lib/arm/libttspico.so|/system/lib/libttspico.so
 system/app/PrintSpooler/lib/arm/libprintspooler_jni.so|/system/lib/libprintspooler_jni.so
 system/bin/acpi|toybox
 system/bin/app_process|app_process32

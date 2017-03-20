@@ -12,7 +12,6 @@ private-phone-apps := \
 	KeyChain \
 	LiveWallpapers \
 	PacProcessor \
-	PicoTts \
 	PrintSpooler \
 	qcrilmsgtunnel \
 	Stk \
