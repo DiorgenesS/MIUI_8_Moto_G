@@ -18,6 +18,24 @@ def AddAssertions(info):
       edify.script[i] = edify.script[i].replace(" ||", ' ')
       return
 
+def ModifyMountData(edify):
+    for i in xrange(len(edify.script)):
+        if "mount(" in edify.script[i] and "by-name/userdata" in edify.script[i]:
+            edify.script[i] = 'run_program("/sbin/busybox", "mount", "/data");'
+
+def AddPrompt(edify):
+    for i in xrange(len(edify.script)):
+        if 'mount("ext4' in edify.script[i] and 'by-name/system' in edify.script[i]:
+            edify.script[i] = 'ui_print("Formating Partitions...");\n' + edify.script[i]
+        elif 'package_extract_dir("system"' in edify.script[i]:
+            edify.script[i] = 'ui_print("Installing system...");\n' + edify.script[i]
+        elif 'symlink("../ui/MessageComplete.ogg' in edify.script[i]:
+            edify.script[i] = 'ui_print("Creating symlinks...");\n' + edify.script[i]
+        elif 'set_metadata_recursive("/system"' in edify.script[i]:
+            edify.script[i] = 'ui_print("Setting permissions...");\n' + edify.script[i]
+        elif 'package_extract_file("boot' in edify.script[i]:
+            edify.script[i] = 'ui_print("Flashing Kernel...");\n' + edify.script[i]
+
 def AddArgsForFormatSystem(info):
   edify = info.script
   for i in xrange(len(edify.script)):
@@ -38,7 +56,11 @@ delete("/system/etc/apns-conf.xml");
 symlink("/system/etc/apns-conf-cdma.xml", "/system/etc/apns-conf.xml");
 endif;"""))
 
+
 def FullOTA_InstallEnd(info):
+    edify = info.script
+    AddPrompt(edify)
+    ModifyMountData(edify)
     WritePolicyConfig(info)
     RemoveDeviceAssert(info)
     CdmaConfig(info)
