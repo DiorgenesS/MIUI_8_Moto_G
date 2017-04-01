@@ -77,6 +77,13 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
 	@echo remove unnecessary files!
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/app/*
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/prebuilts
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/videoplugins
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/yellowpage
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/cdrom_install.iso
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
+	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/build-manifest.xml
