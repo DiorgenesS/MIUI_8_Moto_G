@@ -1,0 +1,30 @@
+From b238f309ab5815ac3d08152a6df25627d0ba7954 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Sat, 8 Apr 2017 19:15:23 -0300
+Subject: [PATCH] Enable font in Global version
+
+---
+ Settings/res/xml/display_settings.xml | 9 +++------
+ 1 file changed, 3 insertions(+), 6 deletions(-)
+
+--- a/Settings/res/xml/display_settings.xml
++++ b/Settings/res/xml/display_settings.xml
+@@ -12,12 +12,9 @@
+     <PreferenceCategory android:title="@string/touch_title" android:key="touch_category">
+         <CheckBoxPreference android:persistent="false" android:title="@string/touch_sensitive_title" android:key="touch_sensitive" android:summary="@string/touch_sensitive_summary" />
+     </PreferenceCategory>
+-    <PreferenceCategory android:title="@string/title_font_current2" android:key="font_settings_cat">
+-        <miui.preference.ValuePreference android:title="@string/title_font_current2" android:key="font_settings" />
+-        <miui.preference.ValuePreference android:title="@string/title_layout_current2" android:key="page_layout_settings">
+-            <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.Settings$PageLayoutActivity" />
+-        </miui.preference.ValuePreference>
+-    </PreferenceCategory>
++    <PreferenceScreen android:title="@string/title_font_current" android:key="title_font_current">
++        <intent android:targetPackage="com.android.settings" android:action="android.intent.action.MAIN" android:targetClass="com.android.settings.Settings$FontSettingsActivity" />
++    </PreferenceScreen>
+     <PreferenceCategory android:title="@string/system" />
+     <com.android.settings.WarnedListPreference android:entries="@array/miui_entries_font_size" android:title="@string/title_font_size" android:key="font_size" android:summary="@string/summary_font_size" android:dialogTitle="@string/dialog_title_font_size" android:entryValues="@array/entryvalues_font_size" />
+     <ListPreference android:persistent="false" android:entries="@array/screen_timeout_entries" android:title="@string/screen_timeout" android:key="screen_timeout" android:summary="@string/screen_timeout_summary" android:entryValues="@array/screen_timeout_values" />
+-- 
+2.7.4
+
