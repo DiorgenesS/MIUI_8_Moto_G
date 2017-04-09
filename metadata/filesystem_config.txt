@@ -1735,6 +1735,8 @@ system/media/audio/ui/VideoStop.ogg 0 0 644 selabel=u:object_r:system_file:s0 ca
 system/media/audio/ui/WirelessChargingStarted.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_click.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/audio/ui/camera_focus.ogg 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/default 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/default/com.android.systemui 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.miui.videoplayer.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
