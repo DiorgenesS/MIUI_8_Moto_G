@@ -1,0 +1,89 @@
+From ed3c2044f9fdb0fda189bb609c64f0cf7dcc1bf4 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 11 Apr 2017 10:31:43 -0300
+Subject: [PATCH 1/2] Fix for the notification counter for icons in the launcher
+
+---
+ .../systemui/statusbar/phone/PhoneStatusBar.smali  | 28 +++++++++++++++++++++-
+ 1 file changed, 27 insertions(+), 1 deletion(-)
+
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
+@@ -7563,6 +7563,10 @@
+ 
+     move-result-object v2
+ 
++    iget v0, v2, Landroid/app/Notification;->number:I
++
++    if-nez v0, :cond_skip1
++
+     iget-object v2, v2, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
+     invoke-virtual {v2}, Landroid/app/MiuiNotification;->getMessageCount()I
+@@ -7581,6 +7585,8 @@
+     move-result v1
+ 
+     .local v1, "oldCount":I
++    :cond_skip2
++
+     if-ne v0, v1, :cond_0
+ 
+     if-ne v0, v1, :cond_1
+@@ -8647,7 +8653,7 @@
+ .end method
+ 
+ .method private updateAppMessage(Lcom/android/systemui/statusbar/ExpandedNotification;)V
+-    .locals 9
++    .locals 10
+     .param p1, "notification"    # Lcom/android/systemui/statusbar/ExpandedNotification;
+ 
+     .prologue
+@@ -8792,12 +8798,22 @@
+ 
+     move-result-object v7
+ 
++    iget v9, v7, Landroid/app/Notification;->number:I
++
++    if-nez v9, :cond_skip3
++
+     iget-object v7, v7, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
+     invoke-virtual {v7}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v7
+ 
++    move v9, v7
++
++    :cond_skip3
++
++    move v7,v9
++
+     add-int/2addr v4, v7
+ 
+     :cond_2
+@@ -8897,12 +8913,22 @@
+ 
+     move-result-object v7
+ 
++    iget v9, v7, Landroid/app/Notification;->number:I
++
++    if-nez v9, :cond_skip4
++
+     iget-object v7, v7, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
+     invoke-virtual {v7}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v7
+ 
++    move v9,v7
++
++    :cond_skip4
++
++    move v7,v9
++
+     add-int/2addr v4, v7
+ 
+     :cond_6
+-- 
+2.7.4
+
