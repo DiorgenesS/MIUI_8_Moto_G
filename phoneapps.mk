@@ -24,7 +24,6 @@ private-phone-priv-apps := \
 	AudioFX \
 	BackupRestoreConfirmation \
 	CarrierConfig \
-	CellBroadcastReceiver \
 	CMAudioService \
 	CMSettingsProvider \
 	ExternalStorageProvider \
