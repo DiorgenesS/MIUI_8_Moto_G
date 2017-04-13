@@ -1,0 +1,35 @@
+From 73a4dcdb9d8743063f1d1922191c08a03daaad8e Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 4 Apr 2017 23:48:54 -0300
+Subject: [PATCH] Tap on the Status Bar to Lock
+
+---
+ MiuiSystemUI/res/layout/status_bar_simple.xml | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+--- a/MiuiSystemUI/res/layout/status_bar_simple.xml
++++ b/MiuiSystemUI/res/layout/status_bar_simple.xml
+@@ -1,6 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <com.android.systemui.statusbar.phone.SimpleStatusBar android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="@dimen/status_bar_height"
+-  xmlns:android="http://schemas.android.com/apk/res/android">
++  xmlns:android="http://schemas.android.com/apk/res/android"
++  xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
+     <com.android.systemui.statusbar.phone.BatteryIndicator android:layout_gravity="top" android:id="@id/battery_indicator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/battery_indicator" android:scaleType="fitXY" />
+     <RelativeLayout android:id="@id/icons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="3.0dip" android:paddingEnd="3.0dip">
+         <com.android.systemui.statusbar.policy.Clock android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="start|center" android:id="@id/clock" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:paddingStart="3.0dip" android:paddingEnd="3.0dip" />
+@@ -17,7 +18,10 @@
+                 <include android:id="@id/signal_cluster2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/signal_cluster_view" />
+             </LinearLayout>
+             <ImageView android:id="@id/battery_charging_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+-            <com.android.systemui.statusbar.phone.BatteryStatusIconView android:id="@id/battery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++            <FrameLayout android:layout_width="wrap_content" android:layout_height="@dimen/status_bar_height">
++                <com.android.systemui.statusbar.phone.BatteryStatusIconView android:id="@id/battery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                <com.android.systemui.statusbar.policy.KeyButtonView android:id="@id/back" android:layout_width="30.0dip" android:layout_height="25.0dip" android:layout_toRightOf="@id/recent_apps" android:contentDescription="@string/accessibility_back" systemui:keyCode="26" systemui:glowBackground="@drawable/ic_sysbar_highlight" />
++            </FrameLayout>
+             <TextView android:textAppearance="@style/TextAppearance.StatusBar.Battery" android:gravity="center" android:id="@id/battery_num" android:paddingBottom="@dimen/statusbar_battery_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="1.0dip" android:layout_marginEnd="3.0dip" />
+         </com.android.systemui.statusbar.phone.StatusBarIcons>
+     </RelativeLayout>
+-- 
+2.7.4
+
