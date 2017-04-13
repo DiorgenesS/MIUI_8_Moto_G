@@ -1,0 +1,42 @@
+From 4d4c5ad3e64052b6523e1a78d14c34edfec33d03 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 11 Apr 2017 14:30:33 -0300
+Subject: [PATCH 1/2] Starting previous application on long hold button
+
+---
+ Settings/res/values-pt-rBR/arrays.xml | 1 +
+ Settings/res/values/arrays.xml        | 2 ++
+ 2 files changed, 3 insertions(+)
+
+--- a/Settings/res/values-pt-rBR/arrays.xml
++++ b/Settings/res/values-pt-rBR/arrays.xml
+@@ -610,6 +610,7 @@
+         <item>Fechar app atual</item>
+         <item>Executar Pesquisa rápida</item>
+         <item>Mostrar menu</item>
++        <item>Último aplicativo</item>
+     </string-array>
+     <string-array name="screen_key_long_press_timeout">
+         <item>0.5 segundos</item>
+
+--- a/Settings/res/values/arrays.xml
++++ b/Settings/res/values/arrays.xml
+@@ -1158,6 +1158,7 @@
+         <item>Close current app</item>
+         <item>Launch quick search</item>
+         <item>Show menu</item>
++        <item>Previous application</item>
+     </string-array>
+     <string-array name="screen_key_long_press_action_value">
+         <item>none</item>
+@@ -1167,6 +1168,7 @@
+         <item>close_app</item>
+         <item>quick_search</item>
+         <item>show_menu</item>
++        <item>prev_app</item>
+     </string-array>
+     <string-array name="screen_key_long_press_timeout">
+         <item>0.5 seconds</item>
+-- 
+2.7.4
+
