@@ -1,0 +1,23 @@
+From f939083f2c9eafc64d5e9d790db209e09618f712 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 11 Apr 2017 11:23:22 -0300
+Subject: [PATCH] Added logo for Moto G
+
+---
+XiaomiAccount/smali/com/xiaomi/account/data/b.smali | 2 +-
+1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/XiaomiAccount/smali/com/xiaomi/account/data/b.smali
++++ b/XiaomiAccount/smali/com/xiaomi/account/data/b.smali
+@@ -134,7 +134,7 @@
+ 
+     if-eqz v1, :cond_1
+ 
+-    const-string v0, "https://account.xiaomi.com/static/res/6532f65/PHONE/passport/images/MI/android.png"
++    const-string v0, "https://raw.githubusercontent.com/DiorgenesS/logo/master/others/MotoG.png"
+ 
+     :cond_1
+     return-object v0
+-- 
+2.7.4
+
