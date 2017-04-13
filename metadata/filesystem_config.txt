@@ -1742,6 +1742,8 @@ system/media/theme/miui_mod_icons/com.android.fmradio.png 0 0 644 selabel=u:obje
 system/media/theme/miui_mod_icons/com.android.providers.calllogbackup.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.android.providers.settings.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.android.server.telecom.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.android.settings_ex.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/com.dio.stocksettings.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.google.android.syncadapters.calendar.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.google.android.syncadapters.contacts.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/com.miui.videoplayer.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
