@@ -1,0 +1,79 @@
+From c84160ff6f917cd074b5b87b207d1ad4f3a73ddc Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Sat, 15 Apr 2017 01:08:04 -0300
+Subject: [PATCH] Activate the settings in SMS "Definition of one-time passwords" and "Grouping of service messages"
+
+---
+ .../mms/ui/MessagingPreferenceActivity.smali       | 44 ----------------------
+ 1 file changed, 44 deletions(-)
+
+--- a/Mms/smali/com/android/mms/ui/MessagingPreferenceActivity.smali
++++ b/Mms/smali/com/android/mms/ui/MessagingPreferenceActivity.smali
+@@ -1101,19 +1101,6 @@
+     check-cast v0, Landroid/preference/PreferenceCategory;
+ 
+     .local v0, "displayPref":Landroid/preference/PreferenceCategory;
+-    const-string v3, "IN"
+-
+-    invoke-static {v3}, Lmiui/os/Build;->checkRegion(Ljava/lang/String;)Z
+-
+-    move-result v3
+-
+-    if-nez v3, :cond_0
+-
+-    sget-boolean v3, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+-
+-    if-nez v3, :cond_c
+-
+-    :cond_0
+     iget-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mCollapseSPMessagePref:Landroid/preference/CheckBoxPreference;
+ 
+     invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+@@ -1168,20 +1155,6 @@
+ 
+     iput-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mShowTemplateInPref:Landroid/preference/CheckBoxPreference;
+ 
+-    invoke-static {}, Lcom/android/mms/ui/MessageUtils;->isUnderstandSupported()Z
+-
+-    move-result v3
+-
+-    if-eqz v3, :cond_e
+-
+-    const-string v3, "IN"
+-
+-    invoke-static {v3}, Lmiui/os/Build;->checkRegion(Ljava/lang/String;)Z
+-
+-    move-result v3
+-
+-    if-eqz v3, :cond_d
+-
+     iget-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mShowTemplateInPref:Landroid/preference/CheckBoxPreference;
+ 
+     invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+@@ -1478,23 +1451,6 @@
+ 
+     invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
+ 
+-    if-eqz v1, :cond_2
+-
+-    iget-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mShowTemplateInPref:Landroid/preference/CheckBoxPreference;
+-
+-    invoke-virtual {v1, v3}, Landroid/preference/PreferenceCategory;->removePreference(Landroid/preference/Preference;)Z
+-
+-    goto/16 :goto_2
+-
+-    :cond_e
+-    if-eqz v1, :cond_2
+-
+-    invoke-virtual {p0}, Lcom/android/mms/ui/MessagingPreferenceActivity;->getPreferenceScreen()Landroid/preference/PreferenceScreen;
+-
+-    move-result-object v3
+-
+-    invoke-virtual {v3, v1}, Landroid/preference/PreferenceScreen;->removePreference(Landroid/preference/Preference;)Z
+-
+     goto/16 :goto_2
+ 
+     :cond_f
+-- 
+2.7.4
+
