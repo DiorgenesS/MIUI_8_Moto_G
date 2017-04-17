@@ -1,0 +1,52 @@
+From 9c9e05b2632ea5efa939e5c164368310ea7cbca3 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 17 Apr 2017 11:26:51 -0300
+Subject: [PATCH 2/2] patch for style staturbar
+
+---
+ Settings/res/values/arrays.xml        | 8 ++++++++
+ Settings/res/values/strings.xml       | 1 +
+ Settings/res/xml/display_settings.xml | 1 +
+ 3 files changed, 10 insertions(+)
+
+--- a/Settings/res/values/arrays.xml
++++ b/Settings/res/values/arrays.xml
+@@ -249,6 +249,14 @@
+         <item>1</item>
+         <item>0</item>
+     </string-array>
++    <string-array name="ios_toggle_entries">
++        <item>Default</item>
++        <item>IOS</item>
++    </string-array>
++    <string-array name="toggles_line_values">
++        <item>0</item>
++        <item>1</item>
++    </string-array>
+     <string-array name="data_usage_data_range">
+         <item>Last 30 days</item>
+         <item>Set usage cycle...</item>
+
+--- a/Settings/res/values/strings.xml
++++ b/Settings/res/values/strings.xml
+@@ -159,6 +159,7 @@
+     <string name="online_resource_entry">Online resources</string>
+     <string name="additional_system_update" />
+     <string name="additional_system_update_menu" />
++    <string name="ios_toggle_title">StatusBar style</string>
+     <string name="input_method_selector_show_automatically_value">0</string>
+     <string name="input_method_selector_always_show_value">1</string>
+     <string name="input_method_selector_always_hide_value">2</string>
+
+--- a/Settings/res/xml/display_settings.xml
++++ b/Settings/res/xml/display_settings.xml
+@@ -29,4 +29,5 @@
+     <CheckBoxPreference android:title="@string/gesture_wakeup_title" android:key="gesture_wakeup" />
+     <CheckBoxPreference android:title="@string/accelerometer_title" android:key="auto_rotate" />
+     <CheckBoxPreference android:persistent="false" android:title="@string/notification_pulse_title" android:key="notification_pulse" android:summary="@string/led_pulse_summary" />
++    <MiuiListPreference android:entries="@array/ios_toggle_entries" android:layout="@layout/preference_ringtone" android:title="@string/ios_toggle_title" android:key="ios_toggle" android:summary="%s" android:defaultValue="0" android:entryValues="@array/toggles_line_values" intent="com.miui.app.ExtraStatusBarManager.REQUEST_RESTART" />
+ </PreferenceScreen>
+\ No newline at end of file
+-- 
+2.7.4
+
