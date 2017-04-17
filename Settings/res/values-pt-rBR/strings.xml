@@ -68,6 +68,7 @@
     <string name="audio_list_loading">Carregando…</string>
     <string name="title_local_resource">Recursos locais</string>
     <string name="online_resource_entry">Recursos online</string>
+    <string name="ios_toggle_title">Estilo da barra de status</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="create">Criar</string>
