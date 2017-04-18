@@ -1,0 +1,78 @@
+From 5d24b750e9e5c4cded15376f1ec6f6bb62c622d9 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Fri, 14 Apr 2017 23:09:57 -0300
+Subject: [PATCH 3/3] Patch blur effect
+
+---
+ framework/smali/miui/util/ScreenshotDrawable.smali | 32 ++++++++++++++--------
+ 1 file changed, 19 insertions(+), 12 deletions(-)
+
+--- a/framework/smali/miui/util/ScreenshotDrawable.smali
++++ b/framework/smali/miui/util/ScreenshotDrawable.smali
+@@ -45,16 +45,6 @@
+ 
+     sput-object v0, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
+ 
+-    const-string v0, "ro.miui.has_real_blur"
+-
+-    const/4 v1, 0x0
+-
+-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+-
+-    move-result v0
+-
+-    sput-boolean v0, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
+-
+     const-string v0, "oled"
+ 
+     const-string v1, "ro.display.type"
+@@ -267,13 +257,26 @@
+     .locals 7
+ 
+     .prologue
+-    sget-boolean v2, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
++    iget-object v2, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
++
++    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
++
++    move-result-object v2
+ 
+-    if-eqz v2, :cond_0
++    const-string v3, "blur_on"
++
++    const/4 v4, 0x1
++
++    invoke-static {v2, v3}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
++
++    move-result v3
++
++    if-nez v3, :cond_0
+ 
+     :goto_0
+     return-void
++    sput-boolean v4, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
+ 
+     :cond_0
+     :try_start_0
+     iget-object v2, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
+@@ -316,6 +319,8 @@
+     :try_end_0
+     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+ 
++    const/4 v4, 0x0
++
+     goto :goto_0
+ 
+     .end local v1    # "screenshot":Landroid/graphics/Bitmap;
+@@ -331,6 +336,8 @@
+ 
+     invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+ 
++    const/4 v4, 0x0
++
+     goto :goto_0
+ .end method
+ 
+-- 
+2.7.4
+
