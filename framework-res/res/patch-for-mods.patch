@@ -1,0 +1,107 @@
+From c299d85d1567e0edeacd5f398c3f3e96eec99514 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Mon, 17 Apr 2017 21:47:50 -0300
+Subject: [PATCH] patch for "Independent settings", necessary for futures mods
+
+---
+ .../res/layout/color_preference_layout.xml         | 24 ++++++++++++++++++++++
+ .../res/layout/launch_preference_app_icon.xml      |  5 +++++
+ .../res/layout/launch_preference_item.xml          | 11 ++++++++++
+ .../res/layout/launch_preference_layout.xml        |  7 +++++++
+ .../res/layout/seekbar_preference_layout.xml       |  6 ++++++
+ framework-res/res/values/strings.xml               |  2 ++
+ 6 files changed, 55 insertions(+)
+
+
+--- /dev/null
++++ b/framework-res/res/layout/color_preference_layout.xml
+@@ -0,0 +1,24 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:orientation="vertical" android:id="@+id/dialog_color_picker" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip">
++        <TextView android:textSize="20.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="Hex:" />
++        <EditText android:id="@+id/hex" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="ff000000" />
++        <ImageButton android:gravity="center" android:id="@+id/enter" android:background="@color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/ic_cab_done_holo_light" />
++    </LinearLayout>
++    <android.preference.MiuiColorPickerView android:id="@+id/color_picker_view" android:tag="portrait" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
++    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="7.0dip">
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/white_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/black_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/blue_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/red_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/green_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:layout_weight="0.5" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/yellow_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="0.5" />
++    </LinearLayout>
++    <TextView android:textAppearance="?textAppearanceSmall" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="5.0dip" android:text="@string/press_color_to_apply" />
++    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginBottom="10.0dip">
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/old_color_panel" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_weight="0.5" />
++        <TextView android:textSize="20.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="→" />
++        <android.preference.MiuiColorPickerPanelView android:id="@+id/new_color_panel" android:layout_width="0.0px" android:layout_height="wrap_content" android:layout_weight="0.5" />
++    </LinearLayout>
++</LinearLayout>
+\ No newline at end of file
+
+--- /dev/null
++++ b/framework-res/res/layout/launch_preference_app_icon.xml
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <ImageView android:id="@+id/iconForApp" android:focusable="false" android:clickable="false" android:layout_width="37.0dip" android:layout_height="37.0dip" />
++</RelativeLayout>
+\ No newline at end of file
+
+--- /dev/null
++++ b/framework-res/res/layout/launch_preference_item.xml
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <ImageView android:id="@+id/appIcon" android:padding="3.0dip" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="centerCrop" android:contentDescription="@null" />
++    <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="10.0dip" android:layout_height="fill_parent" />
++    <LinearLayout android:gravity="center|left" android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="210.0dip" android:layout_height="fill_parent">
++        <TextView android:textStyle="bold" android:textColor="@color/holo_button_normal" android:gravity="center|left" android:id="@+id/appName" android:layout_width="235.0dip" android:layout_height="fill_parent" />
++        <TextView android:gravity="center|left" android:id="@+id/appPackage" android:visibility="invisible" android:layout_width="261.0dip" android:layout_height="wrap_content" />
++    </LinearLayout>
++    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="104.0dip" android:layout_height="fill_parent" />
++</LinearLayout>
+\ No newline at end of file
+
+--- /dev/null
++++ b/framework-res/res/layout/launch_preference_layout.xml
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<RelativeLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="16.0dip" android:paddingEnd="16.0dip"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <EditText android:textStyle="italic" android:id="@+id/searchApp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:hint="@string/search_go" android:singleLine="false" android:selectAllOnFocus="false" android:textIsSelectable="false" android:textAllCaps="false" android:backgroundTint="@color/holo_primary" android:backgroundTintMode="src_in" />
++    <ListView android:id="@+id/appsList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/searchApp" android:layout_alignParentStart="true" />
++    <ProgressBar android:id="@+id/progressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:indeterminate="true" android:layout_below="@+id/searchApp" android:layout_centerHorizontal="true" android:progressTint="@color/keyguard_avatar_frame_color" android:indeterminateTint="@color/keyguard_avatar_frame_shadow_color" android:indeterminateTintMode="src_in" />
++</RelativeLayout>
+\ No newline at end of file
+
+--- /dev/null
++++ b/framework-res/res/layout/seekbar_preference_layout.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingRight="?scrollbarSize" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?listPreferredItemHeight"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <SeekBar android:id="@+id/seekbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" />
++    <TextView android:textAppearance="?textAppearanceSmall" android:textColor="?textColorSecondary" android:gravity="center" android:id="@+id/seekbar_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" />
++</LinearLayout>
+\ No newline at end of file
+
+--- a/framework-res/res/values/strings.xml
++++ b/framework-res/res/values/strings.xml
+@@ -945,6 +945,8 @@ Are you sure you want to navigate away from this page?"</string>
+     <string name="searchview_description_clear">Clear query</string>
+     <string name="searchview_description_submit">Submit query</string>
+     <string name="searchview_description_voice">Voice search</string>
++    <string name="press_color_to_apply">Click on the color to select</string>
++    <string name="auto_app_launch">Application for launch</string>
+     <string name="enable_explore_by_touch_warning_title">Enable Explore by Touch?</string>
+     <string name="enable_explore_by_touch_warning_message">"%1$s wants to enable Explore by Touch. When Explore by Touch is turned on, you can hear or see descriptions of what's under your finger or perform gestures to interact with the phone."</string>
+     <string name="oneMonthDurationPast">1 month ago</string>
+-- 
+2.7.4
+
