@@ -178,7 +178,7 @@ Subject: [PATCH 1/2] patch for style staturbar
 +
 +    const-string v1, "ios_toggle"
 +
-+    invoke-static {v0, v1}, Landroid/preference/PreferenceManager;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
++    invoke-static {v0, v1}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
 +
 +    move-result v1
 +
