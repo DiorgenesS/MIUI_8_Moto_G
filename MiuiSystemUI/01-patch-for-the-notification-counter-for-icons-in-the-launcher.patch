@@ -1,0 +1,278 @@
+From 464e8b5346d463612b7cccf3adc962cbc400a710 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 18 Apr 2017 00:07:30 -0300
+Subject: [PATCH] Fix for the notification counter for icons in the launcher
+
+---
+ .../systemui/statusbar/phone/PhoneStatusBar.smali  | 201 ++++++++++++++++++++-
+ 1 file changed, 200 insertions(+), 1 deletion(-)
+
+
+--- a/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/statusbar/phone/PhoneStatusBar.smali
+@@ -7566,24 +7566,38 @@
+ 
+     iget-object v2, v2, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
++    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getNumber(Landroid/service/notification/StatusBarNotification;)I
++
++    move-result v0
++
++    if-nez v0, :cond_skip1
++
+     invoke-virtual {v2}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v0
+ 
+     .local v0, "count":I
++    :cond_skip1
+     invoke-virtual {p2}, Lcom/android/systemui/statusbar/ExpandedNotification;->getNotification()Landroid/app/Notification;
+ 
+     move-result-object v2
+ 
+     iget-object v2, v2, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
++    invoke-virtual {p0, p2}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getNumber(Landroid/service/notification/StatusBarNotification;)I
++
++    move-result v1
++
++    if-nez v1, :cond_skip2
++
+     invoke-virtual {v2}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v1
+ 
+     .local v1, "oldCount":I
++    :cond_skip2
+     if-ne v0, v1, :cond_0
+ 
+     if-ne v0, v1, :cond_1
+ 
+     invoke-virtual {p0, p3}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->isHandleAppNotification(Landroid/os/IBinder;)Z
+@@ -8650,7 +8664,7 @@
+ .end method
+ 
+ .method private updateAppMessage(Lcom/android/systemui/statusbar/ExpandedNotification;)V
+-    .locals 9
++    .locals 10
+     .param p1, "notification"    # Lcom/android/systemui/statusbar/ExpandedNotification;
+ 
+     .prologue
+@@ -8795,12 +8809,24 @@
+ 
+     move-result-object v7
+ 
++    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getNumber(Landroid/service/notification/StatusBarNotification;)I
++
++    move-result v9
++
++    if-nez v9, :cond_skip3
++
+     iget-object v7, v7, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
+     invoke-virtual {v7}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v7
+ 
++    move v9, v7
++
++    :cond_skip3
++
++    move v7,v9
++
+     add-int/2addr v4, v7
+ 
+     :cond_2
+@@ -8901,12 +8927,24 @@
+ 
+     move-result-object v7
+ 
++    invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->getNumber(Landroid/service/notification/StatusBarNotification;)I
++
++    move-result v9
++
++    if-nez v9, :cond_skip4
++
+     iget-object v7, v7, Landroid/app/Notification;->extraNotification:Landroid/app/MiuiNotification;
+ 
+     invoke-virtual {v7}, Landroid/app/MiuiNotification;->getMessageCount()I
+ 
+     move-result v7
+ 
++    move v9, v7
++
++    :cond_skip4
++
++    move v7,v9
++
+     add-int/2addr v4, v7
+ 
+     :cond_6
+@@ -22932,3 +22970,164 @@
+ 
+     return-void
+ .end method
++
++.method public getNumber(Landroid/service/notification/StatusBarNotification;)I
++    .locals 6
++    .param p1, "sbn"    # Landroid/service/notification/StatusBarNotification;
++
++    .prologue
++    const/4 v2, 0x0
++
++    .local v2, "num":I
++    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getPackageName()Ljava/lang/String;
++
++    move-result-object v4
++
++    const-string v5, "com.whatsapp"
++
++    invoke-virtual {v4, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_2
++
++    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
++
++    move-result-object v4
++
++    iget-object v4, v4, Landroid/app/Notification;->extras:Landroid/os/Bundle;
++
++    const-string v5, "android.text"
++
++    invoke-virtual {v4, v5}, Landroid/os/Bundle;->getCharSequence(Ljava/lang/String;)Ljava/lang/CharSequence;
++
++    move-result-object v4
++
++    invoke-interface {v4}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
++
++    move-result-object v0
++
++    .local v0, "extra":Ljava/lang/String;
++    const-string v4, "message"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-nez v4, :cond_0
++
++    const-string v4, "mensagens"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "mensajes"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "\u77ed\u4fe1"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "\u901a\u8baf"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "messaggi"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "mensajer\u00eda"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "messages"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "messaging"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_0
++
++    const-string v4, "\u0441\u043e\u043e\u0431\u0449\u0435\u043d"
++
++    invoke-virtual {v0, v4}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
++
++    move-result v4
++
++    if-eqz v4, :cond_1
++
++    :cond_0
++    const-string v4, "\\d+"
++
++    invoke-static {v4}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
++
++    move-result-object v3
++
++    .local v3, "pat":Ljava/util/regex/Pattern;
++    invoke-virtual {v3, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
++
++    move-result-object v1
++
++    .local v1, "matcher":Ljava/util/regex/Matcher;
++    invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
++
++    move-result v4
++
++    if-eqz v4, :cond_1
++
++    invoke-virtual {v1}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
++
++    move-result-object v4
++
++    invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
++
++    move-result v2
++
++    .end local v0    # "extra":Ljava/lang/String;
++    .end local v1    # "matcher":Ljava/util/regex/Matcher;
++    .end local v3    # "pat":Ljava/util/regex/Pattern;
++    :cond_1
++    :goto_0
++    return v2
++
++    :cond_2
++    invoke-virtual {p1}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
++
++    move-result-object v4
++
++    iget v2, v4, Landroid/app/Notification;->number:I
++
++    goto :goto_0
++.end method
+-- 
+2.7.4
+
