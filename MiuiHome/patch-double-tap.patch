@@ -1,0 +1,371 @@
+From 0142210e2f3bdc8183f4c9c09278c45c012a2fe6 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 18 Apr 2017 11:25:08 -0300
+Subject: [PATCH 1/3] Double tap and swipe
+
+---
+ .../com/miui/home/launcher/Launcher$19$1.smali     |  19 +++
+ .../smali/com/miui/home/launcher/Launcher.smali    |  10 ++
+ .../home/launcher/Workspace$SwipeListener.smali    | 181 +++++++++++++++++++++
+ .../smali/com/miui/home/launcher/Workspace.smali   |  80 +++++++++
+ 4 files changed, 290 insertions(+)
+
+
+--- a/MiuiHome/smali/com/miui/home/launcher/Launcher$19$1.smali
++++ b/MiuiHome/smali/com/miui/home/launcher/Launcher$19$1.smali
+@@ -1390,6 +1390,24 @@
+     goto/16 :goto_0
+ 
+     :cond_13
++    const-string v23, "my.settings.RELOADED"
++
++    move-object/from16 v0, p0
++
++    iget-object v0, v0, Lcom/miui/home/launcher/Launcher$19$1;->val$tmpIntent:Landroid/content/Intent;
++
++    move-object/from16 v24, v0
++
++    invoke-virtual/range {v24 .. v24}, Landroid/content/Intent;->getAction()Ljava/lang/String;
++
++    move-result-object v24
++
++    invoke-virtual/range {v23 .. v24}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++
++    move-result v23
++
++    if-nez v23, :cond_13_
++
+     const-string v23, "com.xiaomi.mihomemanager.clearMiuiHome"
+ 
+     move-object/from16 v0, p0
+@@ -1452,6 +1470,7 @@
+ 
+     invoke-virtual/range {v23 .. v23}, Lcom/miui/home/launcher/LauncherProvider;->loadDefaultWorkspace()V
+ 
++    :cond_13_
+     invoke-static {}, Landroid/os/Process;->myPid()I
+ 
+     move-result v23
+
+--- a/MiuiHome/smali/com/miui/home/launcher/Launcher.smali
++++ b/MiuiHome/smali/com/miui/home/launcher/Launcher.smali
+@@ -5413,6 +5413,16 @@
+     invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/Launcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+ 
+     .end local v0    # "filter":Landroid/content/IntentFilter;
++    new-instance v0, Landroid/content/IntentFilter;
++
++    const-string v1, "my.settings.RELOADED"
++
++    invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Launcher;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
++
++    invoke-virtual {p0, v1, v0}, Lcom/miui/home/launcher/Launcher;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
++
+     :cond_1
+     return-void
+ .end method
+
+--- /dev/null
++++ b/MiuiHome/smali/com/miui/home/launcher/Workspace$SwipeListener.smali
+@@ -0,0 +1,181 @@
++.class Lcom/miui/home/launcher/Workspace$SwipeListener;
++.super Landroid/view/GestureDetector$SimpleOnGestureListener;
++.source "Workspace.java"
++
++
++# annotations
++.annotation system Ldalvik/annotation/EnclosingClass;
++    value = Lcom/miui/home/launcher/Workspace;
++.end annotation
++
++.annotation system Ldalvik/annotation/InnerClass;
++    accessFlags = 0x2
++    name = "SwipeListener"
++.end annotation
++
++
++# instance fields
++.field final synthetic this$0:Lcom/miui/home/launcher/Workspace;
++
++
++# direct methods
++.method private constructor <init>(Lcom/miui/home/launcher/Workspace;)V
++    .locals 0
++
++    iput-object p1, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
++
++    return-void
++.end method
++
++.method synthetic constructor <init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$SwipeListener;)V
++    .locals 0
++
++    invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace$SwipeListener;-><init>(Lcom/miui/home/launcher/Workspace;)V
++
++    return-void
++.end method
++
++
++# virtual methods
++.method public onDoubleTap(Landroid/view/MotionEvent;)Z
++    .locals 4
++
++    new-instance v0, Landroid/content/Intent;
++
++    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
++
++    const-string v1, "my.settings.GESTURE"
++
++    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
++
++    const-string v1, "action"
++
++    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    iget-object v2, v2, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    const/4 v3, 0x2
++
++    aget v2, v2, v3
++
++    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    invoke-virtual {v1}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
++
++    move-result-object v1
++
++    invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
++
++    const/4 v1, 0x1
++
++    return v1
++.end method
++
++.method public onDown(Landroid/view/MotionEvent;)Z
++    .locals 1
++
++    const/4 v0, 0x1
++
++    return v0
++.end method
++
++.method public onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
++    .locals 6
++
++    const/16 v5, 0x14
++
++    const/high16 v4, 0x43480000    # 200.0f
++
++    const/4 v0, 0x0
++
++    if-eqz p1, :cond_0
++
++    if-eqz p2, :cond_0
++
++    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
++
++    move-result v2
++
++    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
++
++    move-result v3
++
++    sub-float/2addr v2, v3
++
++    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
++
++    move-result v2
++
++    const/high16 v3, 0x437a0000    # 250.0f
++
++    cmpg-float v2, v2, v3
++
++    if-gtz v2, :cond_0
++
++    invoke-static {p4}, Ljava/lang/Math;->abs(F)F
++
++    move-result v2
++
++    const/high16 v3, 0x42c80000    # 100.0f
++
++    cmpl-float v2, v2, v3
++
++    if-lez v2, :cond_0
++
++    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
++
++    move-result v2
++
++    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
++
++    move-result v3
++
++    sub-float/2addr v2, v3
++
++    cmpl-float v2, v2, v4
++
++    if-ltz v2, :cond_0
++
++    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    iget-object v2, v2, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    aget v2, v2, v0
++
++    if-eq v2, v5, :cond_0
++
++    new-instance v1, Landroid/content/Intent;
++
++    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
++
++    const-string v2, "my.settings.GESTURE"
++
++    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
++
++    const-string v2, "action"
++
++    iget-object v3, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    iget-object v3, v3, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    aget v3, v3, v0
++
++    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
++
++    iget-object v2, p0, Lcom/miui/home/launcher/Workspace$SwipeListener;->this$0:Lcom/miui/home/launcher/Workspace;
++
++    invoke-virtual {v2}, Lcom/miui/home/launcher/Workspace;->getContext()Landroid/content/Context;
++
++    move-result-object v2
++
++    invoke-virtual {v2, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
++
++    const/4 v0, 0x1
++
++    :cond_0
++    return v0
++.end method
+
+--- a/MiuiHome/smali/com/miui/home/launcher/Workspace.smali
++++ b/MiuiHome/smali/com/miui/home/launcher/Workspace.smali
+@@ -11,6 +11,7 @@
+ # annotations
+ .annotation system Ldalvik/annotation/MemberClasses;
+     value = {
++        Lcom/miui/home/launcher/Workspace$SwipeListener;,
+         Lcom/miui/home/launcher/Workspace$CellInfo;
+     }
+ .end annotation
+@@ -21,6 +22,10 @@
+ 
+ 
+ # instance fields
++.field private mDetector:Landroid/view/GestureDetector;
++
++.field swipeAction:[I
++
+ .field private final ENTER_PREVIEW_ANIMATION_LISTENER:Landroid/view/animation/Animation$AnimationListener;
+ 
+ .field private final EXIT_PREVIEW_ANIMATION_LISTENER:Landroid/view/animation/Animation$AnimationListener;
+@@ -437,6 +442,8 @@
+     invoke-direct {p0, v4}, Lcom/miui/home/launcher/Workspace;->setClip(Z)V
+ 
+     :cond_1
++    invoke-direct {p0, p1}, Lcom/miui/home/launcher/Workspace;->initGestures(Landroid/content/Context;)V
++
+     return-void
+ 
+     :cond_2
+@@ -7985,6 +7992,15 @@
+     return v5
+ 
+     :cond_1
++    iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mDetector:Landroid/view/GestureDetector;
++
++    if-eqz v0, :cond_3_
++
++    iget-object v0, p0, Lcom/miui/home/launcher/Workspace;->mDetector:Landroid/view/GestureDetector;
++
++    invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
++
++    :cond_3_
+     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
+ 
+     move-result v7
+@@ -10305,3 +10321,67 @@
+ 
+     goto :goto_2
+ .end method
++
++.method private initGestures(Landroid/content/Context;)V
++    .locals 6
++
++    const/4 v5, 0x2
++
++    const/4 v4, 0x0
++
++    const/16 v3, 0x3e7
++
++    const/4 v1, 0x3
++
++    new-array v1, v1, [I
++
++    iput-object v1, p0, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    const-string v0, "swipe_up"
++
++    invoke-static {p1, v0}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
++
++    move-result v2
++
++    aput v2, v1, v4
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    const-string v0, "doubletap"
++
++    invoke-static {p1, v0}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
++
++    move-result v2
++
++    aput v2, v1, v5
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    aget v1, v1, v4
++
++    if-ne v1, v3, :cond_0
++
++    iget-object v1, p0, Lcom/miui/home/launcher/Workspace;->swipeAction:[I
++
++    aget v1, v1, v5
++
++    if-eq v1, v3, :cond_1
++
++    :cond_0
++    new-instance v1, Landroid/view/GestureDetector;
++
++    new-instance v2, Lcom/miui/home/launcher/Workspace$SwipeListener;
++
++    const/4 v3, 0x0
++
++    invoke-direct {v2, p0, v3}, Lcom/miui/home/launcher/Workspace$SwipeListener;-><init>(Lcom/miui/home/launcher/Workspace;Lcom/miui/home/launcher/Workspace$SwipeListener;)V
++
++    invoke-direct {v1, p1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
++
++    iput-object v1, p0, Lcom/miui/home/launcher/Workspace;->mDetector:Landroid/view/GestureDetector;
++
++    :cond_1
++    return-void
++.end method
+-- 
+2.7.4
+
