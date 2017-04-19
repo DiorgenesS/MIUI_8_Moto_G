@@ -1,0 +1,31 @@
+From 8dee7f5d5f97f24a82c64606db193cd6bac9b933 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Wed, 19 Apr 2017 08:46:11 -0300
+Subject: [PATCH 1/2] Patch for control charging sounds
+
+---
+ MiuiSystemUI/smali/com/android/systemui/power/PowerUI.smali | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+
+--- a/MiuiSystemUI/smali/com/android/systemui/power/PowerUI.smali
++++ b/MiuiSystemUI/smali/com/android/systemui/power/PowerUI.smali
+@@ -457,13 +457,13 @@
+     move-result-object v0
+ 
+     .local v0, "cr":Landroid/content/ContentResolver;
+-    const-string v1, "power_sounds_enabled"
++    const-string v1, "charging_sounds"
+ 
+     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
+ 
+     move-result v1
+ 
+-    if-ne v1, v2, :cond_1
++    if-eqz v1, :cond_1
+ 
+     if-eqz p1, :cond_1
+ 
+-- 
+2.7.4
+

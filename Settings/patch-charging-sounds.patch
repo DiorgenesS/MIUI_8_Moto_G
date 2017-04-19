@@ -1,0 +1,23 @@
+From 9e6f4d8412a0bc1c884e39a9d3799bf27814e951 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Wed, 19 Apr 2017 08:59:31 -0300
+Subject: [PATCH 2/2] Patch for control charging sounds
+
+---
+ Settings/res/xml/sound_settings.xml | 1 +
+ 1 file changed, 1 insertion(+)
+
+
+--- a/Settings/res/xml/sound_settings.xml
++++ b/Settings/res/xml/sound_settings.xml
+@@ -22,6 +22,7 @@
+     <CheckBoxPreference android:title="@string/dtmf_tone_enable_title" android:key="dtmf_tone" android:defaultValue="true" />
+     <CheckBoxPreference android:title="@string/sound_effects_enable_title" android:key="sound_effects" android:defaultValue="true" />
+     <CheckBoxPreference android:title="@string/lock_sounds_enable_title" android:key="lock_sounds" android:defaultValue="true" />
++    <MiuiCheckBoxPreference android:title="@string/charging_sounds_title" android:key="charging_sounds" android:defaultValue="false" />
+     <Preference android:title="@string/music_title_dolby_control" android:key="dolby_control" android:summary="@string/music_dolby_mode_off" android:fragment="com.android.settings.dolby.DolbySettings" />
+     <Preference android:title="@string/music_audio_effect_optimize" android:key="dirac_control" android:summary="@string/music_audio_effect_optimize_summary" android:fragment="com.android.settings.HeadsetSettings" />
+     <PreferenceCategory android:title="@string/dock_settings" android:key="dock_category" />
+-- 
+2.7.4
+
