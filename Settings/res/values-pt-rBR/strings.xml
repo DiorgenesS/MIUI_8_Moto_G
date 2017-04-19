@@ -2566,7 +2566,7 @@ Qualquer usuário pode atualizar apps para os demais usuários."</string>
     <string name="other_sound_settings">Outros sons</string>
     <string name="dial_pad_tones_title">Tons do teclado</string>
     <string name="screen_locking_sounds_title">Sons de bloqueio de tela</string>
-    <string name="charging_sounds_title">Sons de cobrança</string>
+    <string name="charging_sounds_title">Sons ao carregar</string>
     <string name="docking_sounds_title">Sons da dock</string>
     <string name="touch_sounds_title">Sons de toque</string>
     <string name="vibrate_on_touch_title">Vibrar ao tocar</string>
@@ -4266,6 +4266,9 @@ Selecione seu sistema operacional:"</string>
     <string name="fluency_mode">Animações do sistema</string>
     <string name="fluency_mode_confirm_and_reboot">Reiniciar agora</string>
     <string name="gesture_wakeup_title">Toque duplo na tela para ligá-la</string>
+    <string name="gesture_home">Gestos no launcher</string>
+    <string name="doubletap_home">Toque duplo</string>
+    <string name="swipe_up_home">Deslize para cima</string>
     <string name="install_no_market_app_title">Verificar apps de terceiros</string>
     <string name="install_no_market_app_summary">Verificar apps de terceiros por vírus antes de instalá-los</string>
     <string name="lock_screen_secure_after_timeout_title">Senha requerida</string>
