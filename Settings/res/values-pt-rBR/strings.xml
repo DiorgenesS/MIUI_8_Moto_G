@@ -545,6 +545,7 @@ Para retomar o uso do seu smartphone, é necessário redefinir para as configura
     <string name="bluetooth_dock_settings_a2dp">Para música e mídia</string>
     <string name="bluetooth_dock_settings_remember">Lembrar configurações</string>
     <string name="blur_on_title">Efeito "Blur"</string>
+    <string name="blur_minification_title">Nível do desfoque</string>
     <string name="wifi_assistant_title">Assistente de Wi-Fi</string>
     <string name="wifi_display_settings_title">Transmitir</string>
     <string name="wifi_display_enable_menu_item">Ativar tela sem fio</string>
