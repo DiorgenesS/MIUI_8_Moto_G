@@ -93,7 +93,7 @@ Subject: [PATCH] patch for "Independent settings", necessary for futures mods
 
 --- a/framework-res/res/values/strings.xml
 +++ b/framework-res/res/values/strings.xml
-@@ -945,6 +945,8 @@ Are you sure you want to navigate away from this page?"</string>
+@@ -945,6 +945,8 @@
      <string name="searchview_description_clear">Clear query</string>
      <string name="searchview_description_submit">Submit query</string>
      <string name="searchview_description_voice">Voice search</string>
