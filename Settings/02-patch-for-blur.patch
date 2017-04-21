@@ -1,32 +1,53 @@
-From 8a824f0d6bc98238f1ef3c8d0020705f92de0f63 Mon Sep 17 00:00:00 2001
+From 9e662f509a59638c766b1debe2dab1470ffc4d1f Mon Sep 17 00:00:00 2001
 From: Diorgenes <dyogenes_gd@hotmail.com>
-Date: Mon, 17 Apr 2017 18:39:24 -0300
+Date: Thu, 20 Apr 2017 09:45:34 -0300
 Subject: [PATCH 2/3] Patch blur effect
 
 ---
- Settings/res/values/strings.xml       | 1 +
- Settings/res/xml/display_settings.xml | 1 +
- 2 files changed, 2 insertions(+)
+ Settings/res/values/arrays.xml        | 10 ++++++++++
+ Settings/res/values/strings.xml       |  2 ++
+ Settings/res/xml/display_settings.xml |  2 ++
+ 3 files changed, 14 insertions(+)
 
+
+--- a/Settings/res/values/arrays.xml
++++ b/Settings/res/values/arrays.xml
+@@ -1834,4 +1834,14 @@
+         <item>Notes</item>
+         <item>Child mode</item>
+     </string-array>
++    <string-array name="blur_minification_entries">
++        <item>Low</item>
++        <item>Medium</item>
++        <item>High</item>
++    </string-array>
++    <string-array name="blur_minification_values">
++        <item>2</item>
++        <item>4</item>
++        <item>6</item>
++    </string-array>
+ </resources>
 
 --- a/Settings/res/values/strings.xml
 +++ b/Settings/res/values/strings.xml
-@@ -134,6 +134,7 @@
-     <string name="bluetooth_pairing_pin_error_message">"Couldn't pair with %1$s because of an incorrect PIN or passkey."</string>
-     <string name="bluetooth_pairing_device_down_error_message">"Can't communicate with %1$s."</string>
-     <string name="bluetooth_pairing_rejected_error_message">Pairing rejected by %1$s.</string>
+@@ -3825,6 +3825,8 @@
+     <string name="system_storage">System storage</string>
+     <string name="usage_log">App usage statistics</string>
+     <string name="bluetooth_device_searchable">Discoverable</string>
 +    <string name="blur_on_title">Blur effect</string>
-     <string name="accessibility_wifi_off">Wifi off.</string>
-     <string name="accessibility_no_wifi">Wifi disconnected.</string>
-     <string name="accessibility_wifi_one_bar">Wifi one bar.</string>
++    <string name="blur_minification_title">Degree of blur</string>
+     <string name="usb_charging_title">Speed up charge</string>
+     <string name="usb_charging_summary">Turn off all other USB connection features to speed up charging.</string>
+     <string name="usb_msd_title">Mass storage device</string>
 
 --- a/Settings/res/xml/display_settings.xml
 +++ b/Settings/res/xml/display_settings.xml
-@@ -29,4 +29,5 @@
+@@ -26,4 +26,6 @@
      <CheckBoxPreference android:title="@string/accelerometer_title" android:key="auto_rotate" />
      <CheckBoxPreference android:persistent="false" android:title="@string/notification_pulse_title" android:key="notification_pulse" android:summary="@string/led_pulse_summary" />
      <MiuiListPreference android:entries="@array/ios_toggle_entries" android:layout="@layout/preference_ringtone" android:title="@string/ios_toggle_title" android:key="ios_toggle" android:summary="%s" android:defaultValue="0" android:entryValues="@array/toggles_line_values" intent="com.miui.app.ExtraStatusBarManager.REQUEST_RESTART" />
 +    <MiuiCheckBoxPreference android:title="@string/blur_on_title" android:key="blur_on" android:defaultValue="true" intent="my.settings.BLUR_VIS" />
++    <MiuiListPreference android:entries="@array/blur_minification_entries" android:layout="@layout/preference_ringtone" android:title="@string/blur_minification_title" android:key="blur_minification" android:summary="%s" android:dependency="blur_on" android:defaultValue="4" android:entryValues="@array/blur_minification_values" />
  </PreferenceScreen>
 \ No newline at end of file
 -- 

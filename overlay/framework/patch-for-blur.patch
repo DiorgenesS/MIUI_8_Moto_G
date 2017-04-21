@@ -1,15 +1,17 @@
-From 5d24b750e9e5c4cded15376f1ec6f6bb62c622d9 Mon Sep 17 00:00:00 2001
+From d725fc2537a9f3897769e76b7c94223c1aab7783 Mon Sep 17 00:00:00 2001
 From: Diorgenes <dyogenes_gd@hotmail.com>
-Date: Fri, 14 Apr 2017 23:09:57 -0300
+Date: Thu, 20 Apr 2017 09:11:01 -0300
 Subject: [PATCH 3/3] Patch blur effect
 
 ---
- framework/smali/miui/util/ScreenshotDrawable.smali | 32 ++++++++++++++--------
- 1 file changed, 19 insertions(+), 12 deletions(-)
+ framework/smali/miui/util/ScreenshotDrawable.smali | 40 ++++++++++++++--------
+ framework/smali/miui/util/ScreenshotUtils.smali    |  2 +-
+ 2 files changed, 27 insertions(+), 15 deletions(-)
+
 
 --- a/framework/smali/miui/util/ScreenshotDrawable.smali
 +++ b/framework/smali/miui/util/ScreenshotDrawable.smali
-@@ -45,16 +45,6 @@
+@@ -44,16 +44,6 @@
  
      sput-object v0, Lmiui/util/ScreenshotDrawable;->sTempLoc:[I
  
@@ -26,7 +28,7 @@ Subject: [PATCH 3/3] Patch blur effect
      const-string v0, "oled"
  
      const-string v1, "ro.display.type"
-@@ -267,13 +257,26 @@
+@@ -264,15 +254,35 @@
      .locals 7
  
      .prologue
@@ -36,26 +38,44 @@ Subject: [PATCH 3/3] Patch blur effect
 +    invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
 +
 +    move-result-object v2
- 
--    if-eqz v2, :cond_0
++
 +    const-string v3, "blur_on"
 +
 +    const/4 v4, 0x1
 +
 +    invoke-static {v2, v3}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
-+
+ 
+-    if-eqz v2, :cond_0
 +    move-result v3
 +
 +    if-nez v3, :cond_0
  
      :goto_0
      return-void
-+    sput-boolean v4, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
  
++    sput-boolean v4, Lmiui/util/ScreenshotDrawable;->sHasRealBlur:Z
++
      :cond_0
      :try_start_0
++    const-string v3, "blur_minification"
++
++    invoke-static {v2, v3}, Landroid/preference/MiuiCoreSettingsPreference;->getKeyParam(Landroid/content/Context;Ljava/lang/String;)I
++
++    move-result v4
++
      iget-object v2, p0, Lmiui/util/ScreenshotDrawable;->mOwnerView:Landroid/view/View;
-@@ -316,6 +319,8 @@
+ 
+     invoke-virtual {v2}, Landroid/view/View;->getContext()Landroid/content/Context;
+@@ -281,8 +291,6 @@
+ 
+     const/high16 v3, 0x3f800000    # 1.0f
+ 
+-    sget v4, Lmiui/util/ScreenshotUtils;->sMinification:I
+-
+     int-to-float v4, v4
+ 
+     div-float/2addr v3, v4
+@@ -311,6 +319,8 @@
      :try_end_0
      .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
  
@@ -64,7 +84,7 @@ Subject: [PATCH 3/3] Patch blur effect
      goto :goto_0
  
      .end local v1    # "screenshot":Landroid/graphics/Bitmap;
-@@ -331,6 +336,8 @@
+@@ -325,6 +335,8 @@
  
      invoke-static {v2, v3, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
  
@@ -72,6 +92,18 @@ Subject: [PATCH 3/3] Patch blur effect
 +
      goto :goto_0
  .end method
+ 
+
+--- a/framework/smali/miui/util/ScreenshotUtils.smali
++++ b/framework/smali/miui/util/ScreenshotUtils.smali
+@@ -119,7 +119,7 @@
+ 
+     const-string v2, "persist.sys.real_blur_minify"
+ 
+-    const/4 v3, 0x4
++    const/4 v3, 0x2
+ 
+     invoke-static {v2, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
  
 -- 
 2.7.4
