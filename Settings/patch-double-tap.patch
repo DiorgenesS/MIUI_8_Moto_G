@@ -4,15 +4,15 @@ Date: Tue, 18 Apr 2017 15:02:11 -0300
 Subject: [PATCH 2/3] Double tap and swipe
 
 ---
- Settings/res/values/arrays.xml         | 33 +++++++++++++++++++++++++++++++++
- Settings/res/values/strings.xml        |  3 +++
- Settings/res/xml/launcher_settings.xml |  4 ++++
- 3 files changed, 40 insertions(+)
+ Settings/res/values/arrays.xml         | 39 +++++++++++++++++++++++++++++++++++++++
+ Settings/res/values/strings.xml        |  5 +++++
+ Settings/res/xml/launcher_settings.xml |  6 ++++++
+ 3 files changed, 50 insertions(+)
 
 
 --- a/Settings/res/values/arrays.xml
 +++ b/Settings/res/values/arrays.xml
-@@ -1376,6 +1376,39 @@
+@@ -1378,6 +1378,45 @@
          <item>1</item>
          <item>2</item>
      </string-array>
@@ -23,8 +23,10 @@ Subject: [PATCH 2/3] Double tap and swipe
 +        <item>Dialer</item>
 +        <item>Sound Mode: Sound/Vibration</item>
 +        <item>Notification panel</item>
-+        <item>Wi-Fi Switch</item>
++        <item>Wi-Fi switch</item>
++        <item>Mobile data switch</item>
 +        <item>Clear memory</item>
++        <item>Launching the app</item>
 +        <item>Disable</item>
 +    </string-array>
 +    <string-array name="launcher_double_values">
@@ -32,10 +34,12 @@ Subject: [PATCH 2/3] Double tap and swipe
 +        <item>1</item>
 +        <item>2</item>
 +        <item>3</item>
++        <item>4</item>
 +        <item>5</item>
 +        <item>6</item>
-+        <item>7</item>
++        <item>8</item>
 +        <item>9</item>
++        <item>10</item>
 +        <item>999</item>
 +    </string-array>
 +    <string-array name="launcher_swipe_values">
@@ -43,10 +47,12 @@ Subject: [PATCH 2/3] Double tap and swipe
 +        <item>1</item>
 +        <item>2</item>
 +        <item>3</item>
++        <item>4</item>
 +        <item>5</item>
 +        <item>6</item>
-+        <item>7</item>
++        <item>8</item>
 +        <item>9</item>
++        <item>11</item>
 +        <item>999</item>
 +    </string-array>
      <string-array name="preferred_app_entries">
@@ -55,26 +61,30 @@ Subject: [PATCH 2/3] Double tap and swipe
 
 --- a/Settings/res/values/strings.xml
 +++ b/Settings/res/values/strings.xml
-@@ -4479,6 +4479,9 @@
+@@ -4482,6 +4482,11 @@
      <string name="fluency_mode">System animations</string>
      <string name="fluency_mode_confirm_and_reboot">Reboot now</string>
      <string name="gesture_wakeup_title">Double tap screen to wake</string>
 +    <string name="gesture_home">Gestures on the launcher</string>
 +    <string name="doubletap_home">Double tap</string>
 +    <string name="swipe_up_home">Swipe up</string>
++    <string name="double_tap_app_title">Double tap for app</string>
++    <string name="swipe_up_app_title">Swipe up for app</string>
      <string name="install_no_market_app_title">Unknown sources</string>
      <string name="install_no_market_app_summary">Allow installation of apps from sources other than the App Store</string>
      <string name="lock_screen_secure_after_timeout_title">Password required</string>
 
 --- a/Settings/res/xml/launcher_settings.xml
 +++ b/Settings/res/xml/launcher_settings.xml
-@@ -6,4 +6,8 @@
+@@ -6,4 +6,10 @@
          <CheckBoxPreference android:persistent="false" android:title="@string/launcher_auto_fill_empty_title" android:key="auto_fill_empty_pref" android:defaultValue="false" />
          <CheckBoxPreference android:persistent="false" android:title="@string/lock_screen_cells_title" android:key="lock_screen_cells_pref" android:defaultValue="false" />
      </PreferenceCategory>
 +    <PreferenceCategory android:title="@string/gesture_home">
 +        <MiuiListPreference android:entries="@array/launcher_double_entries" android:layout="@layout/preference_ringtone" android:title="@string/doubletap_home" android:key="doubletap" android:summary="%s" android:defaultValue="0" android:entryValues="@array/launcher_double_values" intent="my.settings.RELOADED" />
++        <MiuiLaunchPreference android:title="@string/double_tap_app_title" android:key="double_tap_app" android:summary="%s" />
 +        <MiuiListPreference android:entries="@array/launcher_double_entries" android:layout="@layout/preference_ringtone" android:title="@string/swipe_up_home" android:key="swipe_up" android:summary="%s" android:defaultValue="0" android:entryValues="@array/launcher_swipe_values" intent="my.settings.RELOADED" />
++        <MiuiLaunchPreference android:title="@string/swipe_up_app_title" android:key="swipe_up_app" android:summary="%s" />
 +    </PreferenceCategory>
  </PreferenceScreen>
 \ No newline at end of file
