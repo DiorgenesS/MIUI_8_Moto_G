@@ -750,7 +750,9 @@ Atenção: Apenas para Ubuntu 8.04!"</item>
         <item>Modo de som: silencioso/vibração</item>
         <item>Painel de notificação</item>
         <item>Ligar/desligar Wi-Fi</item>
+        <item>Ligar/desligar Dados móveis</item>
         <item>Limpar memória</item>
+        <item>Executar "App"</item>
         <item>Desativar</item>
     </string-array>
     <string-array name="launcher_double_values">
@@ -758,10 +760,12 @@ Atenção: Apenas para Ubuntu 8.04!"</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
         <item>5</item>
         <item>6</item>
-        <item>7</item>
+        <item>8</item>
         <item>9</item>
+        <item>10</item>
         <item>999</item>
     </string-array>
     <string-array name="launcher_swipe_values">
@@ -769,10 +773,12 @@ Atenção: Apenas para Ubuntu 8.04!"</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
+        <item>4</item>
         <item>5</item>
         <item>6</item>
-        <item>7</item>
+        <item>8</item>
         <item>9</item>
+        <item>11</item>
         <item>999</item>
     </string-array>
     <string-array name="preferred_app_entries">
