@@ -4,8 +4,8 @@ Date: Sat, 15 Apr 2017 01:08:04 -0300
 Subject: [PATCH] Activate the settings in SMS "Definition of one-time passwords" and "Grouping of service messages"
 
 ---
- .../mms/ui/MessagingPreferenceActivity.smali       | 44 ----------------------
- 1 file changed, 44 deletions(-)
+ .../mms/ui/MessagingPreferenceActivity.smali       | 45 ----------------------
+ 1 file changed, 45 deletions(-)
 
 --- a/Mms/smali/com/android/mms/ui/MessagingPreferenceActivity.smali
 +++ b/Mms/smali/com/android/mms/ui/MessagingPreferenceActivity.smali
@@ -50,7 +50,12 @@ Subject: [PATCH] Activate the settings in SMS "Definition of one-time passwords"
      iget-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mShowTemplateInPref:Landroid/preference/CheckBoxPreference;
  
      invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
-@@ -1478,23 +1451,6 @@
+@@ -1473,28 +1446,10 @@
+     goto/16 :goto_1
+ 
+     .restart local v1    # "smartMsgPref":Landroid/preference/PreferenceCategory;
+-    :cond_d
+     iget-object v3, p0, Lcom/android/mms/ui/MessagingPreferenceActivity;->mShowTemplatePref:Landroid/preference/CheckBoxPreference;
  
      invoke-virtual {v3, p0}, Landroid/preference/CheckBoxPreference;->setOnPreferenceChangeListener(Landroid/preference/Preference$OnPreferenceChangeListener;)V
  
