@@ -17,7 +17,7 @@ Subject: [PATCH 2/2] Added aditional settings for Launcher
      <string name="ios_toggle_title">StatusBar style</string>
 +    <string name="icon_on">On</string>
 +    <string name="icon_off">Off</string>
-+    <string name="icon_shadow_title">Shadows of icons</string>
++    <string name="icon_shadow_title">Shadow</string>
 +    <string name="bar_shadow_title">Reflection of icons in bar</string>
 +    <string name="icon_name_title">Label</string>
 +    <string name="close_folder_title">Automatic closing of folders</string>

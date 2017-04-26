@@ -69,6 +69,12 @@
     <string name="title_local_resource">Recursos locais</string>
     <string name="online_resource_entry">Recursos online</string>
     <string name="ios_toggle_title">Estilo da barra de status</string>
+    <string name="icon_on">Ligado</string>
+    <string name="icon_off">Desligado</string>
+    <string name="icon_shadow_title">Sombra</string>
+    <string name="bar_shadow_title">Reflexo do ícone na barra</string>
+    <string name="icon_name_title">Rótulo</string>
+    <string name="close_folder_title">Fechar pastas automaticamente</string>
     <string name="yes">Sim</string>
     <string name="no">Não</string>
     <string name="create">Criar</string>
