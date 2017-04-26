@@ -1,0 +1,36 @@
+From ef5e5a50e3d0dc0e2e6ce488c127449934a47a55 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Wed, 26 Apr 2017 09:35:07 -0300
+Subject: [PATCH] Modifying the location of the item "Location"
+
+---
+ Settings/res/xml/security_settings_misc.xml | 1 -
+ Settings/res/xml/settings_headers.xml       | 2 +-
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+
+--- a/Settings/res/xml/security_settings_misc.xml
++++ b/Settings/res/xml/security_settings_misc.xml
+@@ -4,7 +4,6 @@
+     <PreferenceCategory android:persistent="false" android:title="@string/device_admin_title" android:key="device_admin_category">
+         <Preference android:persistent="false" android:title="@string/manage_device_admin" android:summary="@string/manage_device_admin_summary" android:fragment="com.android.settings.DeviceAdminSettings" />
+         <CheckBoxPreference android:persistent="false" android:title="@string/install_applications" android:key="toggle_install_applications" android:summaryOn="@string/install_unknown_applications" android:summaryOff="@string/install_unknown_applications" />
+-        <Preference android:title="@string/location_settings_title" android:key="location_settings" android:fragment="com.android.settings.location.MiuiLocationSettings" />
+         <Preference android:persistent="false" android:title="@string/manage_notification_access_title" android:key="manage_notification_access" android:fragment="com.android.settings.notification.NotificationAccessSettings" />
+         <Preference android:title="@string/usage_access_title" android:key="usage_access">
+             <intent android:action="android.settings.USAGE_ACCESS_SETTINGS" />
+
+--- a/Settings/res/xml/settings_headers.xml
++++ b/Settings/res/xml/settings_headers.xml
+@@ -56,7 +56,7 @@
+     <header android:icon="@drawable/ic_settings" android:id="@id/manufacturer_settings">
+         <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
+     </header>
+-    <header android:icon="@drawable/ic_location_settings" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings.location.MiuiLocationSettings" />
++    <header android:icon="@drawable/ic_location_settings" android:key="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings.location.MiuiLocationSettings" />
+     <header android:id="@id/account_settings" android:title="@string/header_category_accounts" />
+     <header android:icon="@drawable/xiaomi_account" android:id="@id/micloud_settings" android:title="@string/xiaomi_account">
+         <intent android:targetPackage="com.xiaomi.account" android:action="android.settings.XIAOMI_ACCOUNT_SYNC_SETTINGS" />
+-- 
+2.7.4
+
