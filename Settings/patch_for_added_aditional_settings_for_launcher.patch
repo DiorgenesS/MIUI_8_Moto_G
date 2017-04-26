@@ -1,0 +1,43 @@
+From 91808b973c6e208f031f537addc77b99e872fa62 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Wed, 26 Apr 2017 10:24:50 -0300
+Subject: [PATCH 2/2] Added aditional settings for Launcher
+
+---
+ Settings/res/values/strings.xml        | 6 ++++++
+ Settings/res/xml/launcher_settings.xml | 4 ++++
+ 2 files changed, 10 insertions(+)
+
+
+--- a/Settings/res/values/strings.xml
++++ b/Settings/res/values/strings.xml
+@@ -159,6 +159,12 @@
+     <string name="additional_system_update" />
+     <string name="additional_system_update_menu" />
+     <string name="ios_toggle_title">StatusBar style</string>
++    <string name="icon_on">On</string>
++    <string name="icon_off">Off</string>
++    <string name="icon_shadow_title">Shadows of icons</string>
++    <string name="bar_shadow_title">Reflection of icons in bar</string>
++    <string name="icon_name_title">Label</string>
++    <string name="close_folder_title">Automatic closing of folders</string>
+     <string name="input_method_selector_show_automatically_value">0</string>
+     <string name="input_method_selector_always_show_value">1</string>
+     <string name="input_method_selector_always_hide_value">2</string>
+
+--- a/Settings/res/xml/launcher_settings.xml
++++ b/Settings/res/xml/launcher_settings.xml
+@@ -5,6 +5,10 @@
+     <PreferenceCategory android:title="@string/miui_screen_config_title" android:key="miui_screen_config_pref">
+         <CheckBoxPreference android:persistent="false" android:title="@string/launcher_auto_fill_empty_title" android:key="auto_fill_empty_pref" android:defaultValue="false" />
+         <CheckBoxPreference android:persistent="false" android:title="@string/lock_screen_cells_title" android:key="lock_screen_cells_pref" android:defaultValue="false" />
++        <MiuiCheckBoxPreference android:title="@string/icon_name_title" android:key="icon_name" android:defaultValue="false" android:summaryOn="@string/icon_on" android:summaryOff="@string/icon_off" intent="my.settings.RELOADED" />
++        <MiuiCheckBoxPreference android:title="@string/icon_shadow_title" android:key="icon_shadow" android:defaultValue="false" android:summaryOn="@string/icon_on" android:summaryOff="@string/icon_off" intent="my.settings.RELOADED" />
++        <MiuiCheckBoxPreference android:title="@string/bar_shadow_title" android:key="bar_shadow" android:defaultValue="false" android:summaryOn="@string/icon_on" android:summaryOff="@string/icon_off" intent="my.settings.RELOADED" />
++        <MiuiCheckBoxPreference android:title="@string/close_folder_title" android:key="close_folder" android:defaultValue="false" />
+     </PreferenceCategory>
+     <PreferenceCategory android:title="@string/gesture_home">
+         <MiuiListPreference android:entries="@array/launcher_double_entries" android:layout="@layout/preference_ringtone" android:title="@string/doubletap_home" android:key="doubletap" android:summary="%s" android:defaultValue="0" android:entryValues="@array/launcher_double_values" intent="my.settings.RELOADED" />
+-- 
+2.7.4
+
