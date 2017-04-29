@@ -567,8 +567,10 @@
     </string-array>
     <string-array name="battery_indicator_style_entries">
         <item>Gráfico</item>
-        <item>Porcentagem</item>
+        <item>Porcentagem e gráfico</item>
         <item>Barra no topo</item>
+        <item>Porcentagem</item>
+        <item>Não mostrar</item>
     </string-array>
     <string-array name="usb_connection_mode_entries">
         <item>Perguntar na conexão</item>
