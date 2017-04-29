@@ -1,0 +1,499 @@
+From be0f4835c982a6bc19dae24c87f37abcedd5271b Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Sat, 29 Apr 2017 12:54:10 -0300
+Subject: [PATCH 2/2] Extend battery indicator settings "Interest only" and "Do not show"
+
+---
+ Settings/res/values-ar/arrays.xml     | 4 +++-
+ Settings/res/values-bg/arrays.xml     | 4 +++-
+ Settings/res/values-cs/arrays.xml     | 4 +++-
+ Settings/res/values-de/arrays.xml     | 4 +++-
+ Settings/res/values-el/arrays.xml     | 4 +++-
+ Settings/res/values-es-rUS/arrays.xml | 4 +++-
+ Settings/res/values-es/arrays.xml     | 4 +++-
+ Settings/res/values-fr/arrays.xml     | 4 +++-
+ Settings/res/values-gu-rIN/arrays.xml | 4 +++-
+ Settings/res/values-hi/arrays.xml     | 4 +++-
+ Settings/res/values-hr/arrays.xml     | 4 +++-
+ Settings/res/values-hu/arrays.xml     | 4 +++-
+ Settings/res/values-in/arrays.xml     | 4 +++-
+ Settings/res/values-it/arrays.xml     | 4 +++-
+ Settings/res/values-ko/arrays.xml     | 4 +++-
+ Settings/res/values-lt/arrays.xml     | 4 +++-
+ Settings/res/values-mk-rMK/arrays.xml | 4 +++-
+ Settings/res/values-pa-rIN/arrays.xml | 4 +++-
+ Settings/res/values-pl/arrays.xml     | 4 +++-
+ Settings/res/values-pt-rBR/arrays.xml | 4 +++-
+ Settings/res/values-pt-rPT/arrays.xml | 4 +++-
+ Settings/res/values-pt/arrays.xml     | 7 +++++++
+ Settings/res/values-ro/arrays.xml     | 4 +++-
+ Settings/res/values-ru/arrays.xml     | 6 ++++--
+ Settings/res/values-th/arrays.xml     | 4 +++-
+ Settings/res/values-tl/arrays.xml     | 4 +++-
+ Settings/res/values-tr/arrays.xml     | 4 +++-
+ Settings/res/values-uk/arrays.xml     | 4 +++-
+ Settings/res/values-vi/arrays.xml     | 4 +++-
+ Settings/res/values/arrays.xml        | 6 +++++-
+ 30 files changed, 97 insertions(+), 30 deletions(-)
+
+
+--- a/Settings/res/values-ar/arrays.xml
++++ b/Settings/res/values-ar/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>رسم بياني</item>
+-        <item>نسبة مئوية</item>
++        <item>النسبة المئوية والرسوم البيانية</item>
+         <item>شريط علوي</item>
++        <item>النسبة المئوية فقط</item>
++        <item>إيقاف</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>السؤال عند الاتصال</item>
+
+--- a/Settings/res/values-bg/arrays.xml
++++ b/Settings/res/values-bg/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Графика</item>
+-        <item>Проценти</item>
++        <item>Процент и графичен</item>
+         <item>Линия над статус лентата</item>
++		<item>само процент</item>
++		<item>Изключено</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Запитване при включване</item>
+
+--- a/Settings/res/values-cs/arrays.xml
++++ b/Settings/res/values-cs/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafický</item>
+-        <item>Procenta</item>
++        <item>Procentní a grafické</item>
+         <item>Linka nad notifikační lištou</item>
++        <item>Procentní</item>
++        <item>Vypnuto</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Zeptat se při připojení</item>
+
+--- a/Settings/res/values-de/arrays.xml
++++ b/Settings/res/values-de/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafisch</item>
+-        <item>Prozent</item>
++        <item>Prozentsatz und grafisch</item>
+         <item>Balken</item>
++        <item>Prozent</item>
++        <item>Behindert</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Nachfragen</item>
+
+--- a/Settings/res/values-el/arrays.xml
++++ b/Settings/res/values-el/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Γραφικός</item>
+-        <item>Ποσοστό</item>
++        <item>Ποσοστό και γραφικό</item>
+         <item>Μπάρα κορυφής</item>
++        <item>Ποσοστό</item>
++        <item>άτομα με ειδικές ανάγκες</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Ερώτηση κατά την σύνδεση</item>
+
+--- a/Settings/res/values-es-rUS/arrays.xml
++++ b/Settings/res/values-es-rUS/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Gráfica</item>
+-        <item>Porcentaje</item>
++        <item>Porcentaje y gráfica</item>
+         <item>Barra superior</item>
++        <item>Porcentaje</item>
++        <item>Desactivado</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Preguntarme al conectar</item>
+
+--- a/Settings/res/values-es/arrays.xml
++++ b/Settings/res/values-es/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Gráfico</item>
+-        <item>Porcentaje</item>
++        <item>Porcentaje y gráfica</item>
+         <item>Barra superior</item>
++        <item>Porcentaje</item>
++        <item>Desactivado</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Preguntarme al conectar</item>
+
+--- a/Settings/res/values-fr/arrays.xml
++++ b/Settings/res/values-fr/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Graphique</item>
+-        <item>Pourcentage</item>
++        <item>Pourcentages et graphiques</item>
+         <item>Barre linéaire</item>
++        <item>Pourcentage seulement</item>
++        <item>Désactivé</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Demander à la connexion</item>
+
+--- a/Settings/res/values-gu-rIN/arrays.xml
++++ b/Settings/res/values-gu-rIN/arrays.xml
+@@ -520,8 +520,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>ગ્રાફિકલ</item>
+-        <item>ટકાવારી</item>
++        <item>ટકાવારી અને ગ્રાફિકલ</item>
+         <item>ટોચ બાર</item>
++        <item>ફક્ત ટકાવારી</item>
++        <item>અક્ષમ કરેલું</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>કનેક્શન કરવા પર પૂછો</item>
+
+--- a/Settings/res/values-hi/arrays.xml
++++ b/Settings/res/values-hi/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>ग्राफिकल</item>
+-        <item>प्रतिशत</item>
++        <item>प्रतिशत और ग्राफ़िकल</item>
+         <item>शीर्ष पट्टी</item>
++        <item>प्रतिशत</item>
++        <item>अक्षम</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>कनेक्शन के लिए पूछें</item>
+
+--- a/Settings/res/values-hr/arrays.xml
++++ b/Settings/res/values-hr/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafika</item>
+-        <item>Postotak</item>
++        <item>Postotak i grafika</item>
+         <item>Linija na vrhu</item>
++        <item>Postotak</item>
++        <item>Niepełnosprawny</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Pitaj kod veze</item>
+
+--- a/Settings/res/values-hu/arrays.xml
++++ b/Settings/res/values-hu/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafikus</item>
+-        <item>Százalék</item>
++        <item>Százalék és grafikus</item>
+         <item>Állapotsor</item>
++        <item>Százalék</item>
++        <item>Tiltva</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Mindig kérdezzen rá</item>
+
+--- a/Settings/res/values-in/arrays.xml
++++ b/Settings/res/values-in/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafik</item>
+-        <item>Persentase</item>
++        <item>Persentase dan grafik</item>
+         <item>Bar atas</item>
++        <item>Persentase</item>
++        <item>Mati</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Tanya saat terhubung</item>
+
+--- a/Settings/res/values-it/arrays.xml
++++ b/Settings/res/values-it/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafico</item>
+-        <item>Percentuale</item>
++        <item>Percentuale e grafica</item>
+         <item>Barra in alto</item>
++        <item>Percentuale</item>
++        <item>Disattivato</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Chiedi alla connessione</item>
+
+--- a/Settings/res/values-ko/arrays.xml
++++ b/Settings/res/values-ko/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>그래픽</item>
+-        <item>퍼센트</item>
++        <item>백분율 및 그래픽</item>
+         <item>상단 바</item>
++        <item>퍼센트</item>
++        <item>꺼짐</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>연결할때마다 묻기</item>
+
+--- a/Settings/res/values-lt/arrays.xml
++++ b/Settings/res/values-lt/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafinis</item>
+-        <item>Procentinis</item>
++        <item>Procentinis ir grafinė</item>
+         <item>Juosta viršuje</item>
++        <item>Procentinis</item>
++        <item>Išjungta</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Paklausti prijungus</item>
+
+--- a/Settings/res/values-mk-rMK/arrays.xml
++++ b/Settings/res/values-mk-rMK/arrays.xml
+@@ -549,8 +549,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Графички</item>
+-        <item>Процент</item>
++        <item>Процент и графички</item>
+         <item>Горна лента</item>
++        <item>Процент</item>
++        <item>лицата со хендикеп</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Побара на конекција</item>
+
+--- a/Settings/res/values-pa-rIN/arrays.xml
++++ b/Settings/res/values-pa-rIN/arrays.xml
+@@ -520,8 +520,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>ਗ੍ਰਾਫਿਕਲ</item>
+-        <item>ਪ੍ਰਤੀਸ਼ਤ</item>
++        <item>ਪ੍ਰਤੀਸ਼ਤ ਅਤੇ ਗਰਾਫੀਕਲ</item>
+         <item>ਉੱਪਰੀ ਪੱਟੀ</item>
++        <item>ਪ੍ਰਤੀਸ਼ਤ</item>
++        <item>ਬੰਦ ਕਰੋ</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>ਕੁਨੈਕਸ਼ਨ ਸਮੇਂ ਪੁੱਛੋ</item>
+
+--- a/Settings/res/values-pl/arrays.xml
++++ b/Settings/res/values-pl/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Słupkowy</item>
+-        <item>Procentowy</item>
++        <item>Procentowy i słupkowy</item>
+         <item>Liniowy</item>
++        <item>Procentowy</item>
++        <item>Wyłączone</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Zapytaj po podłączeniu</item>
+
+--- a/Settings/res/values-pt-rBR/arrays.xml
++++ b/Settings/res/values-pt-rBR/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Gráfico</item>
+-        <item>Porcentagem</item>
++        <item>Porcentagem e gráfico</item>
+         <item>Barra no topo</item>
++        <item>Porcentagem</item>
++        <item>Desativado</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Perguntar na conexão</item>
+
+--- a/Settings/res/values-pt-rPT/arrays.xml
++++ b/Settings/res/values-pt-rPT/arrays.xml
+@@ -549,8 +549,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Gráfico</item>
+-        <item>Percentagem</item>
++        <item>Percentagem e gráfico</item>
+         <item>Barra no topo</item>
++        <item>Percentagem</item>
++        <item>Nenhum</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Perguntar ao ligar</item>
+
+--- a/Settings/res/values-pt/arrays.xml
++++ b/Settings/res/values-pt/arrays.xml
+@@ -542,4 +542,11 @@
+         <item>2</item>
+         <item>1</item>
+     </string-array>
++    <string-array name="battery_indicator_style_entries">
++        <item>Gráfico</item>
++        <item>Porcentagem e gráfico</item>
++        <item>Barra no topo</item>
++        <item>Porcentagem</item>
++        <item>Desativado</item>
++    </string-array>
+ </resources>
+
+--- a/Settings/res/values-ro/arrays.xml
++++ b/Settings/res/values-ro/arrays.xml
+@@ -617,8 +617,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafică</item>
+-        <item>Procent</item>
++        <item>Procenta și grafice</item>
++        <item>numai procenta</item>
+         <item>Bara de sus</item>
++        <item>Oprit</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Întreabă-mă înainte de conectare</item>
+
+--- a/Settings/res/values-ru/arrays.xml
++++ b/Settings/res/values-ru/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Графический</item>
+-        <item>Процентный</item>
+-        <item>Полоса в статус баре</item>
++        <item>Проценты и графический</item>
++        <item>Полоса в строке состояния</item>
++        <item>Только проценты</item>
++        <item>Не показывать</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Запрос при подключении</item>
+
+--- a/Settings/res/values-th/arrays.xml
++++ b/Settings/res/values-th/arrays.xml
+@@ -617,8 +617,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>กราฟิก</item>
+-        <item>เปอร์เซ็นต์</item>
++        <item>ร้อยละและกราฟิก</item>
+         <item>แถบด้านบน</item>
++        <item>เปอร์เซ็นต์</item>
++        <item>ปิด</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>ถามเมื่อมีการเชื่อมต่อ</item>
+
+--- a/Settings/res/values-tl/arrays.xml
++++ b/Settings/res/values-tl/arrays.xml
+@@ -556,8 +556,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grapiko</item>
+-        <item>Porsiyento</item>
++        <item>Porsyento at grapiko</item>
+         <item>Bar sa Itaas</item>
++        <item>Porsiyento</item>
++        <item>Mula sa</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Tanungin sa koneksyon</item>
+
+--- a/Settings/res/values-tr/arrays.xml
++++ b/Settings/res/values-tr/arrays.xml
+@@ -617,8 +617,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Grafiksel</item>
+-        <item>Yüzdelik</item>
++        <item>Yüzde ve grafik</item>
+         <item>Üst çubuk</item>
++        <item>Yüzdelik</item>
++        <item>Kapalı</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Bağlandığında sor</item>
+
+--- a/Settings/res/values-uk/arrays.xml
++++ b/Settings/res/values-uk/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Графічний</item>
+-        <item>Відсотковий</item>
++        <item>Відсоток і графічний</item>
+         <item>Смуга в статус барі</item>
++        <item>Відсотковий</item>
++        <item>Вимкнено</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Запит при підключенні</item>
+
+--- a/Settings/res/values-vi/arrays.xml
++++ b/Settings/res/values-vi/arrays.xml
+@@ -559,8 +559,10 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Đồ họa</item>
+-        <item>Phần trăm</item>
++        <item>Phần trăm và đồ họa</item>
+         <item>Thanh trên cùng</item>
++        <item>Chỉ phần trăm</item>
++        <item>Tắt</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Hỏi khi kết nối</item>
+
+--- a/Settings/res/values/arrays.xml
++++ b/Settings/res/values/arrays.xml
+@@ -1026,13 +1026,17 @@
+     </string-array>
+     <string-array name="battery_indicator_style_entries">
+         <item>Graphical</item>
+-        <item>Percentage</item>
++        <item>Percentage and graphical</item>
+         <item>Top bar</item>
++        <item>Percentage only</item>
++        <item>Off</item>
+     </string-array>
+     <string-array name="battery_indicator_style_values">
+         <item>0</item>
+         <item>1</item>
+         <item>2</item>
++        <item>3</item>
++        <item>4</item>
+     </string-array>
+     <string-array name="usb_connection_mode_entries">
+         <item>Ask upon connection</item>
+-- 
+2.7.4
+
