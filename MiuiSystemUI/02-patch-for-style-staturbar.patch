@@ -4,13 +4,66 @@ Date: Thu, 13 Apr 2017 21:37:35 -0300
 Subject: [PATCH 1/2] patch for style staturbar
 
 ---
+ .../res/layout/signal_cluster_view_ios.xml         | 46 ++++++++++++++++++++++
  .../res/layout/status_bar_expanded_ios.xml         | 25 +++++++++++++
  .../layout/status_bar_expanded_single_page_ios.xml | 19 ++++++++++
  MiuiSystemUI/res/layout/status_bar_ios.xml         | 30 +++++++++++++++
  MiuiSystemUI/res/layout/status_bar_simple_ios.xml  | 30 +++++++++++++++
  MiuiSystemUI/res/layout/super_status_bar_ios.xml   |  9 +++++
  .../systemui/statusbar/phone/PhoneStatusBar.smali  | 43 +++++++++++++++++++++-
- 6 files changed, 155 insertions(+), 1 deletion(-)
+ 7 files changed, 201 insertions(+), 1 deletion(-)
+
+
+--- /dev/null
++++ b/MiuiSystemUI/res/layout/signal_cluster_view_ios.xml
+@@ -0,0 +1,46 @@
++<?xml version="1.0" encoding="utf-8"?>
++<com.android.systemui.statusbar.SignalClusterView android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
++  xmlns:android="http://schemas.android.com/apk/res/android">
++    <com.android.systemui.statusbar.AnimatedImageView android:layout_gravity="center_vertical" android:id="@id/speech_hd" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_speech_hd" />
++    <com.android.systemui.statusbar.AnimatedImageView android:layout_gravity="center_vertical" android:id="@id/mobile_roam" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_data_connected_roam" />
++    <FrameLayout android:layout_gravity="center_vertical" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
++        <LinearLayout android:id="@id/mobile_combo" android:layout_width="wrap_content" android:layout_height="wrap_content">
++            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
++                <com.android.systemui.statusbar.AnimatedImageView android:id="@id/mobile_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                <ImageView android:id="@id/card_slot" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++            </FrameLayout>
++            <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/carrier" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="10" android:singleLine="true" />
++            <FrameLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
++                <com.android.systemui.statusbar.AnimatedImageView android:layout_gravity="bottom|center|left" android:id="@id/mobile_inout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++            </FrameLayout>
++            <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:gravity="center_vertical" android:id="@id/mobile_type" android:paddingLeft="1.0dip" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
++        </LinearLayout>
++        <com.android.systemui.statusbar.AnimatedImageView android:id="@id/airplane" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++        <LinearLayout android:gravity="center_vertical" android:id="@id/mobile_combo_cdma" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent">
++            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
++                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
++                    <ImageView android:id="@id/mobile_signal_evdo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                    <ImageView android:id="@id/mobile_signal_cdma" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                </FrameLayout>
++            </LinearLayout>
++            <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/carrier_cdma" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxEms="10" android:singleLine="true" />
++            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
++                <ImageView android:id="@id/mobile_inout_cdma" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
++                    <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier.CDMA" android:id="@id/mobile_type_cdma" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/stat_sys_data_connected_1x_half" />
++                    <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier.CDMA" android:id="@id/mobile_type_evdo" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++                </FrameLayout>
++            </LinearLayout>
++        </LinearLayout>
++    </FrameLayout>
++    <com.android.systemui.statusbar.AnimatedImageView android:id="@id/wifi_ap_on" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_wifi_ap_on" />
++    <LinearLayout android:id="@id/wifi_combo" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
++        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
++            <com.android.systemui.statusbar.AnimatedImageView android:id="@id/wifi_signal" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++            <com.android.systemui.statusbar.AnimatedImageView android:id="@id/wifi_ap_connect_mark" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/stat_sys_wifi_ap" />
++            <com.android.systemui.statusbar.AnimatedImageView android:layout_gravity="bottom|center" android:id="@id/wifi_inout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
++        </FrameLayout>
++        <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:ellipsize="marquee" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/volte" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/status_bar_volte_label" android:maxEms="10" android:singleLine="true" android:paddingStart="1.0dip" android:paddingEnd="3.0dip" />
++        <TextView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/wifi_label" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxEms="10" android:singleLine="true" />
++    </LinearLayout>
++</com.android.systemui.statusbar.SignalClusterView>
+\ No newline at end of file
 
 --- /dev/null
 +++ b/MiuiSystemUI/res/layout/status_bar_expanded_ios.xml
@@ -52,7 +105,7 @@ Subject: [PATCH 1/2] patch for style staturbar
 +    <View android:id="@id/expanded_bg" android:background="@drawable/notification_panel_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
 +    <FrameLayout android:gravity="center_horizontal" android:layout_gravity="@integer/notification_panel_layout_gravity" android:orientation="vertical" android:id="@id/notification_container_parent" android:layout_width="fill_parent" android:layout_height="fill_parent">
 +        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/quick_settings_container" android:background="@drawable/toggles_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
-+            <com.android.systemui.statusbar.phone.ExpandableTogglesLayout android:orientation="vertical" android:id="@id/expandable_toggle_layout" android:layout_width="fill_parent" android:layout_height="@dimen/single_page_toggles_height" android:layout_marginBottom="@dimen/expanded_notification_detail_bottom" />
++            <com.android.systemui.statusbar.phone.ExpandableTogglesLayout android:orientation="vertical" android:id="@id/expandable_toggle_layout" android:layout_width="fill_parent" android:layout_height="@dimen/single_page_toggles_height" />
 +            <include android:layout_width="fill_parent" android:layout_height="@dimen/single_page_brightness_panel_height" android:layout_marginBottom="@dimen/single_page_brightness_panel_bottom" layout="@layout/status_bar_expanded_brightness_panel" />
 +            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/status_bar_expanded_flow" />
 +        </LinearLayout>
@@ -111,9 +164,9 @@ Subject: [PATCH 1/2] patch for style staturbar
 +    <LinearLayout android:orientation="horizontal" android:id="@id/icons" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
 +        <LinearLayout android:gravity="left" android:paddingRight="3.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
 +            <LinearLayout android:gravity="center_vertical" android:id="@id/signal_cluster_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-+                <include android:id="@id/signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view" />
-+                <include android:id="@id/signal_cluster2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view" />
-+                <com.android.systemui.statusbar.NetworkSpeedView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:gravity="center|left" android:id="@id/network_speed_view" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="3.0dip" android:singleLine="true" />
++                <include android:id="@id/signal_cluster" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view_ios" />
++                <include android:id="@id/signal_cluster2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/signal_cluster_view_ios" />
++                <com.android.systemui.statusbar.NetworkSpeedView android:textAppearance="@style/TextAppearance.StatusBar.Carrier" android:gravity="center|left" android:id="@id/network_speed_view" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="3.0dip" android:layout_marginRight="3.0dip" android:singleLine="true" />
 +                <LinearLayout android:gravity="center|right" android:id="@id/notification_icon_area" android:layout_width="wrap_content" android:layout_height="fill_parent">
 +                    <com.android.systemui.statusbar.StatusBarIconView android:id="@id/notification_more_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/stat_notify_more" />
 +                    <com.android.systemui.statusbar.phone.IconMerger android:gravity="center_vertical" android:id="@id/notificationIcons" android:layout_width="wrap_content" android:layout_height="fill_parent" />
@@ -121,13 +174,13 @@ Subject: [PATCH 1/2] patch for style staturbar
 +            </LinearLayout>
 +        </LinearLayout>
 +        <LinearLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="fill_parent">
-+            <com.android.systemui.statusbar.policy.Clock android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="center" android:id="@id/clock" android:paddingLeft="3.0dip" android:paddingRight="3.0dip" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
++            <com.android.systemui.statusbar.policy.Clock android:textAppearance="@style/TextAppearance.StatusBar.Clock" android:gravity="start|center" android:id="@id/clock" android:paddingBottom="@dimen/statusbar_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" android:paddingStart="3.0dip" android:paddingEnd="3.0dip" />
 +        </LinearLayout>
-+        <LinearLayout android:gravity="right" android:paddingLeft="3.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-+            <com.android.systemui.statusbar.phone.StatusBarIcons android:gravity="center|right" android:id="@id/statusbar_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
++        <LinearLayout android:gravity="right" android:layout_gravity="right" android:paddingLeft="3.0dip" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
++            <com.android.systemui.statusbar.phone.StatusBarIcons android:gravity="end|center" android:id="@id/statusbar_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
 +                <com.android.systemui.statusbar.StatusBarIconView android:id="@id/moreIcon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/stat_notify_more" />
-+                <LinearLayout android:gravity="center_vertical" android:id="@id/statusIcons" android:layout_width="wrap_content" android:layout_height="fill_parent" />
-+                <TextView android:textAppearance="@style/TextAppearance.StatusBar.Battery" android:gravity="center" android:id="@id/battery_num" android:paddingBottom="@dimen/statusbar_battery_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:layout_marginRight="3.0dip" />
++                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/statusIcons" android:layout_width="wrap_content" android:layout_height="fill_parent" />
++                <TextView android:textAppearance="@style/TextAppearance.StatusBar.Battery" android:gravity="center" android:id="@id/battery_num" android:paddingBottom="@dimen/statusbar_battery_text_bottom_padding" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginStart="1.0dip" android:layout_marginEnd="3.0dip" />
 +                <com.android.systemui.statusbar.phone.BatteryStatusIconView android:id="@id/battery" android:layout_width="wrap_content" android:layout_height="wrap_content" />
 +                <ImageView android:id="@id/battery_charging_icon" android:layout_width="wrap_content" android:layout_height="fill_parent" />
 +            </com.android.systemui.statusbar.phone.StatusBarIcons>
