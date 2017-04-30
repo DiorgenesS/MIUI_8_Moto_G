@@ -1,0 +1,37 @@
+From e3940d902180142d4b8e999b60122d2feceffc31 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Sat, 29 Apr 2017 22:57:35 -0300
+Subject: [PATCH] Remove IMEI in activity battery history
+
+---
+ SecurityCenter/res/values/dimens.xml  | 2 +-
+ SecurityCenter/res/values/strings.xml | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+
+--- a/SecurityCenter/res/values/dimens.xml
++++ b/SecurityCenter/res/values/dimens.xml
+@@ -123,7 +123,7 @@
+     <dimen name="battery_history_hardware_padding_top">25.0dip</dimen>
+     <dimen name="battery_history_textsize">15.0sp</dimen>
+     <dimen name="battery_history_textsize_small">12.0sp</dimen>
+-    <dimen name="battery_history_imei_textsize">11.299988sp</dimen>
++    <dimen name="battery_history_imei_textsize">0.0sp</dimen>
+     <dimen name="editor_title_button_margin">7.0dip</dimen>
+     <dimen name="list_item_view_side_padding">13.299988dip</dimen>
+     <dimen name="list_item_view_size_padding_large">26.599976dip</dimen>
+
+--- a/SecurityCenter/res/values/strings.xml
++++ b/SecurityCenter/res/values/strings.xml
+@@ -802,7 +802,7 @@
+     <string name="uninstall_app_done">Uninstalled successfully</string>
+     <string name="auto_task_edit_step1">1.</string>
+     <string name="auto_task_edit_step2">2.</string>
+-    <string name="pc_battery_history_show_imei">IMEI:</string>
++    <string name="pc_battery_history_show_imei"></string>
+     <string name="pref_key_new_installed_app_firewall_mobile">pref_key_new_installed_app_firewall_mobile</string>
+     <string name="pref_key_new_installed_app_firewall_wifi">pref_key_new_installed_app_firewall_wifi</string>
+     <string name="resource_securitycenter_settings">Security</string>
+-- 
+2.7.4
+
