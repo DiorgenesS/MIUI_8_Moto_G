@@ -1,0 +1,24 @@
+From 85555b14c2abf63a5dd96659d9220469676763c5 Mon Sep 17 00:00:00 2001
+From: Diorgenes <dyogenes_gd@hotmail.com>
+Date: Tue, 2 May 2017 19:41:20 -0300
+Subject: [PATCH] Fix miui editor
+
+---
+ framework/smali/android/widget/Editor.smali | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+--- a/framework/smali/android/widget/Editor.smali
++++ b/framework/smali/android/widget/Editor.smali
+@@ -2788,7 +2788,7 @@
+ 
+     move-result-object v2
+ 
+-    const v3, 0x10900f4
++    const v3, 0x10900e9
+ 
+     const/4 v4, 0x0
+ 
+-- 
+2.7.4
+
