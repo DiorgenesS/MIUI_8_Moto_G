@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="hints_traffic_enable_title">
+        <item quantity="other">%d apps não estão sendo monitorados</item>
+        <item quantity="one">%d app não está sendo monitorado</item>
+    </plurals>
+    <plurals name="hints_traffic_disable_title">
+        <item quantity="other">Monitorando uso de dados para %d apps</item>
+        <item quantity="one">Monitorando uso de dados para %d app</item>
+    </plurals>
+    <plurals name="hints_install_apps_interval">
+        <item quantity="other">Usado %d dias atrás</item>
+        <item quantity="one">Usado ontem</item>
+    </plurals>
+    <plurals name="search_app_count_txt_na">
+        <item quantity="other">Pesquisar %d apps</item>
+        <item quantity="one">Pesquisar %d app</item>
+    </plurals>
+    <plurals name="hints_roaming_enable_title">
+        <item quantity="other">%d apps podem usar o roaming de dados</item>
+        <item quantity="one">%d app pode usar o roaming de dados</item>
+    </plurals>
+    <plurals name="hints_roaming_disable_title">
+        <item quantity="other">%d apps não podem usar o roaming de dados</item>
+        <item quantity="one">%d app não pode usar o roaming de dados</item>
+    </plurals>
+    <plurals name="hints_roaming_found_app_count_title">
+        <item quantity="other">%d apps encontrados</item>
+        <item quantity="one">%d app encontrado</item>
+    </plurals>
+    <plurals name="power_center_battery_day">
+        <item quantity="other">"%d dias "</item>
+        <item quantity="one">"%d dia "</item>
+    </plurals>
+    <plurals name="power_center_battery_hour">
+        <item quantity="other">"%d h "</item>
+        <item quantity="one">"%d h "</item>
+    </plurals>
+    <plurals name="power_center_battery_minute">
+        <item quantity="other">"%d min "</item>
+        <item quantity="one">"%d min "</item>
+    </plurals>
+    <plurals name="deep_clean_auto_memory_clean">
+        <item quantity="other">Em %1$d min</item>
+        <item quantity="one">Em %1$d min</item>
+    </plurals>
+    <plurals name="quick_optimize_summary_text">
+        <item quantity="other">%d problemas solucionados</item>
+        <item quantity="one">%d problema solucionado</item>
+    </plurals>
+    <plurals name="quick_optimize_issue_found">
+        <item quantity="other">%d problemas encontrados</item>
+        <item quantity="one">%d problema encontrado</item>
+    </plurals>
+    <plurals name="quick_optimize_issue_count">
+        <item quantity="other">%d problemas</item>
+        <item quantity="one">%d problema</item>
+    </plurals>
+    <plurals name="quick_optimize_suggest_issue_found">
+        <item quantity="other">%d problemas encontrados na bateria, corrija-os</item>
+        <item quantity="one">%d problema encontrado na bateria, corrija-o</item>
+    </plurals>
+    <plurals name="app_check_title_text">
+        <item quantity="other">%d itens podem ser otimizados</item>
+        <item quantity="one">%d item pode ser otimizado</item>
+    </plurals>
+    <plurals name="people">
+        <item quantity="other">Transferido por %1$d pessoas</item>
+        <item quantity="one">Transferido por %1$d pessoa</item>
+    </plurals>
+    <plurals name="people_million">
+        <item quantity="other">Transferido por %1$d pessoas</item>
+        <item quantity="one">Transferido por %1$d pessoa</item>
+    </plurals>
+    <plurals name="million">
+        <item quantity="other">Transferido por %1$d pessoas</item>
+        <item quantity="one">Transferido por %1$d pessoa</item>
+    </plurals>
+    <plurals name="view_num">
+        <item quantity="other">%1$d visualizações</item>
+        <item quantity="one">%1$d visualização</item>
+    </plurals>
+    <plurals name="system_check_content">
+        <item quantity="other">%1$d itens seguros</item>
+        <item quantity="one">%1$d item seguro</item>
+    </plurals>
+    <plurals name="cache_check_content">
+        <item quantity="other">Protegendo %d apps</item>
+        <item quantity="one">Protegendo %d app</item>
+    </plurals>
+    <plurals name="hints_auto_start_enable_title">
+        <item quantity="other">%d apps iniciam automaticamente</item>
+        <item quantity="one">%d app inicia automaticamente</item>
+    </plurals>
+    <plurals name="hints_auto_start_disable_title">
+        <item quantity="other">%d apps proibidos de iniciar automaticamente</item>
+        <item quantity="one">%d app proibido de iniciar automaticamente</item>
+    </plurals>
+    <plurals name="hints_apps_perm_count">
+        <item quantity="other">%d permissões</item>
+        <item quantity="one">%d permissão</item>
+    </plurals>
+    <plurals name="hints_permission_apps_count">
+        <item quantity="other">%d apps</item>
+        <item quantity="one">%d app</item>
+    </plurals>
+    <plurals name="hints_get_root_enable_title">
+        <item quantity="other">%d apps possuem acesso root</item>
+        <item quantity="one">%d app possui acesso root</item>
+    </plurals>
+    <plurals name="hints_get_root_disable_title">
+        <item quantity="other">%d apps não possuem acesso root</item>
+        <item quantity="one">%d app não possui acesso root</item>
+    </plurals>
+    <plurals name="summary_app_update">
+        <item quantity="other">Atualizações disponíveis para %d apps.</item>
+        <item quantity="one">Atualização disponível para %d app.</item>
+    </plurals>
+    <plurals name="hints_handle_item_text_risk_number">
+        <item quantity="other">%d riscos,</item>
+        <item quantity="one">%d risco,</item>
+    </plurals>
+    <plurals name="hints_handle_item_text_virus_number">
+        <item quantity="other">%d trojans,</item>
+        <item quantity="one">%d trojan,</item>
+    </plurals>
+    <plurals name="hints_scan_result_virus_number">
+        <item quantity="other">%d riscos</item>
+        <item quantity="one">%d risco</item>
+    </plurals>
+    <plurals name="hints_scan_result_danger">
+        <item quantity="other">%d riscos encontrados, corrija agora</item>
+        <item quantity="one">%d risco encontrado, corrija agora</item>
+    </plurals>
+    <plurals name="notification_apps">
+        <item quantity="other">%d apps contém riscos à privacidade</item>
+        <item quantity="one">%d app contém riscos à privacidade</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_letters">
+        <item quantity="other">A senha deve conter no mínimo %d letras.</item>
+        <item quantity="one">A senha deve conter no mínimo 1 letra.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_lowercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras minúsculas.</item>
+        <item quantity="one">A senha deve conter pelo menos 1 letra minúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_uppercase">
+        <item quantity="other">A senha deve conter pelo menos %d letras maiúsculas.</item>
+        <item quantity="one">A senha deve conter pelo menos 1 letra maiúscula.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_numeric">
+        <item quantity="other">A senha deve conter pelo menos %d números.</item>
+        <item quantity="one">A senha deve conter pelo menos 1 número.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_symbols">
+        <item quantity="other">A senha deve conter pelo menos %d caracteres especiais.</item>
+        <item quantity="one">A senha deve conter pelo menos 1 caractere especial.</item>
+    </plurals>
+    <plurals name="lockpassword_password_requires_nonletter">
+        <item quantity="other">A senha deve conter pelo menos %d caracteres além de letras.</item>
+        <item quantity="one">A senha deve conter pelo menos 1 caractere além de letras.</item>
+    </plurals>
+    <plurals name="number_locked">
+        <item quantity="other">%d apps bloqueados</item>
+        <item quantity="one">%d app bloqueado</item>
+    </plurals>
+    <plurals name="number_to_lock">
+        <item quantity="other">%d apps não bloqueados</item>
+        <item quantity="one">%d app não bloqueado</item>
+    </plurals>
+    <plurals name="find_applications">
+        <item quantity="other">Pesquisar entre %d apps</item>
+        <item quantity="one">Pesquisar entre %d app</item>
+    </plurals>
+    <plurals name="found_apps_title">
+        <item quantity="other">%d apps encontrados</item>
+        <item quantity="one">%d app encontrado</item>
+    </plurals>
+    <plurals name="sp_settings_exception_count">
+        <item quantity="other">%d itens</item>
+        <item quantity="one">1 item</item>
+    </plurals>
+    <plurals name="sp_back_title_text">
+        <item quantity="other">%s riscos para pagamentos</item>
+        <item quantity="one">%s risco para pagamentos</item>
+    </plurals>
+    <plurals name="sp_monitored_apps_count">
+        <item quantity="other">%s apps de pagamento protegidos</item>
+        <item quantity="one">%s app de pagamento protegido</item>
+    </plurals>
+    <plurals name="sp_monitored_apps_list_group_enable">
+        <item quantity="other">%s apps estão protegidos</item>
+        <item quantity="one">%s app está protegido</item>
+    </plurals>
+    <plurals name="sp_monitored_apps_list_group_disable">
+        <item quantity="other">%s apps não estão protegidos</item>
+        <item quantity="one">%s app não está protegido</item>
+    </plurals>
+    <plurals name="section_clear_acc_item_right_tips">
+        <item quantity="other">%d apps bloqueados aguardando limpeza</item>
+        <item quantity="one">%d app bloqueado aguardando limpeza</item>
+    </plurals>
+    <plurals name="section_security_defend_item_right_tips">
+        <item quantity="other">%d vírus excluídos</item>
+        <item quantity="one">%d vírus excluído</item>
+    </plurals>
+    <plurals name="optimize_result_button_add_score">
+        <item quantity="other">+%d</item>
+        <item quantity="one">+%d</item>
+    </plurals>
+</resources>
