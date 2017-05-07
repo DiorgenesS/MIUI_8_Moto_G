@@ -59,8 +59,18 @@ local-pre-zip-misc:
 	$(hide) cp -rf stockrom/system/bin/app_process32 $(ZIP_DIR)/system/bin/app_process32
 	@echo remove unnecessary libs!
 	$(hide) rm -rf $(ZIP_DIR)/system/lib64
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libapssdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libautotoucher.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libBankCardRecognizer.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libbigo265mobile_nmob.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libconnectionbase.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libDecRes_sdk.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libdidi_secure.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libfamily_jni.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libgnustl_yynmob.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libidcardquality_v1.0.3.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libJeejenAisound.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjeejenmsc.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_eglfence.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_filtershow_filters.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libjni_jpegstream.so
@@ -69,10 +79,19 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libminivenus.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libmresearch.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_audiosdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_commonlib.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_newaudio.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_newvideo.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_util.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libnmob_videosdk.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libpatcher_game_jni.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/librsjni.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libsecurities_sdk.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttscompat.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libttspico.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libwebp.so
+	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libweibosdkcore_sogou.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/libxmpass_sdk_patcher.so
 	$(hide) rm -rf $(ZIP_DIR)/system/lib/xmpass_libweibosdkcore.so
