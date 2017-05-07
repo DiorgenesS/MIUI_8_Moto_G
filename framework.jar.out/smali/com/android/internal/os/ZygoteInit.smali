@@ -396,6 +396,8 @@
 
     invoke-static {}, Lcom/android/internal/os/SamplingProfilerIntegration;->start()V
 
+    invoke-static {}, Lmiui/security/SecurityManager;->init()V
+
     invoke-static {}, Lmiui/patchrom/ClassHook;->initCoreHook()V
 
     const/4 v5, 0x0

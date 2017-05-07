@@ -246,6 +246,17 @@
 
     .line 2203
     :cond_0
+    invoke-static {v0}, Lmiui/securityspace/XSpaceUserHandle;->isXSpaceUser(Landroid/content/pm/UserInfo;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    const v1, 0x11020060
+
+    return v1
+
+    :cond_1
     const/4 v1, 0x0
 
     return v1
@@ -2700,6 +2711,16 @@
     const/4 v1, 0x0
 
     return v1
+.end method
+
+.method getContext()Landroid/app/ContextImpl;
+    .locals 1
+
+    .prologue
+    .line 2255
+    iget-object v0, p0, Landroid/app/ApplicationPackageManager;->mContext:Landroid/app/ContextImpl;
+
+    return-object v0
 .end method
 
 .method public getDefaultActivityIcon()Landroid/graphics/drawable/Drawable;

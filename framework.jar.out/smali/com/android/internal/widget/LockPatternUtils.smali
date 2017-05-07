@@ -2092,6 +2092,16 @@
     return-object v0
 .end method
 
+.method public getKeyguardLockoutAttemptDeadline(I)J
+    .locals 2
+    .param p1, "failedAttempts"    # I
+
+    .prologue
+    const-wide/16 v0, -0x1
+
+    return-wide v0
+.end method
+
 .method public getKeyguardStoredPasswordQuality(I)I
     .locals 4
     .param p1, "userHandle"    # I
@@ -4065,6 +4075,16 @@
 
     .line 1230
     return-void
+.end method
+
+.method public setKeyguardLockoutAttemptDeadline(I)J
+    .locals 2
+    .param p1, "failedAttempts"    # I
+
+    .prologue
+    const-wide/16 v0, -0x1
+
+    return-wide v0
 .end method
 
 .method public setLegacyLockPatternEnabled(I)V
