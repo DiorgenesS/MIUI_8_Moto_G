@@ -9,6 +9,7 @@ private-phone-apps := \
 	CertInstaller \
 	com.qualcomm.location \
 	com.qualcomm.services.location \
+	DocumentsUI \
 	KeyChain \
 	LiveWallpapers \
 	PacProcessor \
