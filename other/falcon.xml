@@ -52,6 +52,4 @@
     <bool name="support_cit">false</bool>
     <!--whether the device is xiaomi-->
     <bool name="is_xiaomi_device">false</bool>
-    <!--the vendor feature, it's value may be qcom,mediatek,leadcore or nvidia-->
-    <string name="vendor">qcom</string>
 </features>
