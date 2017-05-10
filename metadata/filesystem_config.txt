@@ -1753,6 +1753,7 @@ system/media/theme/miui_mod_icons/org.cyanogenmod.audiofx.png 0 0 644 selabel=u:
 system/media/theme/miui_mod_icons/org.cyanogenmod.cmaudio.service.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/org.cyanogenmod.cmsettings.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/media/theme/miui_mod_icons/org.cyanogenmod.screencast.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
+system/media/theme/miui_mod_icons/org.cyanogenmod.snap.png 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX 0 0 755 selabel=u:object_r:system_file:s0 capabilities=0x0
 system/priv-app/AudioFX/AudioFX.apk 0 0 644 selabel=u:object_r:system_file:s0 capabilities=0x0
