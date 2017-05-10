@@ -13,7 +13,7 @@ Subject: [PATCH] Added icon for StockSettings
      <header android:icon="@drawable/ic_children_mode_settings" android:id="@id/children_mode_settings" android:title="@string/children_mode_title" android:fragment="com.android.settings.ChildrenModeSettings" />
      <header android:icon="@drawable/ic_edge_mode_settings" android:id="@id/edge_mode_settings" android:title="@string/pref_edge_handgrip" android:fragment="com.android.settings.EdgeModeSettings" />
      <header android:icon="@drawable/ic_other_advanced_settings" android:id="@id/other_advanced_settings" android:title="@string/other_advanced_settings" android:fragment="com.android.settings.OtherPersonalSettings" />
-+    <header android:icon="@drawable/ic_settings" android:id="@id/manufacturer_settings">
++    <header android:icon="@drawable/ic_other_advanced_settings" android:id="@id/manufacturer_settings">
 +        <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
 +    </header>
      <header android:icon="@drawable/ic_location_settings" android:id="@id/location_settings" android:title="@string/location_settings_title" android:fragment="com.android.settings.location.MiuiLocationSettings" />
