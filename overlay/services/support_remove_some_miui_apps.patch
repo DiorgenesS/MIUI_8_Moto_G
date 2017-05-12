@@ -4,13 +4,13 @@ Date: Tue, 9 May 2017 19:06:08 -0300
 Subject: [PATCH] Support to remove some miui apps
 
 ---
- .../com/miui/server/SecurityManagerService$1.smali | 48 ++------------------------------
- 1 file changed, 2 insertions(+), 46 deletions(-)
+ .../com/miui/server/SecurityManagerService$1.smali | 54 ----------------------
+ 1 file changed, 54 deletions(-)
 
 
 --- a/services/smali/com/miui/server/SecurityManagerService$1.smali
 +++ b/services/smali/com/miui/server/SecurityManagerService$1.smali
-@@ -126,23 +126,7 @@
+@@ -126,26 +126,6 @@
  
      invoke-virtual {v2, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
  
@@ -31,14 +31,18 @@ Subject: [PATCH] Support to remove some miui apps
 -    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 -
 -    const-string v11, "com.miui.guardprovider"
-+    const-string v11, "com.android.settings"
+-
+-    invoke-virtual {v2, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+-
+     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
  
-     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
- 
-@@ -202,21 +186,7 @@
+     move-result-object v4
+@@ -201,26 +181,6 @@
+     .restart local v4    # "i$":Ljava/util/Iterator;
+     .restart local v7    # "platformSignature":[Landroid/content/pm/Signature;
      :cond_1
-     iget-object v11, p0, Lcom/miui/server/SecurityManagerService$1;->this$0:Lcom/miui/server/SecurityManagerService;
- 
+-    iget-object v11, p0, Lcom/miui/server/SecurityManagerService$1;->this$0:Lcom/miui/server/SecurityManagerService;
+-
 -    const-string v12, "com.android.updater"
 -
 -    # invokes: Lcom/miui/server/SecurityManagerService;->enforceAppSignature([Landroid/content/pm/Signature;Ljava/lang/String;Z)V
@@ -54,11 +58,13 @@ Subject: [PATCH] Support to remove some miui apps
 -    iget-object v11, p0, Lcom/miui/server/SecurityManagerService$1;->this$0:Lcom/miui/server/SecurityManagerService;
 -
 -    const-string v12, "com.xiaomi.finddevice"
-+    const-string v12, "com.android.settings"
+-
+-    # invokes: Lcom/miui/server/SecurityManagerService;->enforceAppSignature([Landroid/content/pm/Signature;Ljava/lang/String;Z)V
+-    invoke-static {v11, v7, v12, v9}, Lcom/miui/server/SecurityManagerService;->access$1500(Lcom/miui/server/SecurityManagerService;[Landroid/content/pm/Signature;Ljava/lang/String;Z)V
  
-     # invokes: Lcom/miui/server/SecurityManagerService;->enforceAppSignature([Landroid/content/pm/Signature;Ljava/lang/String;Z)V
-     invoke-static {v11, v7, v12, v9}, Lcom/miui/server/SecurityManagerService;->access$1500(Lcom/miui/server/SecurityManagerService;[Landroid/content/pm/Signature;Ljava/lang/String;Z)V
-@@ -233,20 +203,6 @@
+     sget-boolean v11, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
+ 
+@@ -235,20 +195,6 @@
  
      if-nez v11, :cond_2
  
