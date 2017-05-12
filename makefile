@@ -103,9 +103,11 @@ local-pre-zip-misc:
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/cts.prop
 	$(hide) rm -rf $(ZIP_DIR)/data/miui/resolves_miui.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/addon.d
+	$(hide) rm -rf $(ZIP_DIR)/system/bin/bugreport
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGELOG-CM.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/CHANGES.txt
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/build-manifest.xml
+	$(hide) rm -rf $(ZIP_DIR)/system/etc/init.miui.rc
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-thea.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/etc/thermal-engine-titan.conf
 	$(hide) rm -rf $(ZIP_DIR)/system/media/audio/*
