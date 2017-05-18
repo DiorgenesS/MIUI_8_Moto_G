@@ -10,7 +10,7 @@
     <bool name="is_hongmi">false</bool>
     <!--whether the device support alpha optimized-->
     <bool name="support_alpha_optimized">true</bool>
-	<!--whether the device supports torch-->
+    <!--whether the device supports torch-->
     <bool name="support_torch">true</bool>
     <!--whether install the fm app-->
     <bool name="support_fm">true</bool>
